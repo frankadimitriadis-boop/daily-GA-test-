@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>【第10期】每日公安AI情报简报 | 2026年4月4日</title>
+  <style>
+    :root {
+      --primary: #1F3864;
+      --accent: #4472C4;
+      --high-bg: #FFCCCC;
+      --high-text: #CC0000;
+      --mid-bg: #FFF2CC;
+      --mid-text: #996600;
+      --low-bg: #E2EFDA;
+      --low-text: #375623;
+      --border: #D9D9D9;
+      --row-alt: #F9F9F9;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Microsoft YaHei', '微软雅黑', 'PingFang SC', Arial, sans-serif;
+      background: #F4F6FA;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 24px 16px 48px;
+    }
+
+    /* ===== 顶部横幅 ===== */
+    .banner {
+      background: linear-gradient(135deg, #1F3864 0%, #2E5F9E 60%, #4472C4 100%);
+      color: #fff;
+      border-radius: 12px;
+      padding: 36px 40px 28px;
+      margin-bottom: 28px;
+      box-shadow: 0 4px 18px rgba(31,56,100,0.25);
+      position: relative;
+      overflow: hidden;
+    }
+    .banner::before {
+      content: '';
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 200px; height: 200px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.06);
+    }
+    .banner-badge {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      border-radius: 20px;
+      padding: 3px 14px;
+      font-size: 13px;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .banner h1 {
+      font-size: 28px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      letter-spacing: 1px;
+    }
+    .banner .subtitle {
+      font-size: 14px;
+      opacity: 0.80;
+      margin-bottom: 18px;
+    }
+    .banner-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 13px;
+      opacity: 0.88;
+    }
+    .banner-meta span { display: flex; align-items: center; gap: 5px; }
+
+    /* ===== 摘要卡片 ===== */
+    .summary-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .summary-card {
+      background: #fff;
+      border-radius: 10px;
+      padding: 18px 16px 14px;
+      text-align: center;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-top: 4px solid var(--accent);
+    }
+    .summary-card.high { border-color: var(--high-text); }
+    .summary-card.mid  { border-color: #E6A817; }
+    .summary-card.low  { border-color: #5A9E35; }
+    .summary-card .num {
+      font-size: 40px;
+      font-weight: 800;
+      line-height: 1;
+      margin-bottom: 4px;
+    }
+    .summary-card.high .num { color: var(--high-text); }
+    .summary-card.mid  .num { color: #E6A817; }
+    .summary-card.low  .num { color: #5A9E35; }
+    .summary-card .label { font-size: 13px; color: #666; }
+
+    /* ===== 板块标题 ===== */
+    .section-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(90deg, #1F3864, #4472C4);
+      color: #fff;
+      border-radius: 8px;
+      padding: 12px 20px;
+      font-size: 17px;
+      font-weight: 700;
+      margin: 28px 0 12px;
+      letter-spacing: 1px;
+    }
+
+    /* ===== 情报表格 ===== */
+    .intel-table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      margin-bottom: 8px;
+    }
+    .intel-table thead tr {
+      background: #1F3864;
+      color: #fff;
+    }
+    .intel-table thead th {
+      padding: 11px 12px;
+      font-size: 13px;
+      font-weight: 600;
+      text-align: left;
+      letter-spacing: 0.5px;
+    }
+    .intel-table tbody tr {
+      border-bottom: 1px solid var(--border);
+      transition: background 0.15s;
+    }
+    .intel-table tbody tr:hover { background: #EDF3FB; }
+    .intel-table tbody td {
+      padding: 12px 12px;
+      font-size: 13.5px;
+      vertical-align: top;
+    }
+
+    /* 风险等级列 */
+    .risk-badge {
+      display: inline-block;
+      border-radius: 5px;
+      padding: 3px 10px;
+      font-size: 12.5px;
+      font-weight: 700;
+      white-space: nowrap;
+    }
+    .risk-high  { background: var(--high-bg); color: var(--high-text); }
+    .risk-mid   { background: var(--mid-bg);  color: var(--mid-text); }
+    .risk-low   { background: var(--low-bg);  color: var(--low-text); }
+
+    /* 行底色 */
+    tr.row-high td:first-child { background: var(--high-bg); }
+    tr.row-mid  td:first-child { background: var(--mid-bg); }
+    tr.row-low  td:first-child { background: var(--low-bg); }
+    tr.row-high td:last-child  { background: #FFF5F5; }
+    tr.row-mid  td:last-child  { background: #FFFDF0; }
+    tr.row-low  td:last-child  { background: #F3FAF0; }
+
+    .title-cell { font-weight: 600; color: #1F3864; }
+    .source-cell { color: var(--accent); font-size: 12.5px; }
+
+    /* ===== 风险汇总 ===== */
+    .risk-summary {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.07);
+      padding: 24px 28px;
+      margin-top: 10px;
+    }
+    .risk-group { margin-bottom: 18px; }
+    .risk-group:last-child { margin-bottom: 0; }
+    .risk-group-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .risk-group ul {
+      list-style: none;
+      padding-left: 8px;
+    }
+    .risk-group ul li {
+      font-size: 13.5px;
+      padding: 4px 0 4px 18px;
+      position: relative;
+      color: #333;
+      border-bottom: 1px dashed #EEE;
+    }
+    .risk-group ul li:before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #4472C4;
+    }
+    .risk-group ul li:last-child { border-bottom: none; }
+
+    /* ===== 底部 ===== */
+    .footer {
+      text-align: center;
+      margin-top: 36px;
+      padding-top: 18px;
+      border-top: 2px solid var(--accent);
+      color: #999;
+      font-size: 12.5px;
+    }
+    .footer strong { color: #4472C4; }
+
+    /* ===== 响应式 ===== */
+    @media (max-width: 768px) {
+      .banner { padding: 22px 16px 18px; }
+      .banner h1 { font-size: 20px; }
+      .intel-table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+
+  <!-- 顶部横幅 -->
+  <div class="banner">
+    <div class="banner-badge">🛡️ 内部参考资料 · 第10期</div>
+    <h1>【第10期】每日公安AI情报简报</h1>
+    <div class="subtitle">区域情报监测系统 · 南威软件股份有限公司自动化生成</div>
+    <div class="banner-meta">
+      <span>📅 监测周期：2026年4月3日—4月4日</span>
+      <span>🕐 生成时间：2026年4月4日 10:00</span>
+      <span>📡 数据来源：全网公开信息</span>
+    </div>
+  </div>
+
+  <!-- 摘要卡片 -->
+  <div class="summary-cards">
+    <div class="summary-card">
+      <div class="num" style="color:#4472C4">10</div>
+      <div class="label">本期情报总数</div>
+    </div>
+    <div class="summary-card high">
+      <div class="num">3</div>
+      <div class="label">🔴 高风险</div>
+    </div>
+    <div class="summary-card mid">
+      <div class="num">5</div>
+      <div class="label">🟡 中风险</div>
+    </div>
+    <div class="summary-card low">
+      <div class="num">2</div>
+      <div class="label">🟢 低风险</div>
+    </div>
+  </div>
+
+  <!-- ===== 政策与热点 ===== -->
+  <div class="section-title">📋 【政策与热点】</div>
+  <table class="intel-table">
+    <thead>
+      <tr>
+        <th style="width:8%">风险等级</th>
+        <th style="width:22%">核心标题</th>
+        <th style="width:30%">关键内容摘要（50字内）</th>
+        <th style="width:13%">来源</th>
+        <th style="width:27%">对南威的启示 / 风险等级</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-high">
+        <td><span class="risk-badge risk-high">🔴 高风险</span></td>
+        <td class="title-cell">玉山县公安局自研"三山视界"AI预警系统实战上线</td>
+        <td>江西玉山县岩瑞派出所自研AI分析预警系统正式投用，实现视频联网实时预警，基层所队自主AI化迈出关键一步。</td>
+        <td class="source-cell">上饶政法网<br>4月2日</td>
+        <td>基层自研AI崛起趋势明显，南威需关注基层所队自建能力带来的市场碎片化风险，可将此作为"平台+本地训练"联合方案切入点。<br><strong style="color:#CC0000">风险：中高</strong></td>
+      </tr>
+      <tr class="row-mid">
+        <td><span class="risk-badge risk-mid">🟡 中风险</span></td>
+        <td class="title-cell">国家药监局发布"人工智能+药品监管"实施意见</td>
+        <td>4月2日药监局发布AI+监管实施意见，聚焦数智赋能重点监管场景，推动AI大模型在行政执法监管领域全面推广。</td>
+        <td class="source-cell">新华网/国家药监局<br>4月2日</td>
+        <td>公安、司法等执法监管部门"AI+监管"政策联动效应强烈，南威可前瞻布局跨部门AI监管解决方案，提升行业覆盖广度。<br><strong style="color:#996600">风险：低</strong></td>
+      </tr>
+      <tr class="row-high">
+        <td><span class="risk-badge risk-high">🔴 高风险</span></td>
+        <td class="title-cell">公安部持续推进"AI赋能警务现代化"三层基础工程部署</td>
+        <td>公安部要求建立算力基座、数据资源基座、数智实战中心三层体系，为各省AI落地提供政策框架，推进警务现代化建设。</td>
+        <td class="source-cell">公安部官网</td>
+        <td>顶层政策明确三层基础工程，南威应尽快对标完善产品路线图，尤其在数智实战中心层面形成标杆案例。<br><strong style="color:#CC0000">风险：中</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ===== 技术前沿 ===== -->
+  <div class="section-title">🔬 【技术前沿】</div>
+  <table class="intel-table">
+    <thead>
+      <tr>
+        <th style="width:8%">风险等级</th>
+        <th style="width:22%">核心标题</th>
+        <th style="width:30%">关键内容摘要（50字内）</th>
+        <th style="width:13%">来源</th>
+        <th style="width:27%">对南威的启示 / 风险等级</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-high">
+        <td><span class="risk-badge risk-high">🔴 高风险</span></td>
+        <td class="title-cell">商汤科技EVA视频智能体：像侦探一样主动分析视频</td>
+        <td>商汤研究院开发EVA框架，多模态大模型转为主动视频理解智能体，"感知前规划"范式迭代推理+选择性处理，6项基准超越SOTA。</td>
+        <td class="source-cell">商汤/arXiv<br>arXiv:2603.22918<br>4月2日报道</td>
+        <td>直接对应公安视频侦查需求，不再逐帧扫描而是"侦探式"推理找关键帧，南威需评估并跟进类似视频智能体技术路线，防止被竞品甩开。<br><strong style="color:#CC0000">风险：高</strong></td>
+      </tr>
+      <tr class="row-mid">
+        <td><span class="risk-badge risk-mid">🟡 中风险</span></td>
+        <td class="title-cell">广州市公安局AI大模型警务平台采购（预算414万）4月招标</td>
+        <td>广州市公安局大数据警务支队发布人工智能大模型警务公共能力支撑平台建设项目预告，预算414.36万元，招标窗口期在4月。</td>
+        <td class="source-cell">千里马招标网<br>3月10日</td>
+        <td>一线大城市公安大模型警务采购窗口开启，南威应立即评估入围资质，研判是否与华为、讯飞、中关村科金形成竞争，主动对接前期接触。<br><strong style="color:#996600">风险：中高</strong></td>
+      </tr>
+      <tr class="row-mid">
+        <td><span class="risk-badge risk-mid">🟡 中风险</span></td>
+        <td class="title-cell">2026年1月全国公安AI中标分析：7项目1263万，大模型+视频分析为焦点</td>
+        <td>据中国采招网，2026年1月公安系统7个AI项目落地，分布6省市，大模型与视频分析类占主导，单项均值约180万，基层县市占比增加。</td>
+        <td class="source-cell">中国采招网<br>2月6日分析</td>
+        <td>大模型+视频分析为公安AI采购两大核心方向，南威需针对两类需求深化产品力，县市基层采购增多意味着性价比竞争加剧。<br><strong style="color:#996600">风险：中</strong></td>
+      </tr>
+      <tr class="row-low">
+        <td><span class="risk-badge risk-low">🟢 低风险</span></td>
+        <td class="title-cell">基层AI应用持续扩展：5G+AI防溺水系统等边缘场景快速落地</td>
+        <td>玉山县公安局推出5G+防溺水AI告警系统，融合AI算法构建四级防控体系，AI在基层实战场景横向渗透明显加快。</td>
+        <td class="source-cell">江西法制网</td>
+        <td>AI应用从核心业务向边缘场景延伸，南威可提炼基层AI场景能力打包成"轻量化AI警务套件"，主打县级所队市场。<br><strong style="color:#375623">风险：低</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ===== 竞品动态 ===== -->
+  <div class="section-title">🎯 【竞品动态】</div>
+  <table class="intel-table">
+    <thead>
+      <tr>
+        <th style="width:8%">风险等级</th>
+        <th style="width:22%">核心标题</th>
+        <th style="width:30%">关键内容摘要（50字内）</th>
+        <th style="width:13%">来源</th>
+        <th style="width:27%">对南威的启示 / 风险等级</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr class="row-high">
+        <td><span class="risk-badge risk-high">🔴 高风险</span></td>
+        <td class="title-cell">【商汤】EVA视频智能体技术：公安视频侦查能力颠覆性突破</td>
+        <td>商汤研究院EVA框架发布（3月论文），主动式推理+选择性视频处理，6项基准超越现有SOTA，技术路线与公安视频侦查高度匹配。</td>
+        <td class="source-cell">alphaXiv/商汤<br>3月24日论文</td>
+        <td>商汤此举标志着视频AI从"被动分析"升至"主动侦查"级别，南威视频结构化产品需尽快评估差距并制定追赶计划，防止商汤在视频侦查高端市场形成技术壁垒。<br><strong style="color:#CC0000">风险：高</strong></td>
+      </tr>
+      <tr class="row-mid">
+        <td><span class="risk-badge risk-mid">🟡 中风险</span></td>
+        <td class="title-cell">【海康威视】2025年报节点临近（4月18日），关注AI业务分拆动向</td>
+        <td>海康威视2025年年报预计4月18日披露，业绩快报显示营收基本持平、净利润逐季加速，AI业务进入收获期，市场关注分拆进展。</td>
+        <td class="source-cell">东方财富/新浪财经<br>1月20日业绩快报</td>
+        <td>年报将揭示AI业务占比和公安市场份额，南威需年报后第一时间研判其公安业务策略调整，动态更新竞争态势评估。<br><strong style="color:#996600">风险：中</strong></td>
+      </tr>
+      <tr class="row-mid">
+        <td><span class="risk-badge risk-mid">🟡 中风险</span></td>
+        <td class="title-cell">【大华股份】华睿科技港股上市进程持续推进，AI视觉独立融资</td>
+        <td>大华股份旗下华睿科技（机器视觉+移动机器人）已在港交所递表，融资完成后将显著增强其在AI工业/安防视觉领域的研发投入。</td>
+        <td class="source-cell">腾讯新闻/搜狐财经<br>1月29日</td>
+        <td>华睿独立融资将为大华注入AI视觉研发新动能，南威需关注其在公安AI视觉（无人机巡逻+AI分析）能力跃升节奏，防止大华子公司形成新竞争核。<br><strong style="color:#996600">风险：中</strong></td>
+      </tr>
+      <tr class="row-low">
+        <td><span class="risk-badge risk-low">🟢 低风险</span></td>
+        <td class="title-cell">【科大讯飞】星火认知大模型V4.0于3月28日发布，数学推理能力大幅提升</td>
+        <td>科大讯飞3月28日发布星火认知大模型V4.0，数学能力突出、逻辑推理显著增强，将继续强化G端（政府/公安）私有化部署产品竞争力。</td>
+        <td class="source-cell">搜狐科技<br>3月28日</td>
+        <td>讯飞V4.0落地公安私有化部署后推理增强将提升案件分析、研判场景准确率，南威需密切跟踪讯飞G端新版本中标节奏，防止Q2窗口期被突破。<br><strong style="color:#996600">风险：中</strong></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ===== 风险汇总 ===== -->
+  <div class="section-title">⚠️ 【风险汇总与行动建议】</div>
+  <div class="risk-summary">
+    <div class="risk-group">
+      <div class="risk-group-title" style="color:#CC0000">🔴 高风险 — 需立即行动</div>
+      <ul>
+        <li><strong>商汤EVA视频智能体：</strong>公安视频侦查方向颠覆性突破，南威需快速评估视频智能体技术路线差距，制定追赶或合作方案</li>
+        <li><strong>基层AI自研趋势：</strong>玉山等基层所队自研AI系统上线，可能蚕食南威基层市场份额，需及时推出"平台托管+本地训练"方案</li>
+        <li><strong>公安AI大模型+视频分析双向集中：</strong>2026年1月采购数据验证，南威须同时强化两大技术产品线竞争力</li>
+      </ul>
+    </div>
+    <div class="risk-group">
+      <div class="risk-group-title" style="color:#E6A817">🟡 中风险 — 持续关注</div>
+      <ul>
+        <li><strong>广州公安AI大模型平台（414万）：</strong>4月招标窗口，竞争对手（华为/讯飞/中关村科金）已就位，南威需立即评估入围可能性</li>
+        <li><strong>海康威视年报（4月18日）：</strong>将揭示其AI业务发展策略，南威需年报后第一时间更新竞争评估</li>
+        <li><strong>大华华睿科技港股融资：</strong>将增强其AI视觉场景研发投入，注意无人机+视觉AI方向的新竞争威胁</li>
+        <li><strong>科大讯飞星火V4.0：</strong>推理能力增强将进一步提升其G端私有化部署竞争力，Q2中标窗口需重点防御</li>
+      </ul>
+    </div>
+    <div class="risk-group">
+      <div class="risk-group-title" style="color:#5A9E35">🟢 低风险/利好 — 可跟踪</div>
+      <ul>
+        <li><strong>国家AI+监管政策联动：</strong>公安AI采购政策持续利好，行业整体增长，可推进跨部门AI监管解决方案布局</li>
+        <li><strong>基层AI轻量化套件机会：</strong>县市基层AI场景快速渗透，南威可提炼县市场景实践打包成轻量化方案推广</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- 底部 -->
+  <div class="footer">
+    <p><strong>本报告由南威软件自动化生成</strong> &nbsp;|&nbsp; 数据来源：全网公开信息 &nbsp;|&nbsp; 生成时间：2026年4月4日 10:00</p>
+    <p style="margin-top:6px; color:#CC0000">⚠️ 本报告仅供内部参考，请勿对外传播</p>
+    <p style="margin-top:8px">© 2026 南威软件股份有限公司 · 公安AI情报监测系统</p>
+  </div>
+
+</div>
+</body>
+</html>
