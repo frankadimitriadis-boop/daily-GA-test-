@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Strategic Analysis of Public Security AI - 2026.04.01-04.07</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Microsoft YaHei',Arial,sans-serif;background:#f5f6fa;color:#333;line-height:1.7}
+.container{max-width:1200px;margin:0 auto;padding:20px}
+.cover{background:linear-gradient(135deg,#1A3C6E 0%,#2E5D9E 50%,#1A3C6E 100%);color:#fff;padding:60px 40px;text-align:center;border-radius:16px;margin-bottom:30px;box-shadow:0 8px 32px rgba(26,60,110,0.3)}
+.cover h1{font-size:2.4em;font-weight:700;margin-bottom:8px}
+.cover h2{font-size:1.6em;font-weight:400;opacity:0.9;margin-bottom:20px}
+.cover .subtitle{font-style:italic;opacity:0.8;font-size:0.95em;border-top:1px solid rgba(255,255,255,0.3);padding-top:20px;margin-top:10px}
+.cover .meta{display:flex;justify-content:center;gap:30px;flex-wrap:wrap;margin-top:20px;font-size:0.9em;opacity:0.9}
+.sec-bar{background:#1A3C6E;color:#fff;padding:14px 24px;border-radius:8px;margin:32px 0 16px;font-size:1.15em;font-weight:700;box-shadow:0 2px 8px rgba(26,60,110,0.2)}
+.sec-bar.red{background:#C0392B}
+.sec-bar.green{background:#27ae60}
+.sec-bar.orange{background:#d35400}
+.highlight{padding:14px 18px;border-radius:8px;margin:12px 0;border-left:5px solid #C0392B;background:#fff}
+.hl-red{background:#fff0f0;border-left-color:#c0392b}
+.hl-yellow{background:#fffbf0;border-left-color:#e67e22}
+.hl-blue{background:#f0f7ff;border-left-color:#2980b9}
+.hl-green{background:#f0fff4;border-left-color:#27ae60}
+.hl-purple{background:#f8f0ff;border-left-color:#8e44ad}
+.label{font-weight:700;font-size:0.9em;display:block;margin-bottom:4px}
+.content{font-size:0.95em;color:#444}
+.row{display:flex;gap:16px;flex-wrap:wrap}
+.col{flex:1;min-width:280px}
+table{width:100%;border-collapse:collapse;margin:12px 0;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,0.08)}
+th{background:#1A3C6E;color:#fff;padding:10px 14px;text-align:center;font-size:0.9em;font-weight:600}
+td{padding:9px 14px;border-bottom:1px solid #eee;font-size:0.88em;vertical-align:top}
+tr:nth-child(even){background:#f8f9fa}
+tr:hover{background:#eef4ff}
+.badge{display:inline-block;padding:2px 8px;border-radius:12px;font-size:0.8em;font-weight:700}
+.b-red{background:#ffe5e5;color:#c0392b}
+.b-yellow{background:#fff3cd;color:#856404}
+.b-blue{background:#e3f2fd;color:#1565c0}
+.b-green{background:#e8f5e9;color:#2e7d32}
+.b-purple{background:#f3e5f5;color:#7b1fa2}
+.b-orange{background:#fff3e0;color:#e65100}
+.footer{text-align:center;padding:40px 20px;color:#888;font-size:0.85em;border-top:1px solid #eee;margin-top:40px}
+h3{font-size:1.05em;color:#1A3C6E;margin:20px 0 8px;font-weight:700}
+h4{font-size:0.98em;color:#C0392B;margin:16px 0 6px;font-weight:600}
+ul{margin:6px 0 6px 20px}
+li{margin:4px 0;font-size:0.9em}
+.card{background:#fff;border-radius:12px;padding:20px;box-shadow:0 2px 8px rgba(0,0,0,0.07);margin-bottom:16px}
+.stat-row{display:flex;gap:12px;flex-wrap:wrap;margin:12px 0}
+.stat-box{flex:1;min-width:150px;background:linear-gradient(135deg,#1A3C6E,#2E5D9E);color:#fff;padding:16px;border-radius:10px;text-align:center}
+.stat-num{font-size:1.8em;font-weight:700}
+.stat-label{font-size:0.8em;opacity:0.85;margin-top:4px}
+.action-card{border-left:4px solid;padding:12px 16px;margin:8px 0;border-radius:0 8px 8px 0;background:#fff}
+.ac-red{border-color:#C0392B;background:#fff5f5}
+.ac-blue{border-color:#2980b9;background:#f0f7ff}
+.ac-green{border-color:#27ae60;background:#f0fff4}
+.ac-orange{border-color:#e67e22;background:#fffbf0}
+.radar-container{display:flex;gap:20px;flex-wrap:wrap;margin:12px 0}
+.radar-item{flex:1;min-width:160px;background:#fff;border-radius:8px;padding:12px;box-shadow:0 1px 4px rgba(0,0,0,0.07)}
+.radar-item h4{color:#1A3C6E;font-size:0.95em;border-bottom:2px solid #1A3C6E;padding-bottom:4px;margin:0 0 8px}
+.bar-row{display:flex;align-items:center;gap:8px;margin:4px 0}
+.bar-label{font-size:0.78em;width:60px;text-align:right;color:#666}
+.bar-bg{flex:1;height:8px;background:#eee;border-radius:4px;overflow:hidden}
+.bar-fill{height:100%;border-radius:4px;transition:width 0.8s}
+.bf-blue{background:#1A3C6E}
+.bf-red{background:#C0392B}
+.bf-green{background:#27ae60}
+.bf-orange{background:#e67e22}
+.bf-purple{background:#8e44ad}
+.bar-val{font-size:0.78em;font-weight:700;width:20px;color:#333}
+.signal-box{background:linear-gradient(135deg,#fff7e6,#ffe8cc);border:1px solid #f39c12;border-radius:8px;padding:14px;margin:10px 0}
+.signal-title{color:#e67e22;font-weight:700;font-size:0.9em;margin-bottom:6px}
+.week-badge{display:inline-block;padding:4px 12px;border-radius:20px;font-size:0.75em;font-weight:700;background:#1A3C6E;color:#fff;margin-right:8px}
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- COVER -->
+<div class="cover">
+  <h1>公安AI领域<br>周度战略分析报告</h1>
+  <h2>Weekly Strategic Intelligence Report · Public Security AI</h2>
+  <div class="meta">
+    <span>📅 分析周期：2026年4月1日 — 4月7日</span>
+    <span>📋 第 #004 期</span>
+    <span>🏢 南威公司 · 内部战略参考</span>
+  </div>
+  <div class="subtitle">本报告基于本周公开情报综合分析，数据截至2026年4月7日</div>
+</div>
+
+<!-- KEY STATS -->
+<div class="stat-row">
+  <div class="stat-box"><div class="stat-num">3</div><div class="stat-label">本周核心变局</div></div>
+  <div class="stat-box"><div class="stat-num">100+</div><div class="stat-label">全国大模型采购项目</div></div>
+  <div class="stat-box"><div class="stat-num">4亿+</div><div class="stat-label">全国大模型采购总预算</div></div>
+  <div class="stat-box"><div class="stat-num">500万</div><div class="stat-label">兰州交警大模型中标额</div></div>
+  <div class="stat-box"><div class="stat-num">96%</div><div class="stat-label">银河水滴步态识别准确率</div></div>
+</div>
+
+<!-- 执行摘要 -->
+<div class="sec-bar">执行摘要 Executive Summary</div>
+<div class="row">
+  <div class="col">
+    <div class="highlight hl-red">
+      <span class="label">变局一·技术赛道切换</span>
+      <div class="content">步态识别从专利探索正式进入公安实战标准化落地阶段——银河水滴"水滴神采"3月连发两版升级，符合GA/T 2185-2024国标，实现7×24无感采集，生物识别赛道从"人脸依赖"向"多模态融合"快速演进，是上周大华专利之外竞争加速的有力印证。</div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="highlight hl-yellow">
+      <span class="label">变局二·政策引擎全速</span>
+      <div class="content">十五五"实战应用年"正式确立，AI核心业务覆盖率≥60%量化硬指标细化为10大场景（智能研判、犯罪预测、电诈劝阻等），市县两级智算中心建设启动，公安大模型采购进入100+项目、4亿元+总预算爆发区间。</div>
+    </div>
+  </div>
+  <div class="col">
+    <div class="highlight hl-blue">
+      <span class="label">变局三·交通AI突破口</span>
+      <div class="content">兰州市公安局交警大模型算法服务项目（500万级）本周完成中标，"交通+大模型"成为继刑侦、治安后第三条规模化落地赛道，预算呈SaaS化+算法服务趋势。</div>
+    </div>
+  </div>
+</div>
+
+<!-- 本周关键词 -->
+<div class="sec-bar">本周关键词 Key Intelligence Keywords</div>
+<table>
+  <tr><th>关键词</th><th>事件描述</th><th>紧急度</th></tr>
+  <tr><td>🔵 步态识别实战化</td><td>银河水滴"水滴神采"连续升级，GA/T 2185-2024国标正式落地，步态识别从探索到标准</td><td><span class="badge b-red">紧急</span></td></tr>
+  <tr><td>🔴 大模型采购爆发</td><td>全国超100个项目/4亿元+，公安/政务/医疗全面开花，十五五开局年政策红利兑现</td><td><span class="badge b-red">紧急</span></td></tr>
+  <tr><td>🟡 交警大模型落地</td><td>兰州公安交警大模型算法服务中标，500万级SaaS化新赛道开启，首例交通专用大模型</td><td><span class="badge b-orange">重要</span></td></tr>
+  <tr><td>🟢 十五五实战应用年</td><td>AI覆盖率≥60%量化目标，市县智算中心建设启动，2026年定位"实战应用年、能力落地年"</td><td><span class="badge b-orange">重要</span></td></tr>
+  <tr><td>🟠 Agent智能体爆发</td><td>新华社报道2026为智能体爆发元年，AI规模化落地临界点，警务Agent应用风险与机遇并存</td><td><span class="badge b-yellow">关注</span></td></tr>
+  <tr><td>🔵 南威泉州中标</td><td>中标泉州市公安局城市安全信息系统项目，防守基本盘，福建公安市场持续深耕</td><td><span class="badge b-green">正面</span></td></tr>
+</table>
+
+<!-- 趋势洞察 -->
+<div class="sec-bar">一、趋势洞察 Trend Intelligence</div>
+
+<div class="card">
+  <h3>1.1 AI应用新场景：多模态生物识别进入公安实战期</h3>
+  <div class="signal-box">
+    <div class="signal-title">📡 本周最强信号：步态识别完成"从实验室到实战标准"的跨越</div>
+    <div style="font-size:0.9em">银河水滴"水滴神采"2026年3月17日/3月21日连续升级，GA/T 2185-2024国标落地，标志着步态识别正式进入公安标准采购体系。</div>
+  </div>
+  
+  <h4>银河水滴"水滴神采"升级要点</h4>
+  <div class="row">
+    <div class="col">
+      <ul>
+        <li><strong>双模采集</strong>：受控建库（执法办案中心）+ 无感补录（7×24h自动捕捉）</li>
+        <li><strong>多视角融合</strong>：双摄像机，0°~180°全角度覆盖</li>
+        <li><strong>高精准度</strong>：实测平均检索准确率96%，召回率优于传统方案</li>
+        <li><strong>快速响应</strong>：数据上传延迟&lt;10分钟，满足"黄金72小时"</li>
+      </ul>
+    </div>
+    <div class="col">
+      <ul>
+        <li><strong>入库质量</strong>：智能质检，合格率≥98%</li>
+        <li><strong>跨区域协同</strong>：接入国家级视频图像平台，"一地采集，全国比对"</li>
+        <li><strong>边缘适配</strong>：支持低分辨率、高人流密度、弱网环境</li>
+        <li><strong>标准合规</strong>：符合GA/T 2185-2024，采购友好</li>
+      </ul>
+    </div>
+  </div>
+
+  <h4>场景迁移路径（南威视角）</h4>
+  <table>
+    <tr><th>技术类别</th><th>成熟度</th><th>公安渗透</th><th>竞争烈度</th><th>南威策略</th></tr>
+    <tr><td>人脸识别</td><td>成熟期</td><td>极高（标配）</td><td><span class="badge b-red">红海</span></td><td>维持集成能力</td></tr>
+    <tr><td>人体结构解析</td><td>成长期</td><td>快速扩张</td><td><span class="badge b-orange">激烈</span></td><td>跟随策略，防守</td></tr>
+    <tr><td><strong>步态识别</strong></td><td><span class="badge b-yellow">导入期↑</span></td><td>快速上升，本周爆发</td><td><span class="badge b-blue">蓝海</span></td><td><strong>立项合作/自研，6个月内</strong></td></tr>
+    <tr><td>声纹识别</td><td>萌芽期</td><td>低，侦查辅助</td><td><span class="badge b-green">早期机会</span></td><td>跟踪商汤/声希进展</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>1.2 一线干警需求变化：从"能用"到"好用"的体验革命</h3>
+  <div class="row">
+    <div class="col">
+      <div class="action-card ac-blue">
+        <strong>新诉求①·智能体协同</strong>
+        <p style="font-size:0.9em;margin-top:4px">数智警务专业人才短缺（某分局仅20余名），干警期望AI能像"数字同事"自主完成情报编撰、文书起草、线索碰撞等繁琐事务</p>
+      </div>
+      <div class="action-card ac-blue">
+        <strong>新诉求②·无人机常态化</strong>
+        <p style="font-size:0.9em;margin-top:4px">无人机已从临时保障转向常态巡逻，7×24h值守需求强烈；需AI辅助自动分析无人机回传视频，识别异常行为并自动推送告警</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="action-card ac-orange">
+        <strong>新诉求③·多端一致体验</strong>
+        <p style="font-size:0.9em;margin-top:4px">手机/电脑/平板的体验割裂是高频吐槽点；移动端证据拍照、现场核查功能卡顿、数据同步延迟问题突出</p>
+      </div>
+      <div class="action-card ac-orange">
+        <strong>新诉求④·AI结果可解释</strong>
+        <p style="font-size:0.9em;margin-top:4px">干警希望系统提供"为什么这么判断"的证据链，避免"黑箱焦虑"；重大案件研判中责任追溯需求明显</p>
+      </div>
+    </div>
+  </div>
+  <div class="highlight hl-red">
+    <span class="label">持续吐槽·数据孤岛</span>
+    <div class="content">跨部门、跨区域数据共享仍是老大难，干警反映"明明应该有的数据，就是调不过来"；十五五规划明确将数据治理列为攻坚任务之一。</div>
+  </div>
+</div>
+
+<!-- 竞品深度画像 -->
+<div class="sec-bar red">二、竞品深度画像 Competitor Profile</div>
+
+<div class="card">
+  <h3>2.1 本周最大竞品动作：银河水滴"水滴神采"步态识别系统升级</h3>
+  <p style="color:#666;font-size:0.9em;margin-bottom:12px">选取理由：3月17日、3月21日连续升级，步态识别纳入国家标准体系，是继上周大华获步态专利后同赛道第二强选手的正式实战宣战</p>
+  
+  <h4>SWOT分析：银河水滴"水滴神采"</h4>
+  <div class="row">
+    <div class="col">
+      <div class="action-card ac-green">
+        <strong>S（优势）</strong>
+        <ul style="margin-top:6px">
+          <li>国内步态识别细分龙头，专利护城河深</li>
+          <li>GA/T 2185-2024国标合规，政府采购友好</li>
+          <li>双模采集技术路线领先，无感补录独家</li>
+          <li>实战验证，识别准确率96%</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="action-card ac-orange">
+        <strong>W（劣势）</strong>
+        <ul style="margin-top:6px">
+          <li>聚焦单一赛道，抗风险能力弱</li>
+          <li>品牌认知度低于海康/大华，渠道短板</li>
+          <li>系统孤岛风险，难以嵌入存量平台</li>
+          <li>算力需求高，地市级采购门槛敏感</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="action-card ac-blue">
+        <strong>O（机会）</strong>
+        <ul style="margin-top:6px">
+          <li>十五五感知网络升级，步态识别新增需求大</li>
+          <li>人脸识别遮挡场景失效，步态是刚需替代</li>
+          <li>"一地采集全国比对"打开省级/国家级订单</li>
+          <li>大模型赋能可提升研判决策价值链</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col">
+      <div class="action-card ac-red">
+        <strong>T（威胁）</strong>
+        <ul style="margin-top:6px">
+          <li>大华股份已获步态识别专利，平台优势明显</li>
+          <li>海康威视随时可切入同赛道</li>
+          <li>公安预算收紧可能推迟新品类采购</li>
+          <li>算法持续迭代需要大量标注数据</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="card">
+  <h3>2.2 竞品意图解码</h3>
+  <div class="highlight hl-yellow">
+    <span class="label">核心判断</span>
+    <div class="content">抢占"非人脸生物识别"标准制定权，锁定公安采购的新增预算口袋。</div>
+  </div>
+  <table>
+    <tr><th>意图</th><th>描述</th><th>对南威的影响</th></tr>
+    <tr><td><span class="badge b-red">①刑侦赛道增量</span></td><td>步态识别主攻遮挡/夜间/远距离嫌疑人锁定，刑侦支队是核心目标客户</td><td>南威刑侦模块存在被边缘化风险</td></tr>
+    <tr><td><span class="badge b-orange">②治安防控入口</span></td><td>无感补采方案在派出所/执法办案中心落地，建立长期数据采集飞轮</td><td>悄悄接入公安基础设施，形成竞争优势</td></tr>
+    <tr><td><span class="badge b-yellow">③阻击大华入侵</span></td><td>快速以国标合规性和实战验证形成壁垒，在大华硬件打包销售前锁定算法合同</td><td>中长期软件算法合同被双强挤压</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>2.3 竞品雷达图对比</h3>
+  <div class="radar-container">
+
+    <div class="radar-item">
+      <h4>海康威视</h4>
+      <div class="bar-row"><span class="bar-label">大模型</span><div class="bar-bg"><div class="bar-fill bf-blue" style="width:70%"></div></div><span class="bar-val">7</span></div>
+      <div class="bar-row"><span class="bar-label">视频感知</span><div class="bar-bg"><div class="bar-fill bf-blue" style="width:100%"></div></div><span class="bar-val">10</span></div>
+      <div class="bar-row"><span class="bar-label">生物识别</span><div class="bar-bg"><div class="bar-fill bf-blue" style="width:80%"></div></div><span class="bar-val">8</span></div>
+      <div class="bar-row"><span class="bar-label">情指行</span><div class="bar-bg"><div class="bar-fill bf-blue" style="width:70%"></div></div><span class="bar-val">7</span></div>
+      <div class="bar-row"><span class="bar-label">渠道</span><div class="bar-bg"><div class="bar-fill bf-blue" style="width:100%"></div></div><span class="bar-val">10</span></div>
+      <div class="bar-row"><span class="bar-label">信创合规</span><div class="bar-bg"><div class="bar-fill bf-blue" style="width:80%"></div></div><span class="bar-val">8</span></div>
+    </div>
+
+    <div class="radar-item">
+      <h4>大华股份</h4>
+      <div class="bar-row"><span class="bar-label">大模型</span><div class="bar-bg"><div class="bar-fill bf-orange" style="width:60%"></div></div><span class="bar-val">6</span></div>
+      <div class="bar-row"><span class="bar-label">视频感知</span><div class="bar-bg"><div class="bar-fill bf-orange" style="width:90%"></div></div><span class="bar-val">9</span></div>
+      <div class="bar-row"><span class="bar-label">生物识别</span><div class="bar-bg"><div class="bar-fill bf-orange" style="width:80%"></div></div><span class="bar-val">8↑</span></div>
+      <div class="bar-row"><span class="bar-label">情指行</span><div class="bar-bg"><div class="bar-fill bf-orange" style="width:60%"></div></div><span class="bar-val">6</span></div>
+      <div class="bar-row"><span class="bar-label">渠道</span><div class="bar-bg"><div class="bar-fill bf-orange" style="width:90%"></div></div><span class="bar-val">9</span></div>
+      <div class="bar-row"><span class="bar-label">信创合规</span><div class="bar-bg"><div class="bar-fill bf-orange" style="width:80%"></div></div><span class="bar-val">8</span></div>
+    </div>
+
+    <div class="radar-item">
+      <h4>科大讯飞</h4>
+      <div class="bar-row"><span class="bar-label">大模型</span><div class="bar-bg"><div class="bar-fill bf-purple" style="width:100%"></div></div><span class="bar-val">10</span></div>
+      <div class="bar-row"><span class="bar-label">视频感知</span><div class="bar-bg"><div class="bar-fill bf-purple" style="width:50%"></div></div><span class="bar-val">5</span></div>
+      <div class="bar-row"><span class="bar-label">生物识别</span><div class="bar-bg"><div class="bar-fill bf-purple" style="width:60%"></div></div><span class="bar-val">6</span></div>
+      <div class="bar-row"><span class="bar-label">情指行</span><div class="bar-bg"><div class="bar-fill bf-purple" style="width:80%"></div></div><span class="bar-val">8</span></div>
+      <div class="bar-row"><span class="bar-label">渠道</span><div class="bar-bg"><div class="bar-fill bf-purple" style="width:80%"></div></div><span class="bar-val">8</span></div>
+      <div class="bar-row"><span class="bar-label">信创合规</span><div class="bar-bg"><div class="bar-fill bf-purple" style="width:90%"></div></div><span class="bar-val">9</span></div>
+    </div>
+
+    <div class="radar-item">
+      <h4>银河水滴</h4>
+      <div class="bar-row"><span class="bar-label">大模型</span><div class="bar-bg"><div class="bar-fill bf-green" style="width:40%"></div></div><span class="bar-val">4</span></div>
+      <div class="bar-row"><span class="bar-label">视频感知</span><div class="bar-bg"><div class="bar-fill bf-green" style="width:60%"></div></div><span class="bar-val">6</span></div>
+      <div class="bar-row"><span class="bar-label">生物识别</span><div class="bar-bg"><div class="bar-fill bf-green" style="width:100%"></div></div><span class="bar-val">10★</span></div>
+      <div class="bar-row"><span class="bar-label">情指行</span><div class="bar-bg"><div class="bar-fill bf-green" style="width:30%"></div></div><span class="bar-val">3</span></div>
+      <div class="bar-row"><span class="bar-label">渠道</span><div class="bar-bg"><div class="bar-fill bf-green" style="width:40%"></div></div><span class="bar-val">4</span></div>
+      <div class="bar-row"><span class="bar-label">信创合规</span><div class="bar-bg"><div class="bar-fill bf-green" style="width:70%"></div></div><span class="bar-val">7</span></div>
+    </div>
+
+    <div class="radar-item" style="border:2px solid #C0392B">
+      <h4 style="color:#C0392B">南威软件（自评）</h4>
+      <div class="bar-row"><span class="bar-label">大模型</span><div class="bar-bg"><div class="bar-fill bf-red" style="width:50%"></div></div><span class="bar-val">5</span></div>
+      <div class="bar-row"><span class="bar-label">视频感知</span><div class="bar-bg"><div class="bar-fill bf-red" style="width:60%"></div></div><span class="bar-val">6</span></div>
+      <div class="bar-row"><span class="bar-label">生物识别</span><div class="bar-bg"><div class="bar-fill bf-red" style="width:40%"></div></div><span class="bar-val">4⚠️</span></div>
+      <div class="bar-row"><span class="bar-label">情指行</span><div class="bar-bg"><div class="bar-fill bf-red" style="width:90%"></div></div><span class="bar-val">9★</span></div>
+      <div class="bar-row"><span class="bar-label">渠道</span><div class="bar-bg"><div class="bar-fill bf-red" style="width:70%"></div></div><span class="bar-val">7</span></div>
+      <div class="bar-row"><span class="bar-label">信创合规</span><div class="bar-bg"><div class="bar-fill bf-red" style="width:70%"></div></div><span class="bar-val">7</span></div>
+    </div>
+
+  </div>
+  <div class="highlight hl-red">
+    <span class="label">⚠️ 预警</span>
+    <div class="content">南威在生物识别（4分）和大模型能力（5分）上明显落后行业均值。情指行系统（9分）是核心竞争壁垒，需重点防守和升级，避免被华为安平等入侵。</div>
+  </div>
+</div>
+
+<!-- 招投标风向标 -->
+<div class="sec-bar green">三、招投标风向标 Bidding Intelligence</div>
+
+<div class="card">
+  <h3>3.1 本周中标公告汇总（2026.04.01-04.07）</h3>
+  <table>
+    <tr><th>项目名称</th><th>地区</th><th>预算金额</th><th>技术方案特点</th><th>中标企业</th><th>模式</th></tr>
+    <tr><td><strong>兰州公安交警大模型算法服务（二次）</strong></td><td>甘肃省</td><td><span class="badge b-red">约500万</span></td><td>交警专用大模型算法服务，订阅制</td><td>待公示</td><td><span class="badge b-blue">SaaS算法</span></td></tr>
+    <tr><td>衡水市公安局大模型一体机</td><td>河北省</td><td>待公示</td><td>华鲲振宇+华为+中电数智方案，私有化</td><td><span class="badge b-orange">中电信数智科技</span></td><td><span class="badge b-orange">私有化+硬件</span></td></tr>
+    <tr><td>江源区公安局移动警务数据服务</td><td>吉林省</td><td>小额</td><td>移动警务数据服务</td><td>待公示</td><td>SaaS移动端</td></tr>
+    <tr><td>郑州智慧公安AI警官项目（续）</td><td>河南省</td><td>中型</td><td>AI警官综合平台</td><td>待公示</td><td>平台型</td></tr>
+    <tr><td><strong>南威软件中标泉州公安城市安全系统</strong></td><td>福建省</td><td>中型</td><td>城市安全信息系统完善提升</td><td><span class="badge b-green">南威软件</span></td><td>传统集成+AI升级</td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>3.2 全国大模型采购全景解读</h3>
+  <div class="highlight hl-yellow">
+    <span class="label">全景数据</span>
+    <div class="content">2026年3月下旬，全国多地集中发布AI大模型采购意向，超100个项目，总预算超4亿元，覆盖公安、政务、医疗、教育多行业。</div>
+  </div>
+  <table>
+    <tr><th>分析维度</th><th>上周趋势（0330）</th><th>本周变化（0407）</th><th>预判方向</th></tr>
+    <tr><td>部署模式</td><td>私有化部署为主</td><td><span class="badge b-blue">SaaS算法服务破局（兰州）</span></td><td>软硬分离，SaaS占比逐步上升</td></tr>
+    <tr><td>采购层级</td><td>省/市为主</td><td>市/县加速放量</td><td>县级公安是下一个增量池</td></tr>
+    <tr><td>技术重点</td><td>视频AI+大模型基础平台</td><td>交警专用大模型+步态感知</td><td>垂直场景专业化加速</td></tr>
+    <tr><td>信创要求</td><td>鼓励国产化</td><td><span class="badge b-red">华鲲振宇明确入围</span></td><td>信创合规成采购硬门槛</td></tr>
+    <tr><td>预算规模</td><td>单项100-1000万为主</td><td>500万算法服务占比上升</td><td>算法/服务预算占比提升</td></tr>
+  </table>
+</div>
+
+<!-- 南威应对建议 -->
+<div class="sec-bar">四、南威应对建议 Strategic Actions</div>
+
+<div class="card">
+  <h3>4.1 立即行动（本月内）</h3>
+  <table>
+    <tr><th>行动项</th><th>背景说明</th><th>优先级</th></tr>
+    <tr><td><strong>①情指行2.0紧急立项</strong></td><td>十五五明确情指行一体化2.0为核心攻坚，南威存量客户面临升级需求，需立即启动需求调研和产品规划</td><td><span class="badge b-orange">中</span></td></tr>
+    <tr><td><strong>②步态识别伙伴谈判</strong></td><td>联系银河水滴探讨算法API授权合作，将步态识别集成到南威视频图像平台，填补生物识别短板</td><td><span class="badge b-orange">中高</span></td></tr>
+    <tr><td><strong>③县级公安专项营销</strong></td><td>结合十五五政策机遇，针对县级公安发起专项推进，重点围绕移动警务/智慧政务低门槛产品切入</td><td><span class="badge b-red">高</span></td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>4.2 短期策略（1-3个月）</h3>
+  <table>
+    <tr><th>行动项</th><th>背景说明</th><th>优先级</th></tr>
+    <tr><td><strong>④交警大模型算法服务试点</strong></td><td>兰州模式验证了"交警+大模型SaaS"路线，南威可基于现有交通系统积累开发交警AI算法服务包，抢占SaaS化先机</td><td><span class="badge b-orange">中</span></td></tr>
+    <tr><td><strong>⑤信创合规认证加速</strong></td><td>衡水采购已明确信创要求，南威需尽快完成与华鲲振宇/飞腾等国产算力平台的适配认证，避免被踢出采购清单</td><td><span class="badge b-red">高</span></td></tr>
+    <tr><td><strong>⑥无人机+AI视频方案试点</strong></td><td>一线干警对无人机常态化+AI自动分析需求强烈，可与大疆/纵横UAS合作提供无人机视频AI研判能力</td><td><span class="badge b-yellow">低中</span></td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>4.3 中期规划（3-12个月）</h3>
+  <table>
+    <tr><th>行动项</th><th>背景说明</th><th>优先级</th></tr>
+    <tr><td><strong>⑦打造十五五标杆案例</strong></td><td>抓住2026年"实战应用年"政策窗口，在1-2个客户打造可推广的AI警务标杆案例，用于全国推广和品牌背书</td><td><span class="badge b-red">高</span></td></tr>
+    <tr><td><strong>⑧公安大模型能力补全</strong></td><td>通过与科大讯飞/华为/腾讯大模型合作，引入大模型底座，聚焦情报研判/文书生成/接警辅助三个核心场景</td><td><span class="badge b-red">高</span></td></tr>
+    <tr><td><strong>⑨构建多模态感知合作生态</strong></td><td>与银河水滴（步态）、商汤（声纹）等建立生态合作，以南威情指行平台为枢纽聚合多模态感知能力</td><td><span class="badge b-orange">中</span></td></tr>
+  </table>
+</div>
+
+<div class="card">
+  <h3>4.4 风险警示</h3>
+  <div class="row">
+    <div class="col">
+      <div class="action-card ac-red">
+        <span class="badge b-red">高风险</span> <strong>步态识别生态跑马圈地</strong>
+        <p style="font-size:0.88em;margin-top:4px">大华/银河水滴形成双头垄断后，南威集成门槛大幅提高，需要在格局确定前完成布局</p>
+      </div>
+      <div class="action-card ac-red">
+        <span class="badge b-red">高风险</span> <strong>信创合规缺失</strong>
+        <p style="font-size:0.88em;margin-top:4px">采购硬门槛形成后，不合规产品直接被出局，影响未来12个月订单获取</p>
+      </div>
+    </div>
+    <div class="col">
+      <div class="action-card ac-orange">
+        <span class="badge b-orange">中风险</span> <strong>情指行2.0被华为/腾讯替代</strong>
+        <p style="font-size:0.88em;margin-top:4px">华为安平在情指行赛道发力，南威核心护城河面临威胁，需加速产品升级</p>
+      </div>
+      <div class="action-card ac-blue">
+        <span class="badge b-blue">低风险</span> <strong>大模型采购预算稀释</strong>
+        <p style="font-size:0.88em;margin-top:4px">超100项目中公安占比可能下降，需关注行业市场份额竞争格局变化</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  <p><strong>公安AI领域周度战略分析报告 第#004期</strong></p>
+  <p>分析周期：2026年4月1日 — 4月7日 | 生成时间：2026年4月7日</p>
+  <p>数据来源：公安部官网、政府采购网、传感器专家网、新华社、千里马招标网等公开信源</p>
+  <p style="margin-top:8px;font-style:italic">本报告所有竞品分析内容基于公开信息整理，仅供南威公司内部战略参考使用，不构成任何投资或法律建议</p>
+</div>
+
+</div>
+</body>
+</html>
