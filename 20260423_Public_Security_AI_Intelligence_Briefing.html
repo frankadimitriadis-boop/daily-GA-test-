@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20260423 公安AI情报简报</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: "Microsoft YaHei", "PingFang SC", Arial, sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 20px; }
+        .header { background: linear-gradient(135deg, #161b22 0%, #21262d 100%); border: 1px solid #30363d; border-radius: 12px; padding: 30px; margin-bottom: 24px; }
+        .header h1 { font-size: 28px; font-weight: 700; color: #58a6ff; margin-bottom: 10px; }
+        .header .subtitle { color: #8b949e; font-size: 14px; }
+        .stats { display: flex; gap: 16px; margin-top: 20px; flex-wrap: wrap; }
+        .stat-card { background: #21262d; border: 1px solid #30363d; border-radius: 8px; padding: 16px 24px; min-width: 140px; }
+        .stat-card .num { font-size: 28px; font-weight: 700; color: #58a6ff; }
+        .stat-card .label { font-size: 12px; color: #8b949e; margin-top: 4px; }
+        .risk-high { color: #C00000; font-weight: 600; }
+        .risk-mid { color: #FF8C00; font-weight: 600; }
+        .risk-low { color: #00B050; font-weight: 600; }
+        .section { background: #161b22; border: 1px solid #30363d; border-radius: 12px; margin-bottom: 20px; overflow: hidden; }
+        .section-header { padding: 16px 24px; border-bottom: 1px solid #30363d; display: flex; align-items: center; gap: 12px; }
+        .section-badge { display: inline-block; padding: 4px 12px; border-radius: 20px; font-size: 12px; font-weight: 600; color: #fff; }
+        .section-title { font-size: 16px; font-weight: 600; color: #e6edf3; }
+        .section-count { margin-left: auto; font-size: 12px; color: #8b949e; }
+        .intelligence-card { padding: 20px 24px; border-bottom: 1px solid #21262d; transition: background 0.2s; }
+        .intelligence-card:last-child { border-bottom: none; }
+        .intelligence-card:hover { background: #1c2128; }
+        .card-title { font-size: 15px; font-weight: 600; color: #e6edf3; margin-bottom: 8px; display: flex; align-items: center; gap: 10px; }
+        .card-title .risk-tag { font-size: 11px; padding: 2px 8px; border-radius: 4px; font-weight: 600; }
+        .card-summary { font-size: 13px; color: #8b949e; line-height: 1.7; margin-bottom: 10px; }
+        .card-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px; }
+        .card-source { font-size: 11px; color: #58a6ff; }
+        .card-implication { font-size: 11px; color: #7ee787; background: #0d1a0d; padding: 6px 10px; border-radius: 4px; border-left: 3px solid #238636; flex: 1; min-width: 300px; }
+        .footer { text-align: center; padding: 30px; color: #484f58; font-size: 12px; }
+        .high-alert { border-left: 3px solid #C00000; }
+        .mid-alert { border-left: 3px solid #FF8C00; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🛡️ 每日公安AI情报简报</h1>
+            <div class="subtitle">2026年4月23日 · 第21期 · 自动生成</div>
+            <div class="stats">
+                <div class="stat-card"><div class="num">10</div><div class="label">情报总数</div></div>
+                <div class="stat-card"><div class="num">3</div><div class="label">高风险</div></div>
+                <div class="stat-card"><div class="num">6</div><div class="label">中风险</div></div>
+                <div class="stat-card"><div class="num">2</div><div class="label">低风险</div></div>
+                <div class="stat-card"><div class="num">3</div><div class="label">技术前沿</div></div>
+                <div class="stat-card"><div class="num">5</div><div class="label">竞品动态</div></div>
+                <div class="stat-card"><div class="num">1</div><div class="label">政策热点</div></div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-badge" style="background:#1F4E79">政策与热点</span>
+                <span class="section-title"></span>
+                <span class="section-count">1条</span>
+            </div>
+
+            <div class="intelligence-card risk-低">
+                <div class="card-title">
+                    2026道路交通安全创新与合作大会在南京举办
+                    <span class="risk-tag risk-低">风险:低</span>
+                </div>
+                <div class="card-summary">公安部道路交通安全研究中心等主办，4月21日在南京召开，聚焦智慧交通与AI融合</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://www.mps.gov.cn/n2254098/n4904352/c10455858/content.html" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 交通公安AI应用持续深化，南威可关注智慧交通赛道机会</div>
+                </div>
+            </div>
+</div>
+        <div class="section">
+            <div class="section-header">
+                <span class="section-badge" style="background:#2E75B6">技术前沿</span>
+                <span class="section-title"></span>
+                <span class="section-count">4条</span>
+            </div>
+
+            <div class="intelligence-card risk-中">
+                <div class="card-title">
+                    Kimi K2.6发布并开源
+                    <span class="risk-tag risk-中">风险:中</span>
+                </div>
+                <div class="card-summary">月之暗面4月20日发布Kimi K2.6，可连续编码13小时编写超4000行代码，代码能力持平GPT-5.4，支持Agent集群协同</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://news.qq.com/rain/a/20260421A04Y2M00" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 国产开源代码模型突破，南威需关注AI编程辅助工具对研发效率的提升影响</div>
+                </div>
+            </div>
+
+            <div class="intelligence-card risk-高">
+                <div class="card-title">
+                    商汤绝影发布Sage端侧多模态大模型
+                    <span class="risk-tag risk-高">风险:高</span>
+                </div>
+                <div class="card-summary">商汤4月22日发布Sage大模型，MoE架构32B总参/3B激活，车端实现复杂智能体能力，PinchBench任务完成率94%领跑</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://ai.codefather.cn/news/2046980679383760915" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 商汤加速布局车载AI市场，对南威公安视觉AI业务构成竞争威胁</div>
+                </div>
+            </div>
+
+            <div class="intelligence-card risk-中">
+                <div class="card-title">
+                    OpenAI发布GPT-Image-2图像生成模型
+                    <span class="risk-tag risk-中">风险:中</span>
+                </div>
+                <div class="card-summary">OpenAI于4月22日发布Images 2，已登顶Image Arena排行榜第一，文生图领域242分领先第二名谷歌</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://www.nbd.com.cn/articles/2026-04-22/4352624.html" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 多模态生成能力持续突破，AI生成内容逼真度提升，AI鉴伪需求将进一步凸显</div>
+                </div>
+            </div>
+
+            <div class="intelligence-card risk-中">
+                <div class="card-title">
+                    阿里4月22日发布AI数字人和多模态交互技术
+                    <span class="risk-tag risk-中">风险:中</span>
+                </div>
+                <div class="card-summary">阿里发布含数字人、多模态交互技术新品，HappyHorse-1.0视频大模型已登顶AI Video Arena排行榜</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://finance.sina.com.cn/stock/hkstock/ggscyd/2026-04-20/doc-inhvcrne6842890.shtml" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 阿里加码多模态AI，对南威多媒体AI业务形成竞争参考</div>
+                </div>
+            </div>
+</div>
+        <div class="section">
+            <div class="section-header">
+                <span class="section-badge" style="background:#833C00">竞品动态</span>
+                <span class="section-title"></span>
+                <span class="section-count">5条</span>
+            </div>
+
+            <div class="intelligence-card risk-高">
+                <div class="card-title">
+                    科大讯飞定增40亿元获批4月24日上市
+                    <span class="risk-tag risk-高">风险:高</span>
+                </div>
+                <div class="card-summary">科大讯飞向特定对象发行A股股票约9023万股，发行价格44.33元/股，募集资金40亿元，4月24日深交所上市</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://stock.10jqka.com.cn/20260422/c676183012.shtml" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 科大讯飞融资40亿加码AI，Q1中标22.5亿延续强势，公安私有化部署威胁持续升级</div>
+                </div>
+            </div>
+
+            <div class="intelligence-card risk-中">
+                <div class="card-title">
+                    科大讯飞成立量智开物合资公司布局量子AI
+                    <span class="risk-tag risk-中">风险:中</span>
+                </div>
+                <div class="card-summary">科大讯飞与两仪万象合资成立量智开物，4月22日发布多项AI+量子计算突破成果，探索AI算力新路径</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://aiproducthub.cn/newsflash/liangzhi-kaiwu-first-ai-quantum-entity-company-china-unveiled/" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 科大讯飞布局量子计算赛道，长期或颠覆AI算力格局，南威需跟踪技术演进</div>
+                </div>
+            </div>
+
+            <div class="intelligence-card risk-中">
+                <div class="card-title">
+                    科大讯飞与哈萨克斯坦YPO代表团签署AI合作协议
+                    <span class="risk-tag risk-中">风险:中</span>
+                </div>
+                <div class="card-summary">科大讯飞4月22日接待YPO哈萨克斯坦分会代表团并签署合作协议，涉及通信、金融、零售、物流等多行业AI合作</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://finance.sina.com.cn/wm/2026-04-22/doc-inhvkupy5997574.shtml" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 科大讯飞加速出海中亚市场，南威海外市场拓展面临阻力</div>
+                </div>
+            </div>
+
+            <div class="intelligence-card risk-中">
+                <div class="card-title">
+                    DeepSeek融资谈判估值超200亿美元
+                    <span class="risk-tag risk-中">风险:中</span>
+                </div>
+                <div class="card-summary">4月22日市场消息，腾讯和阿里巴巴正洽谈投资DeepSeek，估值从100亿美元上调至逾200亿美元（约1365亿元）</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://finance.sina.com.cn/wm/2026-04-22/doc-inhvkupw9239015.shtml" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 DeepSeek背靠互联网巨头资金加持，V4发布在即将加速AI应用落地，南威可关注与其合作可能性</div>
+                </div>
+            </div>
+
+            <div class="intelligence-card risk-低">
+                <div class="card-title">
+                    海康机器人智造大会4月22-24日在桐庐举办
+                    <span class="risk-tag risk-低">风险:低</span>
+                </div>
+                <div class="card-summary">海康机器人智造大会在浙江桐庐举办，汇聚智能制造一线管理者，探讨智造升维路径</div>
+                <div class="card-footer">
+                    <a class="card-source" href="https://www.ithome.com/0/939/735.htm" target="_blank">来源链接</a>
+                    <div class="card-implication">📌 海康机器人业务独立发展，智造领域AI应用加速落地</div>
+                </div>
+            </div>
+</div>
+        <div class="section">
+            <div class="section-header">
+                <span class="section-badge" style="background:#8B0000">⚠️ 风险研判</span>
+                <span class="section-title"></span>
+            </div>
+            <div class="intelligence-card">
+                <div class="card-title">综合风险评估</div>
+                <div class="card-summary">
+                    <strong>科大讯飞</strong>融资40亿、量子AI布局、出海加速，三线并进，公安G端私有化部署威胁升至<span class="risk-high">红色警戒</span>。<br>
+                    <strong>商汤绝影Sage</strong>端侧多模态大模型发布，车载AI加速落地，公安视觉AI竞争加剧。<br>
+                    <strong>DeepSeek V4</strong>发布在即（4月下旬），200亿美元估值加持，互联网巨头争相投资，AI应用生态将加速重构。
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <span class="section-badge" style="background:#1F4E79">📊 竞品速览</span>
+                <span class="section-title"></span>
+            </div>
+            <div class="intelligence-card">
+                <div style="overflow-x:auto;">
+                    <table style="width:100%;border-collapse:collapse;font-size:13px;">
+                        <tr style="background:#21262d;color:#e6edf3;">
+                            <th style="padding:10px;border:1px solid #30363d;text-align:left;">竞品</th>
+                            <th style="padding:10px;border:1px solid #30363d;text-align:left;">近期动态</th>
+                            <th style="padding:10px;border:1px solid #30363d;text-align:left;">对南威威胁等级</th>
+                        </tr>
+                        <tr style="background:#161b22;color:#8b949e;">
+                            <td style="padding:10px;border:1px solid #30363d;">科大讯飞</td>
+                            <td style="padding:10px;border:1px solid #30363d;">定增40亿+量子AI+出海签约</td>
+                            <td style="padding:10px;border:1px solid #30363d;" class="risk-high">极高</td>
+                        </tr>
+                        <tr style="background:#21262d;color:#8b949e;">
+                            <td style="padding:10px;border:1px solid #30363d;">商汤科技</td>
+                            <td style="padding:10px;border:1px solid #30363d;">Sage端侧多模态大模型发布</td>
+                            <td style="padding:10px;border:1px solid #30363d;" class="risk-high">高</td>
+                        </tr>
+                        <tr style="background:#161b22;color:#8b949e;">
+                            <td style="padding:10px;border:1px solid #30363d;">DeepSeek</td>
+                            <td style="padding:10px;border:1px solid #30363d;">V4发布在即，估值200亿美元</td>
+                            <td style="padding:10px;border:1px solid #30363d;" class="risk-mid">中</td>
+                        </tr>
+                        <tr style="background:#21262d;color:#8b949e;">
+                            <td style="padding:10px;border:1px solid #30363d;">海康威视</td>
+                            <td style="padding:10px;border:1px solid #30363d;">机器人智造大会+年报一季报披露</td>
+                            <td style="padding:10px;border:1px solid #30363d;" class="risk-mid">中</td>
+                        </tr>
+                        <tr style="background:#161b22;color:#8b949e;">
+                            <td style="padding:10px;border:1px solid #30363d;">大华股份</td>
+                            <td style="padding:10px;border:1px solid #30363d;">年报一季报披露，AI大模型CAGR目标50%</td>
+                            <td style="padding:10px;border:1px solid #30363d;" class="risk-mid">中</td>
+                        </tr>
+                        <tr style="background:#21262d;color:#8b949e;">
+                            <td style="padding:10px;border:1px solid #30363d;">电科数字</td>
+                            <td style="padding:10px;border:1px solid #30363d;">证监会立案持续发酵</td>
+                            <td style="padding:10px;border:1px solid #30363d;color:#00B050;">低</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            数据来源：全网公开信息 | 仅供参考 | 制表时间：2026-04-23<br>
+            公安AI情报监测系统 v2.1
+        </div>
+    </div>
+</body>
+</html>
