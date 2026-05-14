@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>公安AI情报简报 - 第27期 - 2026年5月14日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: "Microsoft YaHei", "Segoe UI", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e0e0e0;
+            line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header {
+            background: linear-gradient(145deg, #1e3a5f, #0d2137);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 24px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .header-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; }
+        .badge {
+            background: linear-gradient(135deg, #1976D2, #1565C0);
+            color: white; padding: 6px 16px; border-radius: 20px;
+            font-size: 14px; font-weight: 600;
+        }
+        .date-info { color: #90CAF9; font-size: 14px; }
+        .main-title {
+            font-size: 32px; font-weight: 700; color: #ffffff;
+            margin-bottom: 8px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle { color: #90CAF9; font-size: 16px; }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 24px;
+        }
+        .stat-card {
+            background: linear-gradient(145deg, #1e3a5f, #16213e);
+            border-radius: 12px; padding: 20px; text-align: center;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .stat-card:hover { transform: translateY(-4px); box-shadow: 0 8px 25px rgba(0,0,0,0.3); }
+        .stat-card.high-risk { border-left: 4px solid #ef5350; }
+        .stat-card.medium-risk { border-left: 4px solid #ffb74d; }
+        .stat-card.low-risk { border-left: 4px solid #66bb6a; }
+        .stat-card.total { border-left: 4px solid #42A5F5; }
+        .stat-number { font-size: 36px; font-weight: 700; color: #ffffff; }
+        .stat-label { font-size: 14px; color: #90CAF9; margin-top: 4px; }
+        .risk-legend { display: flex; gap: 20px; justify-content: center; margin-bottom: 24px; }
+        .legend-item { display: flex; align-items: center; gap: 8px; font-size: 14px; }
+        .legend-dot { width: 12px; height: 12px; border-radius: 50%; }
+        .legend-dot.high { background: #ef5350; }
+        .legend-dot.medium { background: #ffb74d; }
+        .legend-dot.low { background: #66bb6a; }
+        .section-title {
+            font-size: 22px; font-weight: 600; color: #ffffff;
+            margin: 32px 0 16px; padding-bottom: 8px;
+            border-bottom: 2px solid rgba(25, 118, 210, 0.5);
+        }
+        .intelligence-card {
+            background: linear-gradient(145deg, #1e3a5f, #16213e);
+            border-radius: 12px; margin-bottom: 16px; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: transform 0.2s ease;
+        }
+        .intelligence-card:hover { transform: translateX(8px); }
+        .card-header {
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .card-category { display: flex; align-items: center; gap: 10px; }
+        .category-tag {
+            padding: 4px 12px; border-radius: 6px;
+            font-size: 12px; font-weight: 600;
+        }
+        .category-policy { background: rgba(25, 118, 210, 0.3); color: #90CAF9; }
+        .category-tech { background: rgba(76, 175, 80, 0.3); color: #81C784; }
+        .category-competitor { background: rgba(156, 39, 176, 0.3); color: #CE93D8; }
+        .risk-badge { padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; }
+        .risk-high { background: rgba(239, 83, 80, 0.2); color: #ef5350; border: 1px solid rgba(239, 83, 80, 0.4); }
+        .risk-medium { background: rgba(255, 183, 77, 0.2); color: #ffb74d; border: 1px solid rgba(255, 183, 77, 0.4); }
+        .risk-low { background: rgba(102, 187, 106, 0.2); color: #66bb6a; border: 1px solid rgba(102, 187, 106, 0.4); }
+        .card-body { padding: 20px; }
+        .card-title { font-size: 18px; font-weight: 600; color: #ffffff; margin-bottom: 12px; }
+        .card-summary { font-size: 14px; color: #B0BEC5; margin-bottom: 16px; line-height: 1.7; }
+        .card-footer {
+            display: flex; justify-content: space-between; align-items: flex-start;
+            padding-top: 12px; border-top: 1px solid rgba(255,255,255,0.05);
+        }
+        .source { font-size: 12px; color: #78909C; }
+        .insight { font-size: 13px; color: #90CAF9; max-width: 70%; text-align: right; }
+        .data-table {
+            width: 100%; border-collapse: collapse; margin: 24px 0;
+            background: linear-gradient(145deg, #1e3a5f, #16213e);
+            border-radius: 12px; overflow: hidden;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .data-table th {
+            background: rgba(25, 118, 210, 0.3); color: #90CAF9;
+            padding: 14px 12px; text-align: left; font-weight: 600; font-size: 14px;
+        }
+        .data-table td {
+            padding: 12px; border-bottom: 1px solid rgba(255,255,255,0.05);
+            font-size: 13px; color: #e0e0e0;
+        }
+        .data-table tr:last-child td { border-bottom: none; }
+        .data-table tr:hover { background: rgba(255,255,255,0.03); }
+        .footer {
+            text-align: center; padding: 30px; color: #78909C;
+            font-size: 13px; margin-top: 40px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+        .footer a { color: #90CAF9; text-decoration: none; }
+        @media (max-width: 768px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+            .header-top { flex-direction: column; gap: 10px; }
+            .card-footer { flex-direction: column; gap: 10px; }
+            .insight { max-width: 100%; text-align: left; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-top">
+                <span class="badge">第27期</span>
+                <span class="date-info">监测周期：2026年5月12日—5月14日 | 生成时间：2026-05-14</span>
+            </div>
+            <h1 class="main-title">每日公安AI情报简报</h1>
+            <p class="subtitle">南威公司公安AI竞品监测 · 内部资料</p>
+        </div>
+
+        <div class="stats-grid">
+            <div class="stat-card total">
+                <div class="stat-number">10</div>
+                <div class="stat-label">新增情报</div>
+            </div>
+            <div class="stat-card high-risk">
+                <div class="stat-number">2</div>
+                <div class="stat-label">高风险</div>
+            </div>
+            <div class="stat-card medium-risk">
+                <div class="stat-number">6</div>
+                <div class="stat-label">中风险</div>
+            </div>
+            <div class="stat-card low-risk">
+                <div class="stat-number">2</div>
+                <div class="stat-label">低风险</div>
+            </div>
+        </div>
+
+        <div class="risk-legend">
+            <div class="legend-item"><div class="legend-dot high"></div>高风险：需重点关注，潜在威胁或机遇</div>
+            <div class="legend-item"><div class="legend-dot medium"></div>中风险：保持观察，适时布局</div>
+            <div class="legend-item"><div class="legend-dot low"></div>低风险：信息参考，暂无紧迫行动</div>
+        </div>
+
+        <h2 class="section-title">📋 情报汇总表</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th style="width:8%">分类</th>
+                    <th style="width:22%">核心标题</th>
+                    <th style="width:32%">关键内容摘要</th>
+                    <th style="width:13%">来源/日期</th>
+                    <th style="width:25%">对南威的启示/风险</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background: rgba(239, 83, 80, 0.1);">
+                    <td><span class="category-tag category-competitor">竞品动态</span></td>
+                    <td><strong>DeepSeek 500亿创纪录融资，估值3500亿元</strong></td>
+                    <td>DeepSeek启动首轮外部股权融资，计划募资500亿元，估值3500亿元，创中国AI企业史上最大单笔融资纪录，V4.1定档6月发布。</td>
+                    <td>新浪财经/虎嗅<br>2026-05-09/11</td>
+                    <td><span class="risk-badge risk-high">高风险</span><br>DeepSeek资本与估值飙升，政务/公安领域渗透加速，南威面临竞争压力。</td>
+                </tr>
+                <tr style="background: rgba(239, 83, 80, 0.1);">
+                    <td><span class="category-tag category-competitor">竞品动态</span></td>
+                    <td><strong>科大讯飞Q1中标持续强劲，40个中标公告覆盖全国</strong></td>
+                    <td>科大讯飞近期中标公告40个，分布江苏、浙江、山东、安徽、广东等省份，Q1中标金额接近2025年全年规模，大模型"标王"地位稳固。</td>
+                    <td>招标网/南方企业新闻网<br>2026-05-12</td>
+                    <td><span class="risk-badge risk-high">高风险</span><br>科大讯飞G端大模型市场狂奔态势延续，南威竞标压力持续加大。</td>
+                </tr>
+                <tr>
+                    <td><span class="category-tag category-policy">政策与热点</span></td>
+                    <td><strong>中央网信办发布《智能体规范应用与创新发展实施意见》</strong></td>
+                    <td>5月8日，中央网信办印发智能体规范应用与创新发展实施意见，推动大模型等新一代AI与网络空间、物理世界深度融合，加速AI在各领域落地。</td>
+                    <td>中央网信办<br>2026-05-08</td>
+                    <td><span class="risk-badge risk-medium">中风险</span><br>智能体规范明确，政务AI应用标准化进程加快，南威需关注规范合规要求。</td>
+                </tr>
+                <tr>
+                    <td><span class="category-tag category-policy">政策与热点</span></td>
+                    <td><strong>DeepSeek V4.1定档6月发布，全模态覆盖+MCP协议支持</strong></td>
+                    <td>DeepSeek V4.1将于6月发布，新增图像与音频处理能力，原生支持MCP协议和企业级工具链，API价格优势持续。</td>
+                    <td>百度百科/新浪财经<br>2026-05-09</td>
+                    <td><span class="risk-badge risk-medium">中风险</span><br>DeepSeek V4.1全模态能力将强化政务竞争力，南威需加速大模型产品化。</td>
+                </tr>
+                <tr>
+                    <td><span class="category-tag category-tech">技术前沿</span></td>
+                    <td><strong>西安公安2026年部署AI智能体、具身机器人、无人机</strong></td>
+                    <td>西安公安深入挖掘无人机、具身机器人、AI智能体等新技术在警务实战中的应用场景，推进公安机关"新质战斗力"提升。</td>
+                    <td>中新网<br>2026-05-08</td>
+                    <td><span class="risk-badge risk-medium">中风险</span><br>具身智能+AI智能体成为警务新方向，南威需布局相关产品线。</td>
+                </tr>
+                <tr>
+                    <td><span class="category-tag category-tech">技术前沿</span></td>
+                    <td><strong>阿里发布Qwen3.6系列大模型，登顶国产榜首</strong></td>
+                    <td>阿里4月密集发布Qwen3.6系列，含Qwen3.6-Plus等，覆盖编程、智能体等多场景，登顶国产大模型榜单首位。</td>
+                    <td>腾讯新闻/阿里云<br>2026-04-18/05-09</td>
+                    <td><span class="risk-badge risk-medium">中风险</span><br>国内大模型竞争加剧，Qwen3.6能力跃升，政务/警务场景竞争压力加大。</td>
+                </tr>
+                <tr>
+                    <td><span class="category-tag category-competitor">竞品动态</span></td>
+                    <td><strong>海康威视近期中标40个项目，覆盖全国多省份</strong></td>
+                    <td>海康威视近期中标公告40个，主要分布新疆、江西、浙江、宁夏、广西、广东等省份，持续扩大市场覆盖。</td>
+                    <td>招标网<br>2026-05-13</td>
+                    <td><span class="risk-badge risk-medium">中风险</span><br>海康持续扩大市场覆盖，南威需加强区域竞争优势和产品差异化。</td>
+                </tr>
+                <tr>
+                    <td><span class="category-tag category-competitor">竞品动态</span></td>
+                    <td><strong>商汤科技2025年营收超50亿，生成式AI占63.7%</strong></td>
+                    <td>商汤科技2025年总收入增长33%超50亿元，生成式AI占营收63.7%，高盛预测2026年扭亏为盈，"大装置-大模型-应用"体系稳固。</td>
+                    <td>新浪财经/中金公司<br>2026-04-08</td>
+                    <td><span class="risk-badge risk-medium">中风险</span><br>商汤视觉AI优势稳固，生成式AI占比持续提升，南威需差异化竞争。</td>
+                </tr>
+                <tr>
+                    <td><span class="category-tag category-policy">政策与热点</span></td>
+                    <td><strong>兰州高新公安情指中心智慧护平安</strong></td>
+                    <td>兰州市公安局高新分局情指中心实现全天候值守、全方位调度、全维度防控，警务实战可视化大屏实时跳动，支撑指挥调度、情报导侦。</td>
+                    <td>中新网甘肃<br>2026-05-08</td>
+                    <td><span class="risk-badge risk-low">低风险</span><br>情指行一体化建设持续推进，南威可关注相关系统建设机会。</td>
+                </tr>
+                <tr>
+                    <td><span class="category-tag category-competitor">竞品动态</span></td>
+                    <td><strong>电科数字证监会立案持续发酵，AI业务实质仅390万/年</strong></td>
+                    <td>电科数字涉嫌信息披露违法违规，证监会立案持续发酵。广东等区域空窗期延续，AI业务实质仅390万/年。</td>
+                    <td>新浪财经<br>2026-04-30</td>
+                    <td><span class="risk-badge risk-low">低风险</span><br>电科数字公信力受损空窗延续，南威可趁机抢占广东等区域市场。</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2 class="section-title">🔥 重点关注</h2>
+
+        <div class="intelligence-card">
+            <div class="card-header">
+                <div class="card-category">
+                    <span class="category-tag category-competitor">竞品动态</span>
+                    <span class="risk-badge risk-high">高风险</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">DeepSeek 500亿创纪录融资，估值3500亿元</h3>
+                <p class="card-summary">DeepSeek启动首轮外部股权融资，计划募资500亿元，估值3500亿元，创中国AI企业史上最大单笔融资纪录。V4.1定档6月发布，全模态覆盖+MCP协议支持，API价格优势持续。在政务/公安领域渗透加速。</p>
+                <div class="card-footer">
+                    <span class="source">📍 来源：新浪财经/虎嗅 | 2026-05-09/11</span>
+                    <span class="insight">💡 DeepSeek资本与估值飙升，政务/公安领域渗透加速，南威需加速大模型产品化落地。</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="intelligence-card">
+            <div class="card-header">
+                <div class="card-category">
+                    <span class="category-tag category-competitor">竞品动态</span>
+                    <span class="risk-badge risk-high">高风险</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <h3 class="card-title">科大讯飞Q1中标持续强劲，40个中标公告覆盖全国</h3>
+                <p class="card-summary">科大讯飞近期中标公告40个，分布江苏、浙江、山东、安徽、广东等省份，Q1中标金额接近2025年全年规模，大模型"标王"地位稳固。G端大模型市场狂奔态势延续。</p>
+                <div class="card-footer">
+                    <span class="source">📍 来源：招标网/南方企业新闻网 | 2026-05-12</span>
+                    <span class="insight">💡 科大讯飞G端大模型市场保持狂奔态势，南威在智慧警务大模型竞标中面临的压力持续加大。</span>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">📊 竞品动态速览</h2>
+        <table class="data-table">
+            <thead>
+                <tr>
+                    <th>竞品</th>
+                    <th>近期动态</th>
+                    <th>风险评估</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>DeepSeek</strong></td>
+                    <td>V4.1定档6月，500亿融资，估值3500亿，全模态+MCP协议</td>
+                    <td><span class="risk-badge risk-high">高威胁</span></td>
+                </tr>
+                <tr>
+                    <td><strong>科大讯飞</strong></td>
+                    <td>Q1中标40个公告，接近2025年全年规模，"标王"地位稳固</td>
+                    <td><span class="risk-badge risk-high">高威胁</span></td>
+                </tr>
+                <tr>
+                    <td><strong>海康威视</strong></td>
+                    <td>近期中标40个项目，覆盖全国多省份</td>
+                    <td><span class="risk-badge risk-medium">中威胁</span></td>
+                </tr>
+                <tr>
+                    <td><strong>商汤科技</strong></td>
+                    <td>2025年营收超50亿，生成式AI占63.7%，高盛预测2026年扭亏</td>
+                    <td><span class="risk-badge risk-medium">中威胁</span></td>
+                </tr>
+                <tr>
+                    <td><strong>阿里（Qwen）</strong></td>
+                    <td>Qwen3.6系列密集发布，登顶国产大模型榜首</td>
+                    <td><span class="risk-badge risk-medium">中威胁</span></td>
+                </tr>
+                <tr>
+                    <td><strong>电科数字</strong></td>
+                    <td>证监会立案持续发酵，AI业务实质仅390万/年</td>
+                    <td><span class="risk-badge risk-low">低威胁</span></td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p>南威公司 公安AI竞品监测 | 第27期 | 生成时间：2026年5月14日</p>
+            <p>数据来源：公安部官网、中央网信办、海康威视/大华/科大讯飞/商汤科技官网、新浪财经、36kr、腾讯新闻等公开渠道</p>
+            <p>注：本期情报去重参考第23期（5月6日）、第24期（5月8日）、第25期（5月9日）、第26期（5月11日）已报道内容</p>
+        </div>
+    </div>
+</body>
+</html>
