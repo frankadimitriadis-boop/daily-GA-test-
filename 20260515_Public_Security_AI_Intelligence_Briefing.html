@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【第28期】每日公安AI情报简报 | 2026年5月15日</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+            background: linear-gradient(135deg, #0a1628 0%, #1a2a4a 50%, #0d1f3c 100%);
+            min-height: 100vh;
+            color: #e8eef4;
+            padding: 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 20px;
+            background: rgba(20, 40, 80, 0.8);
+            border-radius: 16px;
+            margin-bottom: 24px;
+            border: 1px solid rgba(80, 140, 220, 0.3);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+        .header h1 {
+            font-size: 28px;
+            color: #60a5fa;
+            margin-bottom: 12px;
+            letter-spacing: 2px;
+        }
+        .header .date {
+            color: #93c5fd;
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+        .header .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 16px;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: rgba(30, 60, 120, 0.6);
+            padding: 12px 24px;
+            border-radius: 8px;
+            border: 1px solid rgba(100, 150, 255, 0.2);
+        }
+        .stat-card.high { border-left: 4px solid #ef4444; }
+        .stat-card.medium { border-left: 4px solid #f59e0b; }
+        .stat-card.low { border-left: 4px solid #10b981; }
+        .stat-card span {
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .stat-card.high span { color: #ef4444; }
+        .stat-card.medium span { color: #f59e0b; }
+        .stat-card.low span { color: #10b981; }
+        .stat-card small {
+            color: #94a3b8;
+            font-size: 12px;
+            margin-left: 6px;
+        }
+        .section {
+            background: rgba(20, 40, 80, 0.7);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(80, 140, 220, 0.2);
+        }
+        .section-title {
+            display: flex;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(30, 60, 120, 0.6);
+            border-radius: 8px;
+            margin-bottom: 16px;
+            border-left: 4px solid #60a5fa;
+        }
+        .section-title h2 {
+            color: #60a5fa;
+            font-size: 18px;
+            letter-spacing: 1px;
+        }
+        .section-title .count {
+            margin-left: auto;
+            background: rgba(96, 165, 250, 0.2);
+            color: #60a5fa;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 14px;
+        }
+        .card {
+            background: rgba(30, 50, 90, 0.5);
+            border-radius: 10px;
+            padding: 16px;
+            margin-bottom: 12px;
+            border: 1px solid rgba(100, 150, 255, 0.1);
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            border-color: rgba(96, 165, 250, 0.4);
+            transform: translateX(4px);
+        }
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .risk-badge {
+            padding: 4px 12px;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-right: 12px;
+        }
+        .risk-high { background: rgba(239, 68, 68, 0.2); color: #ef4444; border: 1px solid rgba(239, 68, 68, 0.4); }
+        .risk-medium { background: rgba(245, 158, 11, 0.2); color: #f59e0b; border: 1px solid rgba(245, 158, 11, 0.4); }
+        .risk-low { background: rgba(16, 185, 129, 0.2); color: #10b981; border: 1px solid rgba(16, 185, 129, 0.4); }
+        .card-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #e2e8f0;
+        }
+        .card-body {
+            padding-left: 4px;
+        }
+        .card-body p {
+            font-size: 14px;
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 8px;
+        }
+        .card-body .source {
+            color: #64748b;
+            font-size: 12px;
+            margin-top: 8px;
+        }
+        .implication {
+            background: rgba(96, 165, 250, 0.1);
+            border-left: 3px solid #60a5fa;
+            padding: 10px 14px;
+            margin-top: 10px;
+            border-radius: 0 6px 6px 0;
+            font-size: 13px;
+            color: #93c5fd;
+        }
+        .footer {
+            text-align: center;
+            padding: 24px;
+            color: #64748b;
+            font-size: 13px;
+            border-top: 1px solid rgba(80, 140, 220, 0.2);
+            margin-top: 30px;
+        }
+        @media (max-width: 768px) {
+            .header h1 { font-size: 22px; }
+            .stats { gap: 12px; }
+            .stat-card { padding: 10px 16px; }
+            .stat-card span { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>【第28期】每日公安AI情报简报</h1>
+            <div class="date">生成日期：2026年5月15日</div>
+            <div class="date">监测周期：2026年5月13日—5月15日</div>
+            <div class="stats">
+                <div class="stat-card high"><span>2</span><small>条</small> 高风险</div>
+                <div class="stat-card medium"><span>6</span><small>条</small> 中风险</div>
+                <div class="stat-card low"><span>2</span><small>条</small> 低风险</div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <h2>📋 政策与热点</h2>
+                <span class="count">3条</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-high">高风险</span>
+                    <div class="card-title">《智能体规范应用与创新发展实施意见》发布</div>
+                </div>
+                <div class="card-body">
+                    <p>中央网信办等联合发布，明确智能体在政务、司法、公共安全等领域应用规范，要求备案检测分级管理。</p>
+                    <div class="source">来源：中国网信网 2026-05-08</div>
+                    <div class="implication">⚠️ 公安AI应用将纳入更严格监管，需关注合规要求</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-medium">中风险</span>
+                    <div class="card-title">益阳公安数智引擎成效显著</div>
+                </div>
+                <div class="card-body">
+                    <p>益阳公安构建智能化平台，接入46部门146类数据，2026年电诈案件下降50.2%，命案发案降66.7%。</p>
+                    <div class="source">来源：湖南省公安厅 2026-05-14</div>
+                    <div class="implication">💡 大数据+AI实战模式成为主流，地方标杆可借鉴</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-medium">中风险</span>
+                    <div class="card-title">四川公安5-15打击经济犯罪宣传日</div>
+                </div>
+                <div class="card-body">
+                    <p>四川公安机关开展打击和防范经济犯罪宣传，AI技术在经济犯罪侦查中的应用成为重点。</p>
+                    <div class="source">来源：中国广播网 2026-05-14</div>
+                    <div class="implication">💡 AI+经侦结合成为新方向</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <h2>🔬 技术前沿</h2>
+                <span class="count">2条</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-medium">中风险</span>
+                    <div class="card-title">济源公安AI算力租赁项目落地</div>
+                </div>
+                <div class="card-body">
+                    <p>济源示范区公安局164.5万采购AI算力租赁服务，服务期三年，中标方为中国移动河南公司。</p>
+                    <div class="source">来源：济源公共资源交易中心 2026-05-12</div>
+                    <div class="implication">💡 AI算力租赁模式向公安领域渗透</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-low">低风险</span>
+                    <div class="card-title">2026年AI+智慧警务白皮书发布</div>
+                </div>
+                <div class="card-body">
+                    <p>全2188页白皮书系统阐述AI+智慧警务技术架构，预测2026年智慧警务从单点突破向全场景智能化演进。</p>
+                    <div class="source">来源：搜狐 2026-04-22</div>
+                    <div class="implication">💡 行业标准规范加速形成</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-title">
+                <h2>🏢 竞品动态</h2>
+                <span class="count">5条</span>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-high">高风险</span>
+                    <div class="card-title">DeepSeek V4.1定档6月，500亿融资创纪录</div>
+                </div>
+                <div class="card-body">
+                    <p>DeepSeek首轮融资500亿，估值3500亿，梁文锋个人出资200亿，V4.1将于6月发布，多模态能力再升级。</p>
+                    <div class="source">来源：aiproducthub.cn 2026-05-10</div>
+                    <div class="implication">⚠️ DeepSeek生态加速扩张，公安大模型竞争加剧</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-medium">中风险</span>
+                    <div class="card-title">海康威视2025年度权益分派实施</div>
+                </div>
+                <div class="card-body">
+                    <p>海康威视每10股派7.5元红利，股权登记日5月19日，除权除息日5月20日，整体运营稳健。</p>
+                    <div class="source">来源：新浪财经 2026-05-14</div>
+                    <div class="implication">💡 龙头财务健康，持续投入研发</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-medium">中风险</span>
+                    <div class="card-title">科大讯飞星火大模型国产算力训练再突破</div>
+                </div>
+                <div class="card-body">
+                    <p>讯飞研究院院长刘聪称，星火在国产算力上训练速度超DeepSeek，仍是中国主流大模型唯一全国产算力。</p>
+                    <div class="source">来源：网易 2026-05-06</div>
+                    <div class="implication">💡 讯飞持续强化自主可控标签，G端优势稳固</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-low">低风险</span>
+                    <div class="card-title">海康威视持续中标40个项目</div>
+                </div>
+                <div class="card-body">
+                    <p>海康威视近期中标公告持续更新，覆盖上海、河南、新疆、广东等省份，以视频监控+AI为主。</p>
+                    <div class="source">来源：招标网 2026-05-14</div>
+                    <div class="implication">💡 海康渠道下沉持续，中小项目竞争激烈</div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <span class="risk-badge risk-low">低风险</span>
+                    <div class="card-title">大华股份2026春蕾行动推进</div>
+                </div>
+                <div class="card-body">
+                    <p>大华股份持续推进区县市场战略，春蕾行动覆盖百城，聚焦基层公安智能化改造。</p>
+                    <div class="source">来源：大华官网 2026-04-27</div>
+                    <div class="implication">💡 区县市场争夺加剧，价格竞争压力上升</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>本报告由南威软件自动化生成 | 数据来源：全网公开信息 | 生成时间：2026年5月15日</p>
+        </div>
+    </div>
+</body>
+</html>
