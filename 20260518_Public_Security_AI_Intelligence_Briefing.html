@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20260518 Public Security AI Intelligence Briefing</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif;
+    background: #0D1B2E;
+    color: #E8EDF5;
+    min-height: 100vh;
+  }
+  .header {
+    background: linear-gradient(135deg, #0D1B2E 0%, #1A3A6B 50%, #0D1B2E 100%);
+    border-bottom: 2px solid #2E5FBF;
+    padding: 28px 40px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 80px,
+      rgba(46,95,191,0.05) 80px,
+      rgba(46,95,191,0.05) 81px
+    );
+  }
+  .header-content { position: relative; z-index: 1; }
+  .badge-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .badge {
+    background: #2E5FBF;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .badge.classified { background: #C00000; }
+  .badge.issue { background: #1A6B3C; }
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #8BA8CF;
+    letter-spacing: 0.5px;
+  }
+  .meta-strip {
+    background: #152645;
+    border-top: 1px solid #2E5FBF;
+    border-bottom: 1px solid #2E5FBF;
+    padding: 10px 40px;
+    display: flex;
+    gap: 30px;
+    font-size: 12px;
+    color: #8BA8CF;
+  }
+  .meta-strip span strong { color: #BDD3F5; }
+  .main { padding: 30px 40px; max-width: 1400px; margin: 0 auto; }
+
+  /* Risk Summary */
+  .risk-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .risk-card {
+    border-radius: 6px;
+    padding: 16px 20px;
+    border-left: 4px solid;
+  }
+  .risk-card.high { background: rgba(192,0,0,0.12); border-color: #C00000; }
+  .risk-card.medium { background: rgba(255,165,0,0.1); border-color: #FF8C00; }
+  .risk-card.low { background: rgba(55,86,35,0.2); border-color: #4CAF50; }
+  .risk-card h3 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 8px; }
+  .risk-card.high h3 { color: #FF6B6B; }
+  .risk-card.medium h3 { color: #FFA500; }
+  .risk-card.low h3 { color: #4CAF50; }
+  .risk-card p { font-size: 12px; color: #B0C4DE; line-height: 1.6; }
+
+  /* Section */
+  .section { margin-bottom: 28px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(46,95,191,0.3);
+  }
+  .section-icon {
+    width: 32px; height: 32px;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .section-icon.policy { background: #2E4A7A; color: #fff; }
+  .section-icon.tech { background: #1A6B3C; color: #fff; }
+  .section-icon.competitor { background: #8B1A1A; color: #fff; }
+  .section-title { font-size: 16px; font-weight: 700; color: #E8EDF5; }
+  .section-count {
+    background: rgba(46,95,191,0.2);
+    color: #8BA8CF;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+
+  /* Cards */
+  .cards-grid { display: grid; gap: 12px; }
+  .intel-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(46,95,191,0.2);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .intel-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 3px;
+  }
+  .intel-card.high::before { background: #C00000; }
+  .intel-card.medium::before { background: #FF8C00; }
+  .intel-card.low::before { background: #4CAF50; }
+  .intel-card:hover {
+    background: rgba(46,95,191,0.1);
+    border-color: rgba(46,95,191,0.5);
+    transform: translateY(-1px);
+  }
+  .card-main { grid-column: 1 / -1; }
+  .card-title { font-size: 14px; font-weight: 700; color: #DAEEFF; margin-bottom: 6px; }
+  .card-summary { font-size: 12px; color: #A0B8D0; line-height: 1.65; margin-bottom: 8px; }
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #6B8AB0;
+    font-style: italic;
+  }
+  .risk-badge {
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+  }
+  .risk-badge.HIGH { background: rgba(192,0,0,0.3); color: #FF6B6B; border: 1px solid #C00000; }
+  .risk-badge.MEDIUM { background: rgba(255,140,0,0.2); color: #FFA500; border: 1px solid #FF8C00; }
+  .risk-badge.LOW { background: rgba(76,175,80,0.15); color: #4CAF50; border: 1px solid #4CAF50; }
+  .card-insight {
+    background: rgba(46,95,191,0.08);
+    border: 1px solid rgba(46,95,191,0.2);
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #B8D0F0;
+    line-height: 1.5;
+  }
+  .card-insight::before { content: "💡 "; }
+
+  /* Footer */
+  .page-footer {
+    background: #152645;
+    border-top: 2px solid #2E5FBF;
+    padding: 16px 40px;
+    text-align: center;
+    font-size: 11px;
+    color: #5A7A9A;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .header { padding: 20px; }
+    .main { padding: 20px; }
+    .risk-summary { grid-template-columns: 1fr; }
+    .meta-strip { flex-direction: column; gap: 6px; padding: 10px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-content">
+    <div class="badge-row">
+      <span class="badge classified">内部参阅</span>
+      <span class="badge issue">第28期</span>
+      <span class="badge">2026-05-18</span>
+    </div>
+    <h1>每日公安AI情报简报</h1>
+    <div class="subtitle">Public Security AI Intelligence Daily Briefing | 南威软件集团 · 公安AI竞品情报中心</div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <span><strong>监测周期：</strong>2026年5月15日 - 5月18日</span>
+  <span><strong>情报总数：</strong>10条</span>
+  <span><strong>政策热点：</strong>3条</span>
+  <span><strong>技术前沿：</strong>3条</span>
+  <span><strong>竞品动态：</strong>4条</span>
+  <span><strong>生成时间：</strong>2026-05-18 10:00</span>
+</div>
+
+<div class="main">
+
+  <!-- 风险摘要 -->
+  <div class="risk-summary">
+    <div class="risk-card high">
+      <h3>🔴 高风险 (HIGH)</h3>
+      <p>AI换脸诈骗成金融侵权新重灾区 · 电科数字被罚300万元信披违规坐实</p>
+    </div>
+    <div class="risk-card medium">
+      <h3>🟡 中风险 (MEDIUM)</h3>
+      <p>国家具身智能应用中试基地落户杭州 · 西安公安部署AI智能体/机器人 · 讯飞强化全国产算力标签</p>
+    </div>
+    <div class="risk-card low">
+      <h3>🟢 低风险 (LOW)</h3>
+      <p>具身智能进入快速发展期 · 海康威视权益分派实施 · 商汤技术+场景双轮驱动</p>
+    </div>
+  </div>
+
+  <!-- 政策与热点 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon policy">政</div>
+      <div class="section-title">政策与热点</div>
+      <span class="section-count">3条</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="intel-card high">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge HIGH">HIGH</span>
+          </div>
+          <div class="card-title">AI换脸诈骗成金融侵权新重灾区，银行员工被骗20万</div>
+          <div class="card-summary">据5月15日全国投资者保护宣传日披露，AI换脸冒充银行员工诈骗20万成新型金融骗局，深度伪造诈骗向多行业扩散。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-05-14</span>
+          </div>
+          <div class="card-insight">AI换脸诈骗态势严峻，公安AI鉴伪需求持续旺盛，南威可布局人脸防伪检测能力</div>
+        </div>
+      </div>
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+          </div>
+          <div class="card-title">国家人工智能应用中试基地（具身智能）落户杭州</div>
+          <div class="card-summary">5月16日，国内首个聚焦具身智能方向的国家级人工智能应用中试基地在杭州滨江正式揭牌，涵盖芯片、算力、本体、模型研发到场景应用全链条。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-05-17</span>
+          </div>
+          <div class="card-insight">具身智能从实验室走向产业落地，公安机器人应用将获国家级平台支撑，需关注技术标准制定窗口期</div>
+        </div>
+      </div>
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+          </div>
+          <div class="card-title">杭州为具身智能机器人立法，全国首部地方性法规出台</div>
+          <div class="card-summary">《杭州市促进具身智能机器人产业发展条例》近日经审议通过，系全国首部聚焦具身智能机器人领域的地方性法规，6月起施行。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪科技，2026-05-01</span>
+          </div>
+          <div class="card-insight">法规落地将加速具身智能在公安巡逻、审讯等场景的合规部署，标准制定权成为争夺焦点</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 技术前沿 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon tech">技</div>
+      <div class="section-title">技术前沿</div>
+      <span class="section-count">3条</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+          </div>
+          <div class="card-title">西安公安2026年部署AI智能体、具身机器人、无人机</div>
+          <div class="card-summary">西安深入挖掘无人机、具身机器人、AI智能体等新技术在警务实战中的应用场景，打造新质战斗力。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 中新网，2026-05-09</span>
+          </div>
+          <div class="card-insight">西安公安树立AI实战应用标杆，全国公安将跟进，讯飞、商汤、海康等争夺头部合作伙伴</div>
+        </div>
+      </div>
+
+      <div class="intel-card low">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge LOW">LOW</span>
+          </div>
+          <div class="card-title">具身智能机器人加速实景应用，多家新生力量入场</div>
+          <div class="card-summary">具身智能机器人发展势头强劲，吸引普罗宇宙机器人等新生力量入场，立足工业场景实际需求按需研发。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 中国新闻网，2026-05-13</span>
+          </div>
+          <div class="card-insight">具身智能进入快速发展期，公安场景应用前景广阔，商业化进程加速</div>
+        </div>
+      </div>
+
+      <div class="intel-card low">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge LOW">LOW</span>
+          </div>
+          <div class="card-title">2026年AI+智慧警务白皮书发布，智慧警务全场景智能化演进</div>
+          <div class="card-summary">全2188页白皮书系统阐述AI+智慧警务技术架构，预测2026年智慧警务从单点突破向全场景智能化演进。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 搜狐，2026-04-22</span>
+          </div>
+          <div class="card-insight">行业标准规范加速形成，南威需对标最新技术架构，保持产品竞争力</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 竞品动态 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon competitor">竞</div>
+      <div class="section-title">竞品动态</div>
+      <span class="section-count">4条</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="intel-card high">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge HIGH">HIGH</span>
+            <span style="font-size:11px;color:#8BA8CF;font-weight:700;">电科数字</span>
+          </div>
+          <div class="card-title">电科数字被罚300万元，卫星互联网业务误导性陈述坐实</div>
+          <div class="card-summary">5月15日晚，电科数字公告收到行政处罚事先告知书，因在上证e互动平台披露的卫星互联网业务信息存在误导性陈述，合计被罚300万元。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 腾讯新闻，2026-05-16</span>
+          </div>
+          <div class="card-insight">风险：HIGH | 电科数字信披违规坐实，AI业务实质仅390万/年，广东区域空窗期延续，南威可趁机争夺其原有客户</div>
+        </div>
+      </div>
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+            <span style="font-size:11px;color:#8BA8CF;font-weight:700;">科大讯飞</span>
+          </div>
+          <div class="card-title">科大讯飞星火大模型国产算力训练再突破，仍为中国唯一全国产算力</div>
+          <div class="card-summary">讯飞研究院院长刘聪称，星火在国产算力上训练速度超DeepSeek，仍是中国主流大模型唯一全国产算力。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 网易，2026-05-06</span>
+          </div>
+          <div class="card-insight">风险：MEDIUM | 讯飞持续强化自主可控标签，G端公安市场优势稳固，南威需差异化竞争</div>
+        </div>
+      </div>
+
+      <div class="intel-card low">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge LOW">LOW</span>
+            <span style="font-size:11px;color:#8BA8CF;font-weight:700;">海康威视</span>
+          </div>
+          <div class="card-title">海康威视2025年度权益分派实施，每10股派7.5元</div>
+          <div class="card-summary">海康威视每10股派7.5元红利，股权登记日5月19日，除权除息日5月20日，整体运营稳健。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-05-14</span>
+          </div>
+          <div class="card-insight">南威启示：海康财务健康，持续研发投入，关注其在中标公告中的技术参数变化</div>
+        </div>
+      </div>
+
+      <div class="intel-card low">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge LOW">LOW</span>
+            <span style="font-size:11px;color:#8BA8CF;font-weight:700;">商汤科技</span>
+          </div>
+          <div class="card-title">商汤善惠机器人小店落地上海，计划年底完成百家门店布局</div>
+          <div class="card-summary">商汤科技旗下商汤善惠推出SenseMartGo烧卖购机器人小店，率先落地上海，计划2026年底完成百家门店布局。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-05-12</span>
+          </div>
+          <div class="card-insight">南威启示：商汤从纯技术转向技术+场景双轮驱动，零售场景落地验证技术可行性后或向公安场景延伸</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="page-footer">
+  <p>南威软件集团 · 公安AI竞品情报中心 | 第28期 | 2026年5月18日 | 监测周期：2026年5月15日 - 5月18日</p>
+  <p style="margin-top:4px;">本报告基于公开情报汇总，仅供内部决策参考，请勿对外传播</p>
+</div>
+
+</body>
+</html>
