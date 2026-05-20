@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>20260520 Public Security AI Intelligence Briefing</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Microsoft YaHei', 'Segoe UI', Arial, sans-serif;
+    background: #0D1B2E;
+    color: #E8EDF5;
+    min-height: 100vh;
+  }
+  .header {
+    background: linear-gradient(135deg, #0D1B2E 0%, #1A3A6B 50%, #0D1B2E 100%);
+    border-bottom: 2px solid #2E5FBF;
+    padding: 28px 40px 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .header::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: repeating-linear-gradient(
+      90deg,
+      transparent,
+      transparent 80px,
+      rgba(46,95,191,0.05) 80px,
+      rgba(46,95,191,0.05) 81px
+    );
+  }
+  .header-content { position: relative; z-index: 1; }
+  .badge-row { display: flex; align-items: center; gap: 12px; margin-bottom: 10px; }
+  .badge {
+    background: #2E5FBF;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 3px 10px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+  }
+  .badge.classified { background: #C00000; }
+  .badge.issue { background: #1A6B3C; }
+  h1 {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    letter-spacing: 2px;
+    margin-bottom: 6px;
+  }
+  .subtitle {
+    font-size: 13px;
+    color: #8BA8CF;
+    letter-spacing: 0.5px;
+  }
+  .meta-strip {
+    background: #152645;
+    border-top: 1px solid #2E5FBF;
+    border-bottom: 1px solid #2E5FBF;
+    padding: 10px 40px;
+    display: flex;
+    gap: 30px;
+    font-size: 12px;
+    color: #8BA8CF;
+  }
+  .meta-strip span strong { color: #BDD3F5; }
+  .main { padding: 30px 40px; max-width: 1400px; margin: 0 auto; }
+
+  .risk-summary {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 30px;
+  }
+  .risk-card {
+    border-radius: 6px;
+    padding: 16px 20px;
+    border-left: 4px solid;
+  }
+  .risk-card.high { background: rgba(192,0,0,0.12); border-color: #C00000; }
+  .risk-card.medium { background: rgba(255,165,0,0.1); border-color: #FF8C00; }
+  .risk-card.low { background: rgba(55,86,35,0.2); border-color: #4CAF50; }
+  .risk-card h3 { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; margin-bottom: 8px; }
+  .risk-card.high h3 { color: #FF6B6B; }
+  .risk-card.medium h3 { color: #FFA500; }
+  .risk-card.low h3 { color: #4CAF50; }
+  .risk-card p { font-size: 12px; color: #B0C4DE; line-height: 1.6; }
+
+  .section { margin-bottom: 28px; }
+  .section-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(46,95,191,0.3);
+  }
+  .section-icon {
+    width: 32px; height: 32px;
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .section-icon.policy { background: #2E4A7A; color: #fff; }
+  .section-icon.tech { background: #1A6B3C; color: #fff; }
+  .section-icon.competitor { background: #8B1A1A; color: #fff; }
+  .section-title { font-size: 16px; font-weight: 700; color: #E8EDF5; }
+  .section-count {
+    background: rgba(46,95,191,0.2);
+    color: #8BA8CF;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+
+  .cards-grid { display: grid; gap: 12px; }
+  .intel-card {
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(46,95,191,0.2);
+    border-radius: 8px;
+    padding: 16px 20px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 12px;
+    transition: all 0.2s;
+    position: relative;
+    overflow: hidden;
+  }
+  .intel-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    width: 3px;
+  }
+  .intel-card.high::before { background: #C00000; }
+  .intel-card.medium::before { background: #FF8C00; }
+  .intel-card.low::before { background: #4CAF50; }
+  .intel-card:hover {
+    background: rgba(46,95,191,0.1);
+    border-color: rgba(46,95,191,0.5);
+    transform: translateY(-1px);
+  }
+  .card-main { grid-column: 1 / -1; }
+  .card-title { font-size: 14px; font-weight: 700; color: #DAEEFF; margin-bottom: 6px; }
+  .card-summary { font-size: 12px; color: #A0B8D0; line-height: 1.65; margin-bottom: 8px; }
+  .card-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .card-source {
+    font-size: 11px;
+    color: #6B8AB0;
+    font-style: italic;
+  }
+  .risk-badge {
+    font-size: 10px;
+    font-weight: 800;
+    padding: 2px 8px;
+    border-radius: 3px;
+    letter-spacing: 1px;
+  }
+  .risk-badge.HIGH { background: rgba(192,0,0,0.3); color: #FF6B6B; border: 1px solid #C00000; }
+  .risk-badge.MEDIUM { background: rgba(255,140,0,0.2); color: #FFA500; border: 1px solid #FF8C00; }
+  .risk-badge.LOW { background: rgba(76,175,80,0.15); color: #4CAF50; border: 1px solid #4CAF50; }
+  .card-insight {
+    background: rgba(46,95,191,0.08);
+    border: 1px solid rgba(46,95,191,0.2);
+    border-radius: 4px;
+    padding: 8px 12px;
+    margin-top: 8px;
+    font-size: 12px;
+    color: #B8D0F0;
+    line-height: 1.5;
+  }
+  .card-insight::before { content: "💡 "; }
+
+  .page-footer {
+    background: #152645;
+    border-top: 2px solid #2E5FBF;
+    padding: 16px 40px;
+    text-align: center;
+    font-size: 11px;
+    color: #5A7A9A;
+    margin-top: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .header { padding: 20px; }
+    .main { padding: 20px; }
+    .risk-summary { grid-template-columns: 1fr; }
+    .meta-strip { flex-direction: column; gap: 6px; padding: 10px 20px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-content">
+    <div class="badge-row">
+      <span class="badge classified">内部参阅</span>
+      <span class="badge issue">第30期</span>
+      <span class="badge">2026-05-20</span>
+    </div>
+    <h1>每日公安AI情报简报</h1>
+    <div class="subtitle">Public Security AI Intelligence Daily Briefing | 南威软件集团 · 公安AI竞品情报中心</div>
+  </div>
+</div>
+
+<div class="meta-strip">
+  <span><strong>监测周期：</strong>2026年5月16日 - 5月20日</span>
+  <span><strong>情报总数：</strong>10条</span>
+  <span><strong>政策热点：</strong>3条</span>
+  <span><strong>技术前沿：</strong>3条</span>
+  <span><strong>竞品动态：</strong>4条</span>
+  <span><strong>生成时间：</strong>2026-05-20 10:00</span>
+</div>
+
+<div class="main">
+
+  <!-- 风险摘要 -->
+  <div class="risk-summary">
+    <div class="risk-card high">
+      <h3>🔴 高风险 (HIGH)</h3>
+      <p>AI换脸诈骗持续高发 · 国家具身智能标准体系2026版发布标志行业规范化</p>
+    </div>
+    <div class="risk-card medium">
+      <h3>🟡 中风险 (MEDIUM)</h3>
+      <p>杭州具身智能立法施行 · 2026政府工作报告明确智慧警务方向 · 中美AI博弈升级</p>
+    </div>
+    <div class="risk-card low">
+      <h3>🟢 低风险 (LOW)</h3>
+      <p>DeepSeek V4.1定档6月 · 科大讯飞Q1中标强劲 · 具身机器人场景大赛举行</p>
+    </div>
+  </div>
+
+  <!-- 政策与热点 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon policy">政</div>
+      <div class="section-title">政策与热点</div>
+      <span class="section-count">3条</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="intel-card high">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge HIGH">HIGH</span>
+          </div>
+          <div class="card-title">2026年政府工作报告明确智慧警务方向，深化主动警务/预防警务</div>
+          <div class="card-summary">2026年政府工作报告中涉公安领域内容明确：依托大数据、人工智能等科技手段，深化主动警务、预防警务，搭建智慧安防、风险预警平台，提升案件精准打击、隐患动态管控、治安态势感知能力。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 平顶山市政府官网，2026-05-08</span>
+          </div>
+          <div class="card-insight">国家层面明确智慧警务战略方向，AI赋能成为公安现代化核心驱动力。南威需对标政策方向，加速产品标准化合规建设。</div>
+        </div>
+      </div>
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+          </div>
+          <div class="card-title">全国首部！杭州为具身智能机器人立法，5月1日起正式施行</div>
+          <div class="card-summary">《杭州市促进具身智能机器人产业发展条例》5月1日起正式施行，系全国首部聚焦具身智能机器人领域的地方性法规，鼓励公共机构开放应用场景，探索"合作创新采购"机制。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-05-01</span>
+          </div>
+          <div class="card-insight">具身智能进入法规监管时代，公安场景应用将获合规保障。南威可探索与杭州公安合作试点，积累具身机器人应用经验。</div>
+        </div>
+      </div>
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+          </div>
+          <div class="card-title">国家具身智能标准体系2026版发布，涵盖人形机器人全产业链</div>
+          <div class="card-summary">2026年3月，我国正式发布首个覆盖人形机器人全产业链、全生命周期的《人形机器人与具身智能标准体系（2026版）》，涵盖基础共性、类脑计算、安全伦理等六大板块。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-05-11</span>
+          </div>
+          <div class="card-insight">行业标准体系建立，具身智能规范化发展提速。南威需关注标准制定进展，争取参与行业标准编制。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 技术前沿 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon tech">技</div>
+      <div class="section-title">技术前沿</div>
+      <span class="section-count">3条</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+          </div>
+          <div class="card-title">2026杭州国际具身机器人场景应用大赛举行，机器人"大展拳脚"</div>
+          <div class="card-summary">5月15日，2026杭州国际具身机器人场景应用大赛开幕，主题"智启未来，场景无界"。200多支团队同台竞技，展示人形机器人、四足机器人在体育竞技、救援、巡检等领域的最新应用。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 人民网，2026-05-15</span>
+          </div>
+          <div class="card-insight">具身智能从实验室走向多元场景，公安巡逻、审讯等场景应用前景广阔。南威需布局机器人集成能力。</div>
+        </div>
+      </div>
+
+      <div class="intel-card low">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge LOW">LOW</span>
+          </div>
+          <div class="card-title">2026年AI+智慧警务白皮书发布，2188页系统阐述技术架构</div>
+          <div class="card-summary">全2188页白皮书系统阐述AI+智慧警务技术架构，预测2026年智慧警务从单点突破向全场景智能化演进，涵盖视频结构化、大模型赋能、情指行一体化等核心能力。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 搜狐，2026-04-22</span>
+          </div>
+          <div class="card-insight">行业规范持续完善，南威可参照白皮书技术架构，优化产品标准化水平。</div>
+        </div>
+      </div>
+
+      <div class="intel-card low">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge LOW">LOW</span>
+          </div>
+          <div class="card-title">建设银行全方位赋能具身智能产业，机器人金融场景落地</div>
+          <div class="card-summary">建设银行积极融入具身智能产业发展，持续推进产品创新，助力畅通"科技-产业-金融"良性循环，机械臂、四足机器人、人形机器人等金融场景应用加速落地。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 人民网，2026-05-15</span>
+          </div>
+          <div class="card-insight">金融资本加速具身智能商业化，公安场景有望获得更多资本支持。南威可探索产融结合路径。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- 竞品动态 -->
+  <div class="section">
+    <div class="section-header">
+      <div class="section-icon competitor">竞</div>
+      <div class="section-title">竞品动态</div>
+      <span class="section-count">4条</span>
+    </div>
+    <div class="cards-grid">
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+            <span style="font-size:11px;color:#8BA8CF;font-weight:700;">DeepSeek</span>
+          </div>
+          <div class="card-title">DeepSeek V4.1定档6月发布，500亿融资创纪录</div>
+          <div class="card-summary">DeepSeek V4.1将于6月发布，新增图像与音频处理能力，原生支持MCP协议和企业级工具链。首轮外部股权融资500亿元，估值3500亿元，创始人梁文锋个人出资200亿元。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-05-09/14</span>
+          </div>
+          <div class="card-insight">DeepSeek资本实力大增，V4.1全模态能力将强化政务竞争力。南威需加速大模型产品化落地。</div>
+        </div>
+      </div>
+
+      <div class="intel-card medium">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge MEDIUM">MEDIUM</span>
+            <span style="font-size:11px;color:#8BA8CF;font-weight:700;">科大讯飞</span>
+          </div>
+          <div class="card-title">科大讯飞Q1中标持续强劲，40个中标公告覆盖全国</div>
+          <div class="card-summary">科大讯飞近期中标公告40个，分布江苏、浙江、山东、安徽、广东等省份，Q1中标金额接近2025年全年规模，大模型"标王"地位稳固。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 招标网，2026-05-12</span>
+          </div>
+          <div class="card-insight">科大讯飞G端大模型市场狂奔态势延续，南威在智慧警务大模型竞标中面临的压力持续加大。</div>
+        </div>
+      </div>
+
+      <div class="intel-card low">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge LOW">LOW</span>
+            <span style="font-size:11px;color:#8BA8CF;font-weight:700;">海康威视</span>
+          </div>
+          <div class="card-title">海康威视持续扩大市场覆盖，近期中标40个项目</div>
+          <div class="card-summary">海康威视近期中标公告40个，主要分布新疆、江西、浙江、宁夏、广西、广东等省份，持续扩大市场覆盖，2025年度权益分派每10股派7.5元。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-05-14</span>
+          </div>
+          <div class="card-insight">海康市场覆盖持续扩大，南威需加强区域竞争优势和产品差异化。</div>
+        </div>
+      </div>
+
+      <div class="intel-card low">
+        <div class="card-main">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span class="risk-badge LOW">LOW</span>
+            <span style="font-size:11px;color:#8BA8CF;font-weight:700;">商汤科技</span>
+          </div>
+          <div class="card-title">商汤科技2025年营收超50亿，生成式AI占63.7%</div>
+          <div class="card-summary">商汤科技2025年总收入增长33%超50亿元，生成式AI占营收63.7%，高盛预测2026年扭亏为盈，"大装置-大模型-应用"体系稳固。</div>
+          <div class="card-footer">
+            <span class="card-source">📰 新浪财经，2026-04-08</span>
+          </div>
+          <div class="card-insight">商汤视觉AI优势稳固，生成式AI占比持续提升，南威需差异化竞争。</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="page-footer">
+  <p>南威软件集团 · 公安AI竞品情报中心 | 第30期 | 2026年5月20日 | 监测周期：2026年5月16日 - 5月20日</p>
+  <p style="margin-top:4px;">本报告基于公开情报汇总，仅供内部决策参考，请勿对外传播</p>
+</div>
+
+</body>
+</html>
