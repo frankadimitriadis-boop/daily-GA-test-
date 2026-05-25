@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Weekly Strategic Analysis of Public Security AI | 2026.05.19-25</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif; background: #f0f2f5; color: #1f3964; font-size: 14px; line-height: 1.6; }
+  .container { max-width: 1100px; margin: 0 auto; padding: 20px; }
+
+  /* Header */
+  .report-header { background: linear-gradient(135deg, #1f3964 0%, #2e75b6 100%); color: #fff; padding: 40px 30px; border-radius: 12px; margin-bottom: 24px; text-align: center; box-shadow: 0 4px 20px rgba(31,57,100,0.3); }
+  .report-header h1 { font-size: 28px; font-weight: 700; margin-bottom: 8px; }
+  .report-header .subtitle { font-size: 16px; opacity: 0.9; margin-bottom: 4px; }
+  .report-header .meta { font-size: 13px; opacity: 0.7; margin-top: 12px; }
+  .report-header .badge { display: inline-block; background: rgba(255,255,255,0.2); padding: 4px 16px; border-radius: 20px; font-size: 12px; margin-top: 10px; }
+
+  /* Keywords */
+  .kw-section { margin-bottom: 24px; }
+  .kw-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+  .kw-card { background: #fff; border-radius: 10px; padding: 20px; text-align: center; box-shadow: 0 2px 12px rgba(0,0,0,0.08); transition: transform 0.2s; }
+  .kw-card:hover { transform: translateY(-3px); }
+  .kw-card .icon { font-size: 32px; margin-bottom: 8px; }
+  .kw-card h3 { font-size: 15px; color: #1f3964; margin-bottom: 6px; }
+  .kw-card p { font-size: 12px; color: #555; line-height: 1.4; }
+  .kw-card.blue { border-top: 4px solid #2e75b6; }
+  .kw-card.red { border-top: 4px solid #c00000; }
+  .kw-card.gold { border-top: 4px solid #ff d700; }
+
+  /* Section */
+  .section { background: #fff; border-radius: 10px; padding: 24px; margin-bottom: 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.08); }
+  .section-title { font-size: 18px; font-weight: 700; color: #1f3964; margin-bottom: 16px; padding-bottom: 10px; border-bottom: 2px solid #2e75b6; display: flex; align-items: center; gap: 8px; }
+  .section-title .num { background: #1f3964; color: #fff; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 14px; }
+
+  /* Subsection */
+  .sub-title { font-size: 15px; font-weight: 600; color: #2e75b6; margin: 16px 0 10px; }
+
+  /* Tables */
+  table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 13px; }
+  thead { background: #1f3964; color: #fff; }
+  th { padding: 10px 8px; text-align: center; font-weight: 600; }
+  td { padding: 8px 8px; text-align: center; border-bottom: 1px solid #e8e8e8; }
+  tr:nth-child(even) { background: #f0f6ff; }
+  tr:nth-child(odd) { background: #fff; }
+  tr:hover { background: #e8f4fd; }
+
+  /* SWOT */
+  .swot-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .swot-card { border-radius: 8px; padding: 14px; color: #fff; }
+  .swot-card.s { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+  .swot-card.w { background: linear-gradient(135deg, #e74c3c, #c0392b); }
+  .swot-card.o { background: linear-gradient(135deg, #2980b9, #3498db); }
+  .swot-card.t { background: linear-gradient(135deg, #8e44ad, #9b59b6); }
+  .swot-card h4 { font-size: 13px; margin-bottom: 8px; opacity: 0.9; }
+  .swot-card p { font-size: 12px; line-height: 1.5; white-space: pre-line; }
+
+  /* Tags */
+  .tag { display: inline-block; padding: 2px 10px; border-radius: 12px; font-size: 11px; font-weight: 600; }
+  .tag-red { background: #fd5353; color: #fff; }
+  .tag-yellow { background: #f39c12; color: #fff; }
+  .tag-green { background: #27ae60; color: #fff; }
+  .tag-blue { background: #2e75b6; color: #fff; }
+
+  /* Radar */
+  .radar-note { background: #fff8e1; border-left: 4px solid #ffc107; padding: 12px 16px; border-radius: 4px; margin-top: 12px; font-size: 13px; }
+
+  /* Conclusion */
+  .conclusion-box { background: linear-gradient(135deg, #1f3964, #2e75b6); color: #fff; border-radius: 10px; padding: 20px; margin-top: 16px; }
+  .conclusion-box h4 { font-size: 15px; margin-bottom: 10px; }
+  .conclusion-box p { font-size: 13px; line-height: 1.7; margin-bottom: 8px; }
+
+  /* Footer */
+  .footer { text-align: center; padding: 20px; color: #888; font-size: 11px; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .kw-grid { grid-template-columns: 1fr; }
+    .swot-grid { grid-template-columns: 1fr; }
+    table { font-size: 11px; }
+  }
+</style>
+</head>
+<body>
+<div class="container">
+
+<!-- HEADER -->
+<div class="report-header">
+  <h1>公安AI领域周度战略分析报告</h1>
+  <div class="subtitle">2026.05.19 — 2026.05.25  |  第005期</div>
+  <div class="meta">南威软件股份有限公司  ·  战略研究中心</div>
+  <div class="badge">仅供内部战略参考</div>
+</div>
+
+<!-- KEYWORDS -->
+<div class="kw-section">
+<div class="kw-grid">
+  <div class="kw-card blue">
+    <div class="icon">🔥</div>
+    <h3>新场景</h3>
+    <p>AR眼镜+AI识别<br>重塑一线实战</p>
+  </div>
+  <div class="kw-card red">
+    <div class="icon">🤖</div>
+    <h3>新风向</h3>
+    <p>机器人中队<br>正式上岗</p>
+  </div>
+  <div class="kw-card gold">
+    <div class="icon">💰</div>
+    <h3>新采购</h3>
+    <p>广州公安大模型<br>平台414万招标</p>
+  </div>
+</div>
+</div>
+
+<!-- 1. TREND -->
+<div class="section">
+  <div class="section-title"><span class="num">1</span>趋势洞察</div>
+
+  <div class="sub-title">1.1 本周新场景：从"人脸识别"到"AR眼镜+AI视觉"</div>
+  <p>本周最值得关注的信号是：一线警务装备正在从<strong>"单点识别"</strong>向<strong>"全域感知+实时识别+远程协同"</strong>跃迁。</p>
+  <table>
+    <thead><tr><th>维度</th><th>传统模式（人脸识别）</th><th>本周新模式（AR眼镜+AI）</th></tr></thead>
+    <tbody>
+      <tr><td>识别距离</td><td>3-5米手持式</td><td>10米远距识别</td></tr>
+      <tr><td>交互方式</td><td>需停下、对准、查看</td><td>所见即识别、动态追踪</td></tr>
+      <tr><td>信息呈现</td><td>手机/电脑屏幕</td><td>AR眼镜视野中实时叠加</td></tr>
+      <tr><td>隐蔽性</td><td>低（明显设备）</td><td>高（可隐藏摄像头指示灯）</td></tr>
+      <tr><td>多人识别</td><td>逐一核验</td><td>同屏多人动态追踪</td></tr>
+      <tr><td>后台协同</td><td>事后回放</td><td>第一视角实时回传、远程指挥</td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:#666;">代表产品：<strong>阿法龙Alpha S30</strong>，5000万像素，79°识别视角，50g超轻，1500nit高亮，4nm双芯片架构。应用场景：巡逻盘查、卡口安检、大型活动安保。</p>
+
+  <div class="sub-title">1.2 从"单模态"到"多模态融合"：步态+声纹加速渗透</div>
+  <table>
+    <thead><tr><th>技术类型</th><th>代表厂商</th><th>核心能力</th><th>公安应用场景</th></tr></thead>
+    <tbody>
+      <tr><td>步态识别</td><td>银河水滴</td><td>国标GA/T 2185-2024落地，无感采集</td><td>视频侦查/大规模布控</td></tr>
+      <tr><td>声纹识别</td><td>中科汇联等</td><td>超短语音、抗噪鲁棒、多模态鉴伪</td><td>电话诈骗筛查/远程身份核验</td></tr>
+      <tr><td>双光警戒</td><td>大华股份</td><td>视觉AI夜视+听觉双麦克风</td><td>全时警戒/夜间监控</td></tr>
+      <tr><td>AR视觉</td><td>阿法龙</td><td>10米人脸+动态追踪+异常预警</td><td>巡逻/便衣/大型活动</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title">1.3 一线干警对AI工具的核心诉求变化</div>
+  <table>
+    <thead><tr><th>诉求类型</th><th>传统痛点</th><th>新需求方向</th></tr></thead>
+    <tbody>
+      <tr><td>实战性</td><td>"识别出来了但用不上"</td><td>AR眼镜10米远距实时核验，现场直接预警</td></tr>
+      <tr><td>便携性</td><td>"设备太重影响执勤"</td><td>50g超轻，磁吸镜片，近视墨镜通用</td></tr>
+      <tr><td>协同性</td><td>"查完不知道传给谁"</td><td>第一视角回传+后台标注+远程调度一体化</td></tr>
+      <tr><td>全天候</td><td>"夜间/逆光效果差"</td><td>AI夜视增强（暗光成像+20%）+1500nit高亮</td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 2. COMPETITOR PROFILE -->
+<div class="section">
+  <div class="section-title"><span class="num">2</span>竞品深度画像：杭州公安"AI警队"正式上岗</div>
+  <p>选取依据：2026年4月16日杭州市公安局科技创新大会上，5款"人工智能+"警务应用集中发布，浙江首个交通管理机器人中队正式入列。这是截至目前国内规模最大、层级最高的公安AI应用集中发布事件。</p>
+
+  <div class="sub-title">SWOT分析：杭州公安AI战略布局</div>
+  <div class="swot-grid">
+    <div class="swot-card s">
+      <h4>S 优势</h4>
+      <p>✅ 市级统一平台，打破警种/区域壁垒
+✅ "智瞳+警小视"覆盖飙车炸街自动预警
+✅ 机器人/无人机/机器狗协同（"智联"平台）
+✅ 首批15台机器人中队已实战验证
+✅ "杭警先用"路径降低试错成本</p>
+    </div>
+    <div class="swot-card w">
+      <h4>W 劣势</h4>
+      <p>⚠️ 研发投入大（科技创新中心）
+⚠️ 对接大量异构设备，运维复杂度高
+⚠️ 大模型计算依赖后台算力，网络要求高</p>
+    </div>
+    <div class="swot-card o">
+      <h4>O 机会</h4>
+      <p>🟢 全国首个大规模AI警队应用，示范效应强
+🟢 探索"智产警用→规模应用→全国复用"路径
+🟢 政企研联合科创生态，本地高新企业参与</p>
+    </div>
+    <div class="swot-card t">
+      <h4>T 威胁</h4>
+      <p>🔴 若效果好，全国复制采购竞争加剧
+🔴 华为/阿里等云厂商借机上移平台层
+🔴 数据安全/隐私合规压力</p>
+    </div>
+  </div>
+
+  <div class="sub-title" style="margin-top:20px;">战略意图分析：对手想抢占哪个细分市场？</div>
+  <table>
+    <thead><tr><th>应用方向</th><th>对应产品/平台</th><th>战略意图</th><th>南威是否有对标</th></tr></thead>
+    <tbody>
+      <tr><td>交通管理智能化</td><td>交通管理机器人中队（15台）</td><td>抢城市交通管理智能化市场</td><td><span class="tag tag-red">❌ 无对标</span></td></tr>
+      <tr><td>视觉AI（路面巡查）</td><td>"智瞳+警小视"视觉体系</td><td>抢视频AI分析市场</td><td><span class="tag tag-yellow">⚠️ 部分对标</span></td></tr>
+      <tr><td>无人设备协同</td><td>"智联"平台（多智能体）</td><td>抢多智能体协同指挥市场</td><td><span class="tag tag-red">❌ 无对标</span></td></tr>
+      <tr><td>AR实景执法</td><td>AR眼镜（规划中）</td><td>抢一线AR执法市场</td><td><span class="tag tag-red">❌ 无对标</span></td></tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- 3. BIDDING -->
+<div class="section">
+  <div class="section-title"><span class="num">3</span>招投标风向标</div>
+
+  <div class="sub-title">3.1 本周重要招标项目汇总</div>
+  <table>
+    <thead><tr><th>#</th><th>项目名称</th><th>采购单位</th><th>预算（万元）</th><th>技术方向</th><th>时间</th></tr></thead>
+    <tbody>
+      <tr><td>1</td><td>人工智能大模型警务公共能力支撑平台建设</td><td>广州市公安局大数据警务支队</td><td><strong>414.36</strong></td><td>大模型平台/公共能力</td><td>2026.05.15招标</td></tr>
+      <tr><td>2</td><td>2026年信息化运维项目（等保密评）</td><td>某省公安厅</td><td>未披露</td><td>信息化运维/等保</td><td>2026.06.12开标</td></tr>
+      <tr><td>3</td><td>2026年信息化运维项目（9个采购包）</td><td>三亚市公安局</td><td>约2019</td><td>运维/多包</td><td>2026年持续运维</td></tr>
+      <tr><td>4</td><td>2026年智能枪弹柜采购项目</td><td>茂县公安局</td><td>95.89</td><td>智能枪弹柜</td><td>2026.06.09开标</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title">3.2 预算趋势分析：从"重资产建设"到"平台+运营"</div>
+  <table>
+    <thead><tr><th>维度</th><th>传统模式（重资产）</th><th>新模式（平台+运营）</th></tr></thead>
+    <tbody>
+      <tr><td>代表项目</td><td>视频监控大规模建设</td><td>广州公安大模型公共能力平台</td></tr>
+      <tr><td>预算规模</td><td>数千万-数亿（硬件为主）</td><td>400-500万（软件/平台为主）</td></tr>
+      <tr><td>采购重心</td><td>摄像头、存储、服务器</td><td>大模型能力、数据治理、运维服务</td></tr>
+      <tr><td>供应商结构</td><td>海康/大华/华为（硬件整合商）</td><td>AI算法商、云厂商、集成商</td></tr>
+      <tr><td>南威机会</td><td>竞争激烈、利润压缩</td><td><span class="tag tag-green">✅ 高价值平台软件</span></td></tr>
+    </tbody>
+  </table>
+  <p style="font-size:12px;color:#666;">关键信号：广州公安大模型平台预算约414万元，聚焦"公共能力支撑"，而非单点应用。省级公安正从"单警种AI"向"全局AI中台"演进。趋势：重资产投入增速放缓，平台软件+AI能力投入增加，SaaS化和运营化是下一阶段方向。</p>
+</div>
+
+<!-- 4. RADAR -->
+<div class="section">
+  <div class="section-title"><span class="num">4</span>竞品雷达图</div>
+  <p>以下为公安AI主要竞品本周动态评分（10分制，南威作为基准参照）：</p>
+  <table>
+    <thead><tr><th>竞品</th><th>生物识别</th><th>大模型能力</th><th>情指行系统</th><th>平台+中台</th><th>AR/穿戴设备</th><th>综合评分</th></tr></thead>
+    <tbody>
+      <tr><td><strong>南威软件</strong></td><td>4/10</td><td>5/10</td><td><span style="color:#27ae60;font-weight:700">9/10</span></td><td>6/10</td><td>0/10</td><td><span style="color:#666">5.6</span></td></tr>
+      <tr><td>银河水滴</td><td><span style="color:#27ae60;font-weight:700">9/10</span></td><td>4/10</td><td>3/10</td><td>3/10</td><td>0/10</td><td>4.8</td></tr>
+      <tr><td>科大讯飞</td><td>7/10</td><td><span style="color:#27ae60;font-weight:700">10/10</span></td><td>4/10</td><td>8/10</td><td>2/10</td><td>6.8</td></tr>
+      <tr><td>华为安平</td><td>7/10</td><td>9/10</td><td>8/10</td><td>9/10</td><td>5/10</td><td><span style="color:#e74c3c;font-weight:700">7.8</span></td></tr>
+      <tr><td>大华股份</td><td>6/10</td><td>6/10</td><td>5/10</td><td>6/10</td><td>4/10</td><td>5.6</td></tr>
+      <tr><td>杭州公安（甲方）</td><td>8/10</td><td>8/10</td><td>8/10</td><td>9/10</td><td>6/10</td><td><span style="color:#e74c3c;font-weight:700">7.8</span></td></tr>
+    </tbody>
+  </table>
+  <div class="radar-note">
+    <strong>📊 雷达图说明：</strong><br>
+    • 南威核心优势仍在情指行系统（9/10），但生物识别和大模型能力严重落后<br>
+    • 华为安平综合实力最强（7.8分），各维度均衡发展，是最大威胁<br>
+    • 科大讯飞大模型能力突出（10/10），正在向公安场景渗透<br>
+    • 杭州公安作为甲方自研能力极强，代表了公安AI自建趋势
+  </div>
+</div>
+
+<!-- 5. RECOMMENDATIONS -->
+<div class="section">
+  <div class="section-title"><span class="num">5</span>南威应对建议</div>
+
+  <div class="sub-title">5.1 短期战术建议（1-3个月）</div>
+  <table>
+    <thead><tr><th>优先级</th><th>建议事项</th><th>对标动作</th><th>预期效果</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag tag-red">🔴 高</span></td><td>快速推出AR眼镜适配版情指行APP</td><td>对标阿法龙Alpha S30的对接能力</td><td>抢占AR执法入口</td></tr>
+      <tr><td><span class="tag tag-red">🔴 高</span></td><td>与银河水滴/声纹厂商洽谈算法集成</td><td>补齐生物识别短板</td><td>丰富情指行识别能力</td></tr>
+      <tr><td><span class="tag tag-yellow">🟡 中</span></td><td>广州公安大模型平台投标准备</td><td>跟进414万大单，建立案例</td><td>获取标杆客户</td></tr>
+      <tr><td><span class="tag tag-yellow">🟡 中</span></td><td>梳理现有情指行客户，调研AR需求</td><td>市场验证+需求确认</td><td>降低研发风险</td></tr>
+    </tbody>
+  </table>
+
+  <div class="sub-title">5.2 中期战略建议（3-12个月）</div>
+  <table>
+    <thead><tr><th>优先级</th><th>建议事项</th><th>战略逻辑</th><th>资源投入</th></tr></thead>
+    <tbody>
+      <tr><td><span class="tag tag-red">🔴 高</span></td><td>研发/收购步态识别算法</td><td>步态识别已是国标，实战化加速</td><td>自研或战略投资</td></tr>
+      <tr><td><span class="tag tag-yellow">🟡 中</span></td><td>与华为云/阿里云合作大模型能力</td><td>南威无自研大模型，借力大厂是现实路径</td><td>合作而非自研</td></tr>
+      <tr><td><span class="tag tag-yellow">🟡 中</span></td><td>推出"轻量版情指行SaaS"</td><td>应对预算收紧+SaaS化趋势</td><td>产品化改造</td></tr>
+      <tr><td><span class="tag tag-green">🟢 低</span></td><td>布局机器人协同调度接口</td><td>杭州"智联"平台已验证方向</td><td>观望+预研</td></tr>
+    </tbody>
+  </table>
+
+  <div class="conclusion-box">
+    <h4>📌 本周核心结论</h4>
+    <p><strong>1️⃣ AR眼镜+AI识别进入一线实战：</strong>10米远距、多人追踪、AR叠加，这是警务装备的下一代形态，南威必须尽快接入。</p>
+    <p><strong>2️⃣ 广州公安大模型平台招标（414万）：</strong>标志省级公安从单点AI向"AI中台"演进，情指行系统是核心入口，需加速与大模型能力融合。</p>
+    <p><strong>3️⃣ 杭州公安AI警队正式上岗：</strong>全国首个大规模AI应用，示范效应极强，"杭警先用→全国复用"路径一旦跑通，将重塑公安信息化格局。</p>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+  本报告仅供内部战略参考 · 南威软件股份有限公司 · 2026年5月25日<br>
+  生成工具：WorkBuddy AI · 数据来源：公开情报搜集
+</div>
+
+</div>
+</body>
+</html>
