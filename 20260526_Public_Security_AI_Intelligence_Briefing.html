@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【第33期】每日公安AI情报简报</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", sans-serif;
+            background: linear-gradient(135deg, #0a1929 0%, #1a237e 50%, #0d47a1 100%);
+            min-height: 100vh;
+            padding: 20px;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 16px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #1a237e 0%, #0d47a1 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .header .meta {
+            font-size: 14px;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.15);
+            padding: 15px 25px;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+        }
+        .stat-card .number {
+            font-size: 28px;
+            font-weight: bold;
+        }
+        .stat-card .label {
+            font-size: 12px;
+            opacity: 0.9;
+        }
+        .stat-card.high .number { color: #ff5252; }
+        .stat-card.medium .number { color: #ffb74d; }
+        .stat-card.low .number { color: #69f0ae; }
+        .content {
+            padding: 30px;
+        }
+        .section {
+            margin-bottom: 30px;
+        }
+        .section-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #1a237e;
+            padding: 12px 20px;
+            background: linear-gradient(90deg, #e8eaf6 0%, #c5cae9 100%);
+            border-left: 4px solid #1a237e;
+            border-radius: 0 8px 8px 0;
+            margin-bottom: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+        th {
+            background: #1a237e;
+            color: white;
+            padding: 12px 10px;
+            text-align: left;
+            font-weight: normal;
+        }
+        td {
+            padding: 12px 10px;
+            border-bottom: 1px solid #e0e0e0;
+            vertical-align: top;
+        }
+        tr:hover {
+            background: #f5f5f5;
+        }
+        .level {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 12px;
+            text-align: center;
+        }
+        .level.high {
+            background: #ffebee;
+            color: #c62828;
+        }
+        .level.medium {
+            background: #fff3e0;
+            color: #e65100;
+        }
+        .level.low {
+            background: #e8f5e9;
+            color: #2e7d32;
+        }
+        .source {
+            display: inline-block;
+            padding: 3px 8px;
+            background: #e3f2fd;
+            color: #1565c0;
+            border-radius: 4px;
+            font-size: 11px;
+        }
+        .footer {
+            background: #f5f5f5;
+            padding: 20px 30px;
+            text-align: center;
+            font-size: 12px;
+            color: #666;
+        }
+        @media (max-width: 768px) {
+            table {
+                font-size: 12px;
+            }
+            th, td {
+                padding: 8px 6px;
+            }
+            .header h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>【第33期】每日公安AI情报简报</h1>
+            <div class="meta">区域情报监测系统 | 内部人员可视角边情报</div>
+            <div class="meta">监测周期：2026年5月25日-26日 | 生成时间：2026年5月26日 10:00</div>
+            <div class="stats">
+                <div class="stat-card">
+                    <div class="number">10条</div>
+                    <div class="label">新增情报</div>
+                </div>
+                <div class="stat-card high">
+                    <div class="number">2条</div>
+                    <div class="label">高风险</div>
+                </div>
+                <div class="stat-card medium">
+                    <div class="number">6条</div>
+                    <div class="label">中风险</div>
+                </div>
+                <div class="stat-card low">
+                    <div class="number">2条</div>
+                    <div class="label">低风险</div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="section">
+                <div class="section-title">【政策与热点】</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:80px;">风险等级</th>
+                            <th style="width:280px;">核心标题</th>
+                            <th style="width:280px;">关键内容摘要</th>
+                            <th style="width:120px;">来源/链接</th>
+                            <th style="width:220px;">对南威的启示</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="level high">高</span></td>
+                            <td>AI辅助诈骗Q1同比暴增312%，公安部专项打击</td>
+                            <td>公安部数据显示，2026年Q1全国破获AI辅助诈骗案件1.2万余起，同比上升312%，单笔最高被骗20万元</td>
+                            <td><span class="source">公安部/央视新闻</span></td>
+                            <td>AI鉴伪技术需求激增，南威可关注数字内容合成检测赛道</td>
+                        </tr>
+                        <tr>
+                            <td><span class="level high">高</span></td>
+                            <td>国家反诈中心APP新增「AI内容鉴定」功能</td>
+                            <td>5月18日上线，图像/视频/文本/音频检测每日10次，由中科睿鉴提供AI检测技术支持</td>
+                            <td><span class="source">公安部刑侦局</span></td>
+                            <td>官方AI鉴伪能力上车，行业标杆确立</td>
+                        </tr>
+                        <tr>
+                            <td><span class="level medium">中</span></td>
+                            <td>具身智能产业从「表演」走向「实干」</td>
+                            <td>国家发改委5月22日发布会明确加快具身智能训练基础设施建设，推动机器人进工厂</td>
+                            <td><span class="source">新华网</span></td>
+                            <td>具身智能基础设施是新赛道，南威可布局</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <div class="section-title">【技术前沿】</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:80px;">风险等级</th>
+                            <th style="width:280px;">核心标题</th>
+                            <th style="width:280px;">关键内容摘要</th>
+                            <th style="width:120px;">来源/链接</th>
+                            <th style="width:220px;">对南威的启示</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="level medium">中</span></td>
+                            <td>2026全球人工智能技术大会在杭州举行</td>
+                            <td>5月23-24日召开，200余位产学研代表围绕具身智能落地、AI赋能千行百业深度探讨</td>
+                            <td><span class="source">中新网</span></td>
+                            <td>具身智能是AI从弱到强必由之路</td>
+                        </tr>
+                        <tr>
+                            <td><span class="level medium">中</span></td>
+                            <td>2026杭州国际具身机器人场景应用大赛收官</td>
+                            <td>5月15-16日举行，200余支队伍围绕14项场景比拼，商超分拣/电力巡检等实景测试</td>
+                            <td><span class="source">杭州日报</span></td>
+                            <td>场景落地是核心竞争力，关注机器人实战能力</td>
+                        </tr>
+                        <tr>
+                            <td><span class="level medium">中</span></td>
+                            <td>DeepSeek V4.1定档6月，多模态+MCP协议</td>
+                            <td>6月发布，支持图像+音频多模态输入，新增MCP协议支持，500亿融资创首轮纪录</td>
+                            <td><span class="source">The Information</span></td>
+                            <td>多模态Agent趋势明确，南威大模型需跟进</td>
+                        </tr>
+                        <tr>
+                            <td><span class="level medium">中</span></td>
+                            <td>特斯拉Optimus人形机器人Q2启动量产</td>
+                            <td>Q2量产启动，国产供应链配套加速，人形机器人产业化进程超预期</td>
+                            <td><span class="source">行业观察</span></td>
+                            <td>关注机器人核心零部件国产化替代机会</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div class="section">
+                <div class="section-title">【竞品动态】</div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width:80px;">风险等级</th>
+                            <th style="width:280px;">核心标题</th>
+                            <th style="width:280px;">关键内容摘要</th>
+                            <th style="width:120px;">来源/链接</th>
+                            <th style="width:220px;">对南威的启示</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><span class="level medium">中</span></td>
+                            <td>科大讯飞135万中标淮安AI评标大单</td>
+                            <td>5月8日中标淮安市国采公共资源交易服务公司AI智能辅助评标系统，讯飞杀入政务采购</td>
+                            <td><span class="source">百度百家号</span></td>
+                            <td>讯飞政务AI能力持续扩张，南威需差异化应对</td>
+                        </tr>
+                        <tr>
+                            <td><span class="level medium">中</span></td>
+                            <td>科大讯飞取得教学设备控制相关专利</td>
+                            <td>5月19日获授权，采集视听信息控制教学设备，专利号CN114779922B</td>
+                            <td><span class="source">国家知识产权局</span></td>
+                            <td>讯飞专利布局延伸至教育领域</td>
+                        </tr>
+                        <tr>
+                            <td><span class="level low">低</span></td>
+                            <td>海康威视近期中标40个项目持续扩大覆盖</td>
+                            <td>覆盖新疆/浙江/黑龙江/山东/广东等省份，智慧安防/农村信用社等多个领域</td>
+                            <td><span class="source">海康威视官网</span></td>
+                            <td>海康渠道下沉策略明显，中小项目竞争加剧</td>
+                        </tr>
+                        <tr>
+                            <td><span class="level low">低</span></td>
+                            <td>商汤/科大讯飞入选福布斯中国AI科技企业TOP50</td>
+                            <td>2026福布斯中国AI科技企业TOP50与财富中国ESG影响力榜双料入选</td>
+                            <td><span class="source">界面新闻</span></td>
+                            <td>行业地位获国际认可，品牌影响力提升</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="footer">
+            本报告由南威软件自动化生成 | 数据来源：全网公开信息检索 | 生成时间：2026年5月26日 10:00<br>
+            内部人员可视角边情报 | 未经授权不可外传
+        </div>
+    </div>
+</body>
+</html>
