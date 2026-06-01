@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Strategic Analysis of Public Security AI - 2026.05.26-06.01</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; background: linear-gradient(135deg, #0a1929 0%, #1a3a5c 100%); min-height: 100vh; color: #e8edf4; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; padding: 40px 20px; background: rgba(26,60,110,0.8); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1); }
+        .header h1 { font-size: 32px; color: #fff; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header .subtitle { font-size: 18px; color: #a8c8e8; margin-bottom: 5px; }
+        .header .meta { font-size: 14px; color: #7a9ec8; }
+        .badge { display: inline-block; background: linear-gradient(135deg, #c0392b, #e74c3c); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-top: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+        .card { background: rgba(26,60,110,0.6); border-radius: 12px; padding: 24px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,100,200,0.3); }
+        .card h2 { color: #4a9eff; font-size: 20px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid rgba(74,158,255,0.3); }
+        .card h3 { color: #7ec8e3; font-size: 16px; margin: 16px 0 8px; }
+        .tag { display: inline-block; background: rgba(74,158,255,0.2); color: #4a9eff; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin: 2px; }
+        .keyword-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .keyword-item { background: rgba(0,40,80,0.5); padding: 12px; border-radius: 8px; border-left: 3px solid #4a9eff; }
+        .keyword-item .kw { color: #ffd700; font-weight: bold; margin-bottom: 4px; display: block; }
+        .keyword-item .desc { color: #b8d4e8; font-size: 13px; line-height: 1.5; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; }
+        th { background: rgba(26,60,110,0.9); color: white; padding: 10px 8px; text-align: left; }
+        td { padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); vertical-align: top; }
+        tr:hover { background: rgba(74,158,255,0.1); }
+        .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .swot-card { padding: 14px; border-radius: 8px; }
+        .swot-s { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .swot-w { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+        .swot-o { background: linear-gradient(135deg, #2980b9, #3498db); }
+        .swot-t { background: linear-gradient(135deg, #e67e22, #f39c12); }
+        .swot-title { font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+        .swot-content { font-size: 12px; line-height: 1.6; color: rgba(255,255,255,0.95); }
+        .alert { background: rgba(231,76,60,0.2); border: 1px solid rgba(231,76,60,0.5); border-radius: 8px; padding: 16px; margin: 15px 0; }
+        .alert-title { color: #e74c3c; font-weight: bold; margin-bottom: 8px; }
+        .recommendation { background: rgba(39,174,96,0.15); border-radius: 8px; padding: 14px; margin: 10px 0; border-left: 4px solid #27ae60; }
+        .recommendation-title { color: #2ecc71; font-weight: bold; margin-bottom: 6px; }
+        .timeline { position: relative; padding-left: 25px; }
+        .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #4a9eff, #27ae60); }
+        .timeline-item { position: relative; margin-bottom: 15px; }
+        .timeline-item::before { content: ''; position: absolute; left: -21px; top: 5px; width: 10px; height: 10px; background: #4a9eff; border-radius: 50%; }
+        .timeline-date { font-size: 12px; color: #4a9eff; margin-bottom: 3px; }
+        .timeline-content { font-size: 13px; color: #b8d4e8; }
+        .threat-high { color: #e74c3c; font-weight: bold; }
+        .threat-med { color: #f39c12; font-weight: bold; }
+        .threat-low { color: #27ae60; }
+        .section-divider { margin: 30px 0; border-top: 1px solid rgba(255,255,255,0.1); }
+        .footer { text-align: center; padding: 30px; color: #7a9ec8; font-size: 12px; margin-top: 40px; }
+        @media (max-width: 768px) { .swot-grid { grid-template-columns: 1fr; } .header h1 { font-size: 24px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>公安AI领域周度战略分析报告</h1>
+            <div class="subtitle">Weekly Strategic Analysis of Public Security AI</div>
+            <div class="meta">2026年第7期 | 2026.05.26 - 06.01 | 南威软件股份有限公司</div>
+            <div class="badge">机密级别：内部参考</div>
+        </div>
+
+        <div class="grid">
+            <!-- Keywords Card -->
+            <div class="card">
+                <h2>本周关键词</h2>
+                <div class="keyword-grid">
+                    <div class="keyword-item">
+                        <span class="kw">步态识别规模化</span>
+                        <span class="desc">石嘴山市162.25万步态识别装备项目落地，标志步态识别从"技术试点"进入"标准化采购"阶段</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">公安大模型平台</span>
+                        <span class="desc">广州市公安局414万大模型平台招标，大模型从"单点应用"向"平台化建设"演进</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">招投标AI化</span>
+                        <span class="desc">发改委等八部门2月联合发文，招投标领域全面推广AI，2026年为推广元年</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">多模态生物识别</span>
+                        <span class="desc">声纹、虹膜、步态等多模态生物特征识别采购需求持续涌现，AI感知从单点向融合升级</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">AI赋能网络安全</span>
+                        <span class="desc">中央网信办5月18日发布AI技术赋能网络安全应用测试公告，AI安全赛道正式开启</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">反诈AI租赁</span>
+                        <span class="desc">深圳罗湖25.97万AI反诈电话外呼租赁服务招标，SaaS化反诈新模式探索</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trend Insights -->
+            <div class="card">
+                <h2>趋势洞察</h2>
+                <h3>2.1 步态识别从"技术试点"进入"标准化采购"阶段</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;margin:10px 0;">
+                    石嘴山市公安局步态识别装备采购项目5月6日完成招标，中标金额162.25万元。这标志着步态识别已从"示范性技术试点"转向"标准化政府采购"阶段。5家企业参与竞标，银河水滴排名第二，反映出步态识别市场的竞争正在加剧。
+                </p>
+                <h3>2.2 公安大模型平台化建设成为新热点</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;margin:10px 0;">
+                    广州市公安局大数据警务支队5月15日发布414万大模型平台招标公告，建设周期18个月。这是继上海484万警情子系统之后又一大型大模型平台项目，表明公安大模型正从"单点应用"向"平台化建设"演进。
+                </p>
+                <h3>2.3 一线民警AI需求从"识别"向"预警"升级</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;margin:10px 0;">
+                    从本周招标项目看，一线民警对AI工具的需求正从"事后识别"向"事前预警"升级。石嘴山步态识别项目要求"步态+人脸+人体结构"多模态融合，并要求接入国家级平台实现"一地采集、全国比对"的预警能力。
+                </p>
+                <h3>2.4 反诈AI走向SaaS化租赁新模式</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;margin:10px 0;">
+                    深圳罗湖25.97万AI反诈电话外呼租赁服务招标，标志着AI反诈从"一次性建设"向"持续性租赁服务"转型。这种SaaS化模式降低了公安一次性投入门槛，也给中小AI厂商提供了新的市场机会。
+                </p>
+            </div>
+
+            <!-- Competitor SWOT -->
+            <div class="card" style="grid-column: span 2;">
+                <h2>竞品深度画像：石嘴山步态识别项目 SWOT分析</h2>
+                <p style="color:#b8d4e8;font-size:13px;margin-bottom:15px;">
+                    本周竞品动作最大的事件为石嘴山市公安局步态识别装备采购项目完成招标。本项目不仅是步态识别市场化的里程碑，也折射出银河水滴、大华等巨头在步态赛道的激烈竞争态势。
+                </p>
+                <div class="swot-grid">
+                    <div class="swot-card swot-s">
+                        <div class="swot-title">优势 Strengths</div>
+                        <div class="swot-content">
+                            1. 步态识别技术成熟，联视神盾软件+华为硬件组合<br>
+                            2. 250路视频解析授权，规模可观<br>
+                            3. 国产品牌组合，完全国产化<br>
+                            4. 价格合理（162.25万 vs 预算180万）
+                        </div>
+                    </div>
+                    <div class="swot-card swot-w">
+                        <div class="swot-title">劣势 Weaknesses</div>
+                        <div class="swot-content">
+                            1. 易龙信息科技非步态识别专业厂商<br>
+                            2. 中标企业缺乏公安行业深度积累<br>
+                            3. 步态识别技术能力待验证
+                        </div>
+                    </div>
+                    <div class="swot-card swot-o">
+                        <div class="swot-title">机会 Opportunities</div>
+                        <div class="swot-content">
+                            1. 步态识别国标GA/T 2185-2024落地，市场需求释放<br>
+                            2. 多地公安已将步态识别纳入年度采购计划<br>
+                            3. "十四五"公安刑事技术规划重点推进方向<br>
+                            4. 从"采集"向"预警"升级，价值链延伸
+                        </div>
+                    </div>
+                    <div class="swot-card swot-t">
+                        <div class="swot-title">威胁 Threats</div>
+                        <div class="swot-content">
+                            1. 银河水滴等专业技术厂商虎视眈眈<br>
+                            2. 大华、华为等巨头硬件捆绑威胁<br>
+                            3. 技术门槛提高，缺乏核心技术将被淘汰<br>
+                            4. 数据合规要求趋严，采集范围受限
+                        </div>
+                    </div>
+                </div>
+                <h3 style="margin-top:20px;">战略意图分析</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                    <strong style="color:#4a9eff;">区域市场开拓：</strong>易龙信息科技作为宁夏本地厂商，以价格优势+本地化服务中标，表明步态识别正从"技术竞争"向"市场深耕"转变。<br>
+                    <strong style="color:#4a9eff;">专业厂商受挫：</strong>银河水滴排名第二，说明仅靠技术领先不足以赢得市场，本地化服务能力成为关键因素。<br>
+                    <strong style="color:#4a9eff;">南威启示：</strong>需在技术+本地化服务两个维度同时发力，才能在步态识别市场占据一席之地。
+                </p>
+            </div>
+
+            <!-- Bidding Trends -->
+            <div class="card" style="grid-column: span 2;">
+                <h2>招投标风向标</h2>
+                <h3>本周公安信息化招标/中标项目汇总</h3>
+                <table>
+                    <tr>
+                        <th>项目名称</th>
+                        <th>采购单位</th>
+                        <th>金额</th>
+                        <th>状态</th>
+                        <th>技术方案特点</th>
+                    </tr>
+                    <tr>
+                        <td>石嘴山市公安局步态识别装备采购</td>
+                        <td>石嘴山市公安局</td>
+                        <td>180万预算<br>162.25万中标</td>
+                        <td><span class="threat-high">已中标</span></td>
+                        <td>步态分析系统+华为硬件，250路授权</td>
+                    </tr>
+                    <tr>
+                        <td>广州市公安局大模型警务公共能力支撑平台</td>
+                        <td>广州市公安局</td>
+                        <td>414.36万</td>
+                        <td><span class="threat-med">招标中</span></td>
+                        <td>18个月建设周期，平台化架构</td>
+                    </tr>
+                    <tr>
+                        <td>深圳罗湖AI智能反诈电话外呼租赁服务</td>
+                        <td>深圳罗湖公安分局</td>
+                        <td>25.97万</td>
+                        <td><span class="threat-med">招标中</span></td>
+                        <td>SaaS化租赁模式，按需付费</td>
+                    </tr>
+                    <tr>
+                        <td>秦皇岛市公安局AI警务应用平台</td>
+                        <td>秦皇岛市公安局</td>
+                        <td>未公布</td>
+                        <td><span class="threat-med">招标中</span></td>
+                        <td>AI警务应用综合平台</td>
+                    </tr>
+                </table>
+                <h3>预算金额变化趋势分析</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                    <strong>重资产建设仍在持续：</strong>石嘴山步态识别项目、渭南数据资源池等大项目仍以硬件采购为主，但软件平台价值持续提升。<br>
+                    <strong>SaaS化转型信号明确：</strong>深圳罗湖反诈AI租赁服务标志着部分公安信息化开始向"按需付费"的SaaS模式转型，这对传统集成商构成挑战。<br>
+                    <strong>大模型平台成新赛道：</strong>广州414万大模型平台建设，标志着公安AI正从"单点应用"向"平台化+大模型"方向演进。<br>
+                    <strong>多模态感知成标配：</strong>各项目均要求步态+人脸+人体结构等多模态融合能力，纯人脸识别项目减少。
+                </p>
+            </div>
+
+            <!-- Southware Recommendations -->
+            <div class="card" style="grid-column: span 2;">
+                <h2>南威应对建议</h2>
+                <div class="recommendation">
+                    <div class="recommendation-title">紧急行动（1-3个月）</div>
+                    <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                        <strong>【步态识别合作】</strong>尽快与银河水滴或联视神盾建立合作关系，将步态识别模块集成到南威视频大数据平台，避免在步态赛道掉队。<br>
+                        <strong>【大模型平台能力】</strong>密切跟踪广州414万大模型平台招标进展，准备技术方案参与竞标，同时借机提升南威大模型平台能力。<br>
+                        <strong>【SaaS化产品准备】</strong>研究深圳罗湖反诈AI租赁模式的可行性，探索将南威优势产品（如情指行一体化）进行SaaS化改造。
+                    </p>
+                </div>
+                <div class="recommendation">
+                    <div class="recommendation-title">中期规划（3-6个月）</div>
+                    <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                        <strong>【多模态融合能力】</strong>将步态识别、声纹识别、虹膜识别纳入产品规划，形成"人脸+步态+声纹"多模态融合解决方案，对标银河水滴技术路线。<br>
+                        <strong>【情指行+AI升级】</strong>基于DeepSeek或昇腾方案，将大模型能力融入情指行一体化平台，提升智能决策能力，对标广州大模型平台建设标准。<br>
+                        <strong>【本地化服务网络】</strong>学习易龙信息科技"本地化服务"策略，在重点省份建立本地化服务网络，提升区域市场竞争能力。
+                    </p>
+                </div>
+                <div class="recommendation">
+                    <div class="recommendation-title">长期战略（6-12个月）</div>
+                    <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                        <strong>【行业标准参与】</strong>积极参与步态识别国标GA/T 2185-2024的推广应用，从"产品供应商"向"标准参与者"转型。<br>
+                        <strong>【标杆案例打造】</strong>在步态识别、视频大数据、情指行一体化等领域打造省级标杆案例，形成可复制的解决方案。<br>
+                        <strong>【AI安全赛道】</strong>关注中央网信办AI安全应用测试公告，探索将南威安全能力与AI结合的新赛道机会。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="card">
+                <h2>本周主要事件时间轴</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-05-06</div>
+                        <div class="timeline-content">石嘴山市公安局步态识别装备采购项目完成招标</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-05-15</div>
+                        <div class="timeline-content">广州市公安局发布414万大模型平台招标公告</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-05-18</div>
+                        <div class="timeline-content">深圳罗湖发布25.97万AI反诈电话外呼租赁服务招标</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-05-18</div>
+                        <div class="timeline-content">中央网信办发布AI技术赋能网络安全应用测试公告</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-05</div>
+                        <div class="timeline-content">广州大模型平台项目开标（待确认）</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor Quick View -->
+            <div class="card">
+                <h2>竞品动态速览</h2>
+                <table>
+                    <tr>
+                        <th>竞品</th>
+                        <th>本周核心动态</th>
+                        <th>威胁等级</th>
+                    </tr>
+                    <tr>
+                        <td>银河水滴</td>
+                        <td>石嘴山项目排名第二，技术领先但市场能力待提升</td>
+                        <td><span class="threat-high">高</span></td>
+                    </tr>
+                    <tr>
+                        <td>华为</td>
+                        <td>与联视神盾合作步态识别，硬件捆绑策略</td>
+                        <td><span class="threat-high">高</span></td>
+                    </tr>
+                    <tr>
+                        <td>大华</td>
+                        <td>超能双光警戒摄像机持续推广，AI夜视增强</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                    <tr>
+                        <td>海康威视</td>
+                        <td>多地连续中标，视频平台技术领先</td>
+                        <td><span class="threat-high">高</span></td>
+                    </tr>
+                    <tr>
+                        <td>易龙信息科技</td>
+                        <td>石嘴山项目中标，本地化服务优势</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                    <tr>
+                        <td>科大讯飞</td>
+                        <td>星火大模型持续迭代，反诈AI能力</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>南威软件股份有限公司 | 战略情报中心</p>
+            <p>机密级别：内部参考 | 未经授权禁止外传</p>
+            <p style="margin-top:10px;">Generated on 2026-06-01</p>
+        </div>
+    </div>
+</body>
+</html>
