@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Strategic Analysis of Public Security AI - 2026.06.02-06.08</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Microsoft YaHei', 'PingFang SC', sans-serif; background: linear-gradient(135deg, #0a1929 0%, #1a3a5c 100%); min-height: 100vh; color: #e8edf4; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        .header { text-align: center; padding: 40px 20px; background: rgba(26,60,110,0.8); border-radius: 16px; margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.1); }
+        .header h1 { font-size: 32px; color: #fff; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); }
+        .header .subtitle { font-size: 18px; color: #a8c8e8; margin-bottom: 5px; }
+        .header .meta { font-size: 14px; color: #7a9ec8; }
+        .badge { display: inline-block; background: linear-gradient(135deg, #c0392b, #e74c3c); color: white; padding: 4px 12px; border-radius: 20px; font-size: 12px; margin-top: 10px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 20px; }
+        .card { background: rgba(26,60,110,0.6); border-radius: 12px; padding: 24px; border: 1px solid rgba(255,255,255,0.1); backdrop-filter: blur(10px); transition: transform 0.3s, box-shadow 0.3s; }
+        .card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,100,200,0.3); }
+        .card h2 { color: #4a9eff; font-size: 20px; margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid rgba(74,158,255,0.3); }
+        .card h3 { color: #7ec8e3; font-size: 16px; margin: 16px 0 8px; }
+        .tag { display: inline-block; background: rgba(74,158,255,0.2); color: #4a9eff; padding: 3px 10px; border-radius: 4px; font-size: 11px; margin: 2px; }
+        .keyword-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
+        .keyword-item { background: rgba(0,40,80,0.5); padding: 12px; border-radius: 8px; border-left: 3px solid #4a9eff; }
+        .keyword-item .kw { color: #ffd700; font-weight: bold; margin-bottom: 4px; display: block; }
+        .keyword-item .desc { color: #b8d4e8; font-size: 13px; line-height: 1.5; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 13px; }
+        th { background: rgba(26,60,110,0.9); color: white; padding: 10px 8px; text-align: left; }
+        td { padding: 8px; border-bottom: 1px solid rgba(255,255,255,0.1); vertical-align: top; }
+        tr:hover { background: rgba(74,158,255,0.1); }
+        .swot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+        .swot-card { padding: 14px; border-radius: 8px; }
+        .swot-s { background: linear-gradient(135deg, #27ae60, #2ecc71); }
+        .swot-w { background: linear-gradient(135deg, #c0392b, #e74c3c); }
+        .swot-o { background: linear-gradient(135deg, #2980b9, #3498db); }
+        .swot-t { background: linear-gradient(135deg, #e67e22, #f39c12); }
+        .swot-title { font-weight: bold; margin-bottom: 8px; font-size: 14px; }
+        .swot-content { font-size: 12px; line-height: 1.6; color: rgba(255,255,255,0.95); white-space: pre-line; }
+        .recommendation { background: rgba(39,174,96,0.15); border-radius: 8px; padding: 14px; margin: 10px 0; border-left: 4px solid #27ae60; }
+        .recommendation-title { color: #2ecc71; font-weight: bold; margin-bottom: 6px; }
+        .timeline { position: relative; padding-left: 25px; }
+        .timeline::before { content: ''; position: absolute; left: 8px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #4a9eff, #27ae60); }
+        .timeline-item { position: relative; margin-bottom: 15px; }
+        .timeline-item::before { content: ''; position: absolute; left: -21px; top: 5px; width: 10px; height: 10px; background: #4a9eff; border-radius: 50%; }
+        .timeline-date { font-size: 12px; color: #4a9eff; margin-bottom: 3px; font-weight: bold; }
+        .timeline-content { font-size: 13px; color: #b8d4e8; }
+        .threat-high { color: #e74c3c; font-weight: bold; }
+        .threat-med { color: #f39c12; font-weight: bold; }
+        .threat-low { color: #27ae60; }
+        .footer { text-align: center; padding: 30px; color: #7a9ec8; font-size: 12px; margin-top: 40px; }
+        @media (max-width: 768px) { .swot-grid { grid-template-columns: 1fr; } .header h1 { font-size: 24px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>公安AI领域周度战略分析报告</h1>
+            <div class="subtitle">Weekly Strategic Analysis of Public Security AI</div>
+            <div class="meta">2026年第8期 | 2026.06.02 - 06.08 | 南威软件股份有限公司</div>
+            <div class="badge">机密级别：内部参考</div>
+        </div>
+
+        <div class="grid">
+            <!-- Keywords -->
+            <div class="card">
+                <h2>本周关键词</h2>
+                <div class="keyword-grid">
+                    <div class="keyword-item">
+                        <span class="kw">信创+AI交管</span>
+                        <span class="desc">上海2243万交通执法管理系统升级改造招标启动，明确要求信创国产化全面替代，电子警察平台XC替换为核心模块</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">AI治堵规模化</span>
+                        <span class="desc">上海AI治堵大模型已覆盖360个重点路口，通行效率提升12.9%，预计10月覆盖1800个路口，进入全域秒级响应实战阶段</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">反诈AI租赁落地</span>
+                        <span class="desc">深圳罗湖AI反诈电话外呼租赁项目6月3日完成中标公示，深圳金鳞通讯以23.956万中标，SaaS化反诈模式首个标杆案例落地</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">警务云平台招标</span>
+                        <span class="desc">贵州省公安厅2026年互联网大数据分析技术服务项目公开招标，6月26日开标，警务大数据服务化模式持续深化</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">警航空地协同</span>
+                        <span class="desc">宿迁公安6月2日发布三维一体警航实战模式，警用无人机+声光警示装备+地面巡防深度融合，构建空中新质战斗力</span>
+                    </div>
+                    <div class="keyword-item">
+                        <span class="kw">数智装备展</span>
+                        <span class="desc">杰创智能6月3日亮相2026广州国际数智装备与人工智能展，发布掌安星AI+安全与常青云AI专有云系列产品</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Trend Insights -->
+            <div class="card">
+                <h2>趋势洞察</h2>
+                <h3>2.1 公安信息化进入"信创+AI"双轮驱动阶段</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;margin:10px 0;">
+                    本周上海启动2243.85万元公安交通执法管理系统升级改造招标，16个月建设周期，核心特征是信创国产化+AI智能化双轮驱动：电子警察平台、信创服务器、操作系统、数据库全面XC替换；AI治堵大模型从360个路口向1800个路口规模化部署；电动自行车智能查验等垂直AI模块持续增加。这一信号意味着，公安信息化已从建系统全面进入信创+智能化深度融合阶段，AI能力成为信创替换之外的第二战场。
+                </p>
+                <h3>2.2 一线民警AI需求从"单点工具"向"平台化作战"升级</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;margin:10px 0;">
+                    宿迁公安发布的三维一体警航实战模式值得关注：空中维度（警用无人机+LED警示屏+声光一体警示器）、地面维度（传统巡防警力+警用机器人+视频监控）、平台维度（统一指挥调度平台）。一线民警的吐槽点正从识别不准转向系统割裂——多个AI系统无法协同、警情与情报无法贯通、空中与地面力量无法联动。平台化、体系化、可协同的AI作战系统成为新刚需。
+                </p>
+                <h3>2.3 AI产品形态从"项目交付"向"订阅服务"加速分化</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;margin:10px 0;">
+                    6月3日深圳金鳞通讯以23.956万中标深圳罗湖AI反诈电话外呼租赁服务，成为继上周该项目招标后的关键进展。SaaS化反诈AI具有三大趋势意义：采购模式从一次性硬件采购转为按需付费的SaaS租赁；中小专业厂商凭借垂直场景AI能力进入公安采购清单；云通信+AI+反诈数据形成新型产业组合。对南威的启示：传统集成商必须正视SaaS化趋势，加快自身优势产品的SaaS化改造。
+                </p>
+                <h3>2.4 公安AI应用从"事后取证"向"事前预警+事中处置"延伸</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;margin:10px 0;">
+                    上海AI治堵大模型信号灯准确率从72%提升到86%，本周宿迁警航装备升级，均显示出公安AI正从事后取证向事中实时干预延伸：AI直接驱动信号灯配时实现实时控制；对飙车炸街等违法行为实现自动预警+智能劝导；基于AI预测的警情热力图实现警力精准投放。这一转变对算法实时性、边缘计算能力、与警务流程的深度耦合提出了更高要求。
+                </p>
+            </div>
+
+            <!-- Competitor SWOT -->
+            <div class="card" style="grid-column: span 2;">
+                <h2>竞品深度画像：上海2243万交通执法系统升级 SWOT分析</h2>
+                <p style="color:#b8d4e8;font-size:13px;margin-bottom:15px;">
+                    本周竞品动作最大的事件为上海2243.85万元公安交通执法管理系统2026年升级改造项目招标启动。本项目是2026年迄今金额最高的公安交管AI招标，且明确要求信创国产化+AI智能化双轮驱动，对全国公安信息化市场具有风向标意义。
+                </p>
+                <div class="swot-grid">
+                    <div class="swot-card swot-s">
+                        <div class="swot-title">优势 Strengths</div>
+                        <div class="swot-content">①金额大（2243.85万），是2026年迄今公安交管单笔最大招标
+②明确AI+信创双要求，AI治堵规模化复制（从360向1800路口）
+③上海警务信息化基础好，AI治堵已实战验证（效率提升12.9%）
+④专项AI应用（电动自行车智能查验）体现垂直场景深化</div>
+                    </div>
+                    <div class="swot-card swot-w">
+                        <div class="swot-title">劣势 Weaknesses</div>
+                        <div class="swot-content">①16个月建设周期长，厂商需垫资能力
+②信创+AI双重要求，技术门槛极高，排除大量中小厂商
+③传统集成商如不能完成信创认证将直接出局
+④对运维、二次开发能力要求高，单纯产品型厂商难以胜任</div>
+                    </div>
+                    <div class="swot-card swot-o">
+                        <div class="swot-title">机会 Opportunities</div>
+                        <div class="swot-content">①2026年是十四五收官年，公安信创替换+AI建设双高峰期
+②上海标杆效应将带动其他省市跟进，全国信创+AI交管市场释放
+③国产AI算力（昇腾、海光、寒武纪）通过本项目实现规模化验证
+④与新国标GB/T多项标准衔接，技术领先者可参与标准制定</div>
+                    </div>
+                    <div class="swot-card swot-t">
+                        <div class="swot-title">威胁 Threats</div>
+                        <div class="swot-content">①华为（昇腾+欧拉+高斯数据库）具备信创+AI全栈能力，是最大威胁
+②海康、大华等安防巨头借硬件渠道捆绑AI算法
+③阿里云、腾讯云等云厂商切入警务云+AI市场
+④南威若错过本项目，全国信创+AI交管市场存在感将被削弱</div>
+                    </div>
+                </div>
+                <h3 style="margin-top:20px;">战略意图分析</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                    <strong style="color:#4a9eff;">抢占信创+AI交管标准制高点：</strong>上海招标要求往往成为其他省市参照标准，本项目明确信创+AI双门槛，本质上是公安交管信息化国家级技术规范的上海实践。<br>
+                    <strong style="color:#4a9eff;">培育国产AI算力+操作系统生态：</strong>2243万中相当比例将流向国产硬件+软件生态（鲲鹏/昇腾CPU、欧拉操作系统、高斯数据库等），是国产IT生态在公安行业的关键突破。<br>
+                    <strong style="color:#4a9eff;">细分市场卡位：交通管理：</strong>向全域智能交通管理演进，对专注交通赛道的厂商是重大机会。<br>
+                    <strong style="color:#e74c3c;">南威对标产品审视：</strong>南威当前在交通赛道产品以信号控制系统、车辆大数据为主，缺乏信创+AI治堵垂直解决方案。本项目如不参与，南威在公安交管AI市场的存在感将进一步弱化。
+                </p>
+            </div>
+
+            <!-- Bidding Trends -->
+            <div class="card" style="grid-column: span 2;">
+                <h2>招投标风向标</h2>
+                <h3>本周公安信息化招标/中标项目汇总</h3>
+                <table>
+                    <tr>
+                        <th>项目名称</th>
+                        <th>采购单位</th>
+                        <th>金额</th>
+                        <th>状态</th>
+                        <th>技术方案特点</th>
+                    </tr>
+                    <tr>
+                        <td>公安交通执法管理系统2026年升级改造</td>
+                        <td>上海市公安局</td>
+                        <td>2243.85万</td>
+                        <td><span class="threat-high">招标中</span></td>
+                        <td>AI治堵+信创国产化+电子警察平台XC替换+电动自行车智能查验，16个月</td>
+                    </tr>
+                    <tr>
+                        <td>非机动车道路交通管理子系统2026年升级改造</td>
+                        <td>上海市公安局</td>
+                        <td>215.5万</td>
+                        <td><span class="threat-med">招标中</span></td>
+                        <td>管理端+骑手端+预警流转+交通执法Ⅱ，5个月</td>
+                    </tr>
+                    <tr>
+                        <td>AI智能反诈电话外呼租赁服务</td>
+                        <td>深圳罗湖公安分局</td>
+                        <td>23.956万</td>
+                        <td><span class="threat-high">已中标</span></td>
+                        <td>SaaS化租赁模式，深圳金鳞通讯中标</td>
+                    </tr>
+                    <tr>
+                        <td>广州市公安局交管支队2026信息化运维</td>
+                        <td>广州市公安局</td>
+                        <td>包1:315万<br>包2:移动中标</td>
+                        <td><span class="threat-high">已中标</span></td>
+                        <td>监控及交通信息板系统维护，东亚集团+广东移动</td>
+                    </tr>
+                    <tr>
+                        <td>贵州省公安厅2026年互联网大数据分析技术服务</td>
+                        <td>贵州省公安厅</td>
+                        <td>未公布</td>
+                        <td><span class="threat-med">招标中</span></td>
+                        <td>警务大数据服务化模式，6月26日开标</td>
+                    </tr>
+                    <tr>
+                        <td>2026世界人工智能大会区级委托采购</td>
+                        <td>上海某区</td>
+                        <td>未公布</td>
+                        <td><span class="threat-med">招标中</span></td>
+                        <td>面向中小微企业采购，6月5-12日获取文件</td>
+                    </tr>
+                    <tr>
+                        <td>息烽县公安局互联网信息服务</td>
+                        <td>息烽县公安局</td>
+                        <td>6.216万</td>
+                        <td><span class="threat-high">已成交</span></td>
+                        <td>贵广网络中标，6月2日成交</td>
+                    </tr>
+                </table>
+                <h3>预算金额变化趋势分析</h3>
+                <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                    <strong>重资产建设仍是主流：</strong>上海2243万交通执法系统升级改造是2026年迄今公安交管单笔最大招标，核心业务系统仍以重资产方式投入，预算规模未出现紧缩。<br>
+                    <strong>SaaS化转型出现首个标杆：</strong>罗湖AI反诈租赁服务23.956万中标，金额虽小但意义重大——SaaS化反诈模式从招标公告走向实际落地，预计2026年下半年将有更多省市跟进。<br>
+                    <strong>运维服务市场稳定释放：</strong>广州交管运维项目（东亚集团+广东移动）显示，存量系统的运维服务市场仍稳定释放，年化运维预算成为新基建。<br>
+                    <strong>国产化要求贯穿各类项目：</strong>从上海2243万到215.5万，从信创替换到反诈AI，技术国产化、数据本地化已成为各类公安项目的标配要求，海外厂商基本退出主战场。
+                </p>
+            </div>
+
+            <!-- Southware Recommendations -->
+            <div class="card" style="grid-column: span 2;">
+                <h2>南威应对建议</h2>
+                <div class="recommendation">
+                    <div class="recommendation-title">紧急行动（1-3个月）</div>
+                    <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                        <strong>【跟踪上海2243万项目】</strong>成立专项小组跟踪上海公安交通执法管理系统升级改造招标，组织技术方案编写+信创适配能力评估，争取进入投标名单。<br>
+                        <strong>【布局SaaS化反诈AI产品】</strong>借鉴罗湖金鳞通讯中标经验，将南威情指行一体化平台中的反诈预警模块进行SaaS化改造，争取3个月内推出反诈AI即服务产品。<br>
+                        <strong>【信创认证加速】</strong>针对华为鲲鹏/昇腾、欧拉操作系统、高斯数据库等国产化技术栈，加快南威核心产品的适配认证，3个月内完成至少3项关键认证。
+                    </p>
+                </div>
+                <div class="recommendation">
+                    <div class="recommendation-title">中期规划（3-6个月）</div>
+                    <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                        <strong>【空地协同+警航平台建设】</strong>借鉴宿迁三维一体警航实战模式，将南威情指行一体化平台向空地协同方向升级，整合无人机、警用机器人、视频监控的统一指挥调度能力。<br>
+                        <strong>【AI治堵解决方案产品化】</strong>基于南威在交通信号控制、视频结构化的基础，引入大模型能力（DeepSeek、昇腾），打造AI治堵+智能信号垂直解决方案，瞄准全国二三线城市。<br>
+                        <strong>【WAIC 2026参展布局】</strong>2026世界人工智能大会7月17-20日在上海举办，南威应组织参展并发布至少1款新品，借势提升行业影响力。
+                    </p>
+                </div>
+                <div class="recommendation">
+                    <div class="recommendation-title">长期战略（6-12个月）</div>
+                    <p style="color:#b8d4e8;font-size:13px;line-height:1.6;">
+                        <strong>【信创+AI交管标准制定者】</strong>积极参与上海信创+AI交管项目经验总结，争取成为其他省市复制方案的标准制定参与者。<br>
+                        <strong>【云通信+反诈生态布局】</strong>与电信运营商（特别是广东移动、中国电信）建立战略合作，借力其政企客户渠道，共同开拓反诈AI、城市安全等SaaS服务市场。<br>
+                        <strong>【AI产品矩阵SaaS化】</strong>将南威核心AI产品（情指行、案件管理、视频大数据等）进行全面SaaS化改造，构建南威警务云服务品牌。
+                    </p>
+                </div>
+            </div>
+
+            <!-- Competitor Radar -->
+            <div class="card" style="grid-column: span 2;">
+                <h2>竞品雷达图（5维度评分）</h2>
+                <table>
+                    <tr>
+                        <th>厂商</th>
+                        <th>AI能力</th>
+                        <th>信创能力</th>
+                        <th>行业经验</th>
+                        <th>本地化服务</th>
+                        <th>价格竞争力</th>
+                        <th>综合</th>
+                    </tr>
+                    <tr><td>华为安平</td><td>10</td><td>10</td><td>9</td><td>7</td><td>6</td><td>8.4</td></tr>
+                    <tr><td>海康威视</td><td>9</td><td>8</td><td>10</td><td>9</td><td>7</td><td>8.6</td></tr>
+                    <tr><td>大华股份</td><td>8</td><td>8</td><td>9</td><td>9</td><td>8</td><td>8.4</td></tr>
+                    <tr><td>科大讯飞</td><td>10</td><td>7</td><td>8</td><td>6</td><td>5</td><td>7.2</td></tr>
+                    <tr><td>商汤科技</td><td>9</td><td>6</td><td>7</td><td>5</td><td>5</td><td>6.4</td></tr>
+                    <tr><td>银河水滴</td><td>7</td><td>5</td><td>6</td><td>8</td><td>7</td><td>6.6</td></tr>
+                    <tr><td>杰创智能</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7</td><td>7.0</td></tr>
+                    <tr style="background:rgba(231,76,60,0.2);"><td><strong>南威软件</strong></td><td><strong>5</strong></td><td><strong>7</strong></td><td><strong>9</strong></td><td><strong>9</strong></td><td><strong>7</strong></td><td><strong>7.4</strong></td></tr>
+                </table>
+                <p style="color:#e74c3c;font-size:13px;line-height:1.6;margin-top:10px;">
+                    <strong>【南威综合定位】</strong>7.4分，行业第4位。优势在行业经验和本地化服务（9分），劣势在AI能力（5分）。在信创+AI双轮驱动的市场环境下，南威需借助行业经验优势补齐AI能力短板。
+                </p>
+            </div>
+
+            <!-- Timeline -->
+            <div class="card">
+                <h2>本周主要事件时间轴</h2>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-02</div>
+                        <div class="timeline-content">贵州息烽县公安局互联网信息服务成交（贵广网络，6.216万）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-02</div>
+                        <div class="timeline-content">宿迁公安三维一体警航实战模式发布（空地协同新标杆）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-03</div>
+                        <div class="timeline-content">深圳罗湖AI反诈电话外呼租赁服务中标（深圳金鳞通讯，23.956万）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-03</div>
+                        <div class="timeline-content">杰创智能亮相2026广州国际数智装备展（掌安星+常青云）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-05</div>
+                        <div class="timeline-content">上海非机动车道路交通管理子系统招标启动（215.5万）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-05</div>
+                        <div class="timeline-content">广州大模型警务平台开标（414.36万，结果待公布）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-05</div>
+                        <div class="timeline-content">广州交管支队2026信息化运维项目中标（东亚+广东移动）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-05</div>
+                        <div class="timeline-content">2026世界人工智能大会区级采购项目招标启动（WAIC 7月举办）</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-date">2026-06-08</div>
+                        <div class="timeline-content">上海公安交通执法管理系统升级改造招标启动（2243.85万，16个月）</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Competitor Quick View -->
+            <div class="card">
+                <h2>竞品动态速览</h2>
+                <table>
+                    <tr>
+                        <th>竞品</th>
+                        <th>本周核心动态</th>
+                        <th>威胁等级</th>
+                    </tr>
+                    <tr>
+                        <td>华为安平</td>
+                        <td>上海2243万项目中信创+AI全栈能力优势明显，是最大中标热门</td>
+                        <td><span class="threat-high">极高</span></td>
+                    </tr>
+                    <tr>
+                        <td>海康威视</td>
+                        <td>硬件渠道+AI算法捆绑策略持续，多地交管项目持续中标</td>
+                        <td><span class="threat-high">高</span></td>
+                    </tr>
+                    <tr>
+                        <td>大华股份</td>
+                        <td>步态识别+视频监控一体化解决方案推广</td>
+                        <td><span class="threat-high">高</span></td>
+                    </tr>
+                    <tr>
+                        <td>科大讯飞</td>
+                        <td>星火大模型+反诈AI能力，瞄准公安SaaS化市场</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                    <tr>
+                        <td>杰创智能</td>
+                        <td>掌安星AI+安全亮相广州数智装备展，进军AI安全赛道</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                    <tr>
+                        <td>深圳金鳞通讯</td>
+                        <td>中标罗湖AI反诈电话外呼租赁23.956万，SaaS化反诈新势力</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                    <tr>
+                        <td>银河水滴</td>
+                        <td>步态识别持续推广，但上海交管类项目尚未见中标</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                    <tr>
+                        <td>商汤科技</td>
+                        <td>SenseFoundry等城市AI平台持续迭代</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                    <tr>
+                        <td>阿里云/腾讯云</td>
+                        <td>借WAIC 2026继续布局警务云+AI市场</td>
+                        <td><span class="threat-med">中</span></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>南威软件股份有限公司 | 战略情报中心</p>
+            <p>机密级别：内部参考 | 未经授权禁止外传</p>
+            <p style="margin-top:10px;">Generated on 2026-06-08</p>
+        </div>
+    </div>
+</body>
+</html>
