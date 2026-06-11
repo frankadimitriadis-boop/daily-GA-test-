@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>每日公安AI情报简报 · 第41期</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            background-color: #f2f4f8;
+            font-family: 'Segoe UI', 'PingFang SC', Roboto, 'Helvetica Neue', sans-serif;
+            padding: 2rem 1.5rem;
+            display: flex;
+            justify-content: center;
+            color: #1e2a3a;
+        }
+        .brief-container {
+            max-width: 960px;
+            width: 100%;
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 12px 40px rgba(0, 20, 40, 0.08);
+            overflow: hidden;
+            padding: 0;
+        }
+        .header {
+            background: #0b1a2e;
+            padding: 1.8rem 2.2rem 1.5rem 2.2rem;
+            border-bottom: 4px solid #1e6f9f;
+            position: relative;
+        }
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 2.2rem;
+            width: 60px;
+            height: 4px;
+            background: #f5b342;
+            border-radius: 0 4px 4px 0;
+        }
+        .header-top {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .header-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #ffffff;
+            letter-spacing: 0.02em;
+        }
+        .header-title small {
+            font-weight: 400;
+            font-size: 1rem;
+            color: #9bb7d4;
+            margin-left: 10px;
+        }
+        .header-badge {
+            background: #1e6f9f;
+            color: white;
+            font-size: 0.7rem;
+            font-weight: 600;
+            padding: 0.3rem 1rem;
+            border-radius: 30px;
+            letter-spacing: 0.3px;
+            border: 1px solid #368ac0;
+        }
+        .header-sub {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            margin-top: 16px;
+            color: #b6cfe5;
+            font-size: 0.8rem;
+            border-top: 1px solid #1f3b54;
+            padding-top: 14px;
+        }
+        .header-sub span {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 0.2rem 0.8rem;
+            border-radius: 20px;
+        }
+        .stats-bar {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            gap: 1.2rem 2rem;
+            background: #f0f5fa;
+            padding: 1rem 2.2rem;
+            border-bottom: 1px solid #dde5ed;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #1f3a57;
+        }
+        .stats-bar .stat-item { display: flex; align-items: center; gap: 6px; }
+        .stats-bar .stat-high { color: #b22234; font-weight: 700; }
+        .stats-bar .stat-mid { color: #c97d2d; font-weight: 700; }
+        .stats-bar .stat-low { color: #3d7e5a; font-weight: 700; }
+        .risk-tag {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            padding: 0.15rem 0.8rem;
+            border-radius: 20px;
+            background: #e9ecf0;
+            color: #1f2a3a;
+            margin-right: 4px;
+        }
+        .risk-tag.high { background: #fce9e9; color: #a51d2c; }
+        .risk-tag.mid { background: #fff0db; color: #a8661a; }
+        .risk-tag.low { background: #e1f0e8; color: #1f6e4a; }
+        .content { padding: 0.8rem 2.2rem 2rem 2.2rem; }
+        .section-block { margin-top: 1.6rem; }
+        .section-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 1rem;
+            font-weight: 700;
+            color: #0b1a2e;
+            border-bottom: 2px solid #dce4ed;
+            padding-bottom: 0.5rem;
+            margin-bottom: 0.6rem;
+            letter-spacing: 0.3px;
+        }
+        .section-title .sec-icon { font-size: 1.2rem; }
+        .intel-grid { display: flex; flex-direction: column; gap: 0.5rem; }
+        .intel-row {
+            display: grid;
+            grid-template-columns: 52px 1fr 2.2fr 1.6fr 1.2fr;
+            gap: 6px 12px;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 0.7rem 0.4rem 0.7rem 0.6rem;
+            border: 1px solid #eef2f6;
+            align-items: start;
+            font-size: 0.78rem;
+            line-height: 1.4;
+        }
+        .intel-row:hover { background: #f8fafd; border-color: #cbd8e6; }
+        .intel-row.header-row {
+            background: #eaf0f7;
+            border: 1px solid #c9d6e5;
+            font-weight: 600;
+            color: #1a314b;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.3px;
+            padding: 0.5rem 0.4rem 0.5rem 0.6rem;
+            border-radius: 10px;
+        }
+        .intel-row .col-risk { font-weight: 700; font-size: 0.75rem; }
+        .intel-row .col-title { font-weight: 600; color: #0a1e33; }
+        .intel-row .col-summary { color: #2e4058; }
+        .intel-row .col-source { color: #3f5a78; font-size: 0.7rem; }
+        .intel-row .col-insight {
+            color: #1a4a6b;
+            background: #f2f8ff;
+            padding: 0.1rem 0.4rem;
+            border-radius: 6px;
+            font-size: 0.72rem;
+        }
+        .source-date { color: #6f7e94; }
+        .footer-note {
+            margin-top: 2.2rem;
+            padding: 1rem 1.8rem;
+            background: #f3f7fc;
+            border-radius: 18px;
+            color: #2c4a6a;
+            font-size: 0.8rem;
+            text-align: center;
+            border: 1px solid #dce5ef;
+        }
+        .footer-note strong { color: #0b2a48; }
+        .footer-note .highlight { color: #b22234; font-weight: 500; }
+        .dedup-note {
+            display: inline-block;
+            background: #e1f0e8;
+            color: #1f6e4a;
+            padding: 0.25rem 1rem;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        @media (max-width: 760px) {
+            .intel-row { grid-template-columns: 1fr; gap: 6px; padding: 0.8rem; }
+            .intel-row.header-row { display: none; }
+            .header-title { font-size: 1.3rem; }
+            .header { padding: 1.2rem 1.2rem; }
+            .content { padding: 0.5rem 1rem 1.5rem 1rem; }
+            .stats-bar { padding: 0.8rem 1rem; gap: 0.8rem; }
+            .intel-row .col-insight { background: transparent; padding-left: 0; }
+        }
+    </style>
+</head>
+<body>
+<div class="brief-container">
+
+    <!-- 头部 -->
+    <div class="header">
+        <div class="header-top">
+            <div class="header-title">
+                【第41期】每日公安AI情报简报
+                <small>南威软件 · 竞品情报监测系统</small>
+            </div>
+            <div class="header-badge">内部人员视角 · 情报简报</div>
+        </div>
+        <div class="header-sub">
+            <span>📅 监测周期：2026年6月10日—6月11日</span>
+            <span>⏱️ 生成时间：2026年6月11日 10:00</span>
+            <span><span class="dedup-note">✅ 已去重第40期(6月10日)已报道内容</span></span>
+        </div>
+    </div>
+
+    <!-- 统计栏 -->
+    <div class="stats-bar">
+        <div class="stat-item">📊 本期共监测到 <strong style="font-weight:800;">9</strong> 条新增情报，其中</div>
+        <div class="stat-item"><span class="stat-high">高风险 2 条</span></div>
+        <div class="stat-item"><span class="stat-mid">中风险 5 条</span></div>
+        <div class="stat-item"><span class="stat-low">低风险 2 条</span></div>
+    </div>
+
+    <!-- 内容主体 -->
+    <div class="content">
+
+        <!-- ========= 政策与热点 ========= -->
+        <div class="section-block">
+            <div class="section-title">
+                <span class="sec-icon">📌</span> 政策与热点
+            </div>
+            <div class="intel-grid">
+                <div class="intel-row header-row">
+                    <div class="col-risk">风险等级</div>
+                    <div class="col-title">核心标题</div>
+                    <div class="col-summary">关键内容摘要（50字内）</div>
+                    <div class="col-source">来源</div>
+                    <div class="col-insight">对南威的启示</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag high">高</span></div>
+                    <div class="col-title">中宣部、公安部联合部署"全民反诈在行动"集中宣传月</div>
+                    <div class="col-summary">6月10日启动，主题"不听不信不贪恋，构筑反诈心防线"，全国"五进"宣传，在京举行启动仪式。</div>
+                    <div class="col-source">新华社/公安部官网, <span class="source-date">2026-06-10</span></div>
+                    <div class="col-insight">反诈AI+宣传进入国家级集中推进阶段，南威可关注反诈宣教智能化产品的政企合作机会。</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag high">高</span></div>
+                    <div class="col-title">美国防部更新1260H清单，新增阿里、百度、比亚迪等20+企业</div>
+                    <div class="col-summary">6月8日美方新增阿里/百度/京东方/宇树科技等20+企业至清单，海康大华商汤继续在列，共计188家。</div>
+                    <div class="col-source">新浪财经, <span class="source-date">2026-06-09</span></div>
+                    <div class="col-insight">清单扩至AI/互联网/新能源，出口管制风险升级。南威需加速国产替代供应链自主可控布局。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========= 技术前沿 ========= -->
+        <div class="section-block">
+            <div class="section-title">
+                <span class="sec-icon">⚙️</span> 技术前沿
+            </div>
+            <div class="intel-grid">
+                <div class="intel-row header-row">
+                    <div class="col-risk">风险等级</div>
+                    <div class="col-title">核心标题</div>
+                    <div class="col-summary">关键内容摘要（50字内）</div>
+                    <div class="col-source">来源</div>
+                    <div class="col-insight">对南威的启示</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag mid">中</span></div>
+                    <div class="col-title">ISC.AI 2026定档6月24日，聚焦"AI对AI"安全范式变革</div>
+                    <div class="col-summary">第十四届ISC.AI大会在北京举办，核心议题：安全对抗从"人对人"向"AI对AI"范式变革。</div>
+                    <div class="col-source">环球网, <span class="source-date">2026-06-02</span></div>
+                    <div class="col-insight">AI安全攻防升级为行业共识，南威警务AI产品的安全防护与对抗能力需同步建设。</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag low">低</span></div>
+                    <div class="col-title">海康威视获图像修复模型相关专利授权</div>
+                    <div class="col-summary">6月9日获"图像修复模型训练方法"专利，用合成数据训练模型提升RGB图像修复效果。</div>
+                    <div class="col-source">新浪财经, <span class="source-date">2026-06-10</span></div>
+                    <div class="col-insight">海康持续加强AI底层视觉技术，南威在视频图像处理赛道需关注差异化路径。</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag low">低</span></div>
+                    <div class="col-title">大华股份申请嵌入式远程运维专利</div>
+                    <div class="col-summary">6月9日公布"嵌入式设备远程运维方法"专利，实现监控写操作上传信息、定位诊断。</div>
+                    <div class="col-source">国家知识产权局, <span class="source-date">2026-06-10</span></div>
+                    <div class="col-insight">大华在设备运维智能化持续布局，南威可参考其思路优化自身产品服务体系。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ========= 竞品动态 ========= -->
+        <div class="section-block">
+            <div class="section-title">
+                <span class="sec-icon">📈</span> 竞品动态
+            </div>
+            <div class="intel-grid">
+                <div class="intel-row header-row">
+                    <div class="col-risk">风险等级</div>
+                    <div class="col-title">核心标题</div>
+                    <div class="col-summary">关键内容摘要（50字内）</div>
+                    <div class="col-source">来源</div>
+                    <div class="col-insight">对南威的启示</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag mid">中</span></div>
+                    <div class="col-title">大华股份与脉冲视觉签署战略合作，成立联合技术创新中心</div>
+                    <div class="col-summary">6月9日签约，围绕类脑脉冲视觉技术在智慧交通/智慧城市场景开展产业化合作。</div>
+                    <div class="col-source">大华官网, <span class="source-date">2026-06-09</span></div>
+                    <div class="col-insight">类脑脉冲视觉突破帧式传感器框架，极端光照/高速场景优势显著，南威需关注对安防感知格局的影响。</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag mid">中</span></div>
+                    <div class="col-title">电科数字中标中国金融期货交易所269.50万元采购项目</div>
+                    <div class="col-summary">6月9日公告，电科数字中标中金所光纤铜缆采购项目，中标金额269.50万元。</div>
+                    <div class="col-source">东方财富网, <span class="source-date">2026-06-09</span></div>
+                    <div class="col-insight">电科数字在金融IT领域持续获取订单，体现其非公安领域多元拓展能力值得关注。</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag mid">中</span></div>
+                    <div class="col-title">海康威视亮相2026华南工博会（6月10-12日）</div>
+                    <div class="col-summary">海康在深圳华南工博会打造7大工业场景展区，展示工业数字化转型解决方案。</div>
+                    <div class="col-source">微信公众号, <span class="source-date">2026-06-10</span></div>
+                    <div class="col-insight">海康持续强化工业AIoT定位，从安防向工业数字化延伸，需关注其行业边界扩张节奏。</div>
+                </div>
+
+                <div class="intel-row">
+                    <div class="col-risk"><span class="risk-tag mid">中</span></div>
+                    <div class="col-title">商汤科技2026深度评测：原生多模态领跑，全生态落地赋能</div>
+                    <div class="col-summary">行业分析文章指出商汤视觉AI十年稳居中国市场榜首，大模型+大装置双驱动战略成效显著。</div>
+                    <div class="col-source">新浪财经, <span class="source-date">2026-06-10</span></div>
+                    <div class="col-insight">商汤在视觉AI龙头地位稳固，公安视觉AI竞争持续加剧，南威需强化差异化应用能力。</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 结尾信息 -->
+        <div class="footer-note">
+            <span>感谢您收阅本期简报！</span><br>
+            <span style="display:inline-block; margin-top: 6px; color: #3b5d7e;">
+                本报告由南威软件自动化生成 | 数据来源：全网公开信息 | 生成时间：2026年6月11日
+            </span>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>
