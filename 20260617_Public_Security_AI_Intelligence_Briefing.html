@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日公安AI情报简报 | 第44期</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif;
+    background: #f0f4f8;
+    color: #1a2a3a;
+    line-height: 1.6;
+    padding: 20px;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,20,40,0.08);
+    padding: 32px 36px;
+}
+.header {
+    background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 100%);
+    margin: -32px -36px 24px -36px;
+    padding: 30px 36px;
+    border-radius: 16px 16px 0 0;
+    color: #ffffff;
+}
+.header h1 { font-size: 26px; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px; }
+.header .subtitle { font-size: 13px; opacity: 0.85; margin-bottom: 10px; }
+.header .meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; opacity: 0.75; }
+.overview-bar {
+    background: #eef3f9; border-left: 5px solid #1F4E79;
+    padding: 14px 18px; border-radius: 10px; margin-bottom: 28px; font-size: 15px; font-weight: 500;
+}
+.risk-badge { display: inline-block; padding: 3px 14px; border-radius: 30px; font-size: 12px; font-weight: 600; letter-spacing: 0.3px; }
+.risk-badge.high { background: #C00000; color: #ffffff; }
+.risk-badge.medium { background: #f39c12; color: #ffffff; }
+.risk-badge.low { background: #27ae60; color: #ffffff; }
+.section-title {
+    font-size: 20px; font-weight: 700; color: #1F4E79;
+    margin: 30px 0 12px 0; padding-bottom: 6px;
+    border-bottom: 2px solid #dce6ef;
+}
+.data-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 24px;
+    font-size: 13px; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,20,40,0.04);
+}
+.data-table thead { background: #1F4E79; color: #ffffff; }
+.data-table th { padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; letter-spacing: 0.5px; white-space: nowrap; }
+.data-table th:nth-child(1) { width: 68px; }
+.data-table th:nth-child(2) { width: 22%; }
+.data-table th:nth-child(3) { width: 28%; }
+.data-table th:nth-child(4) { width: 14%; }
+.data-table th:nth-child(5) { width: 28%; }
+.data-table tbody tr { border-bottom: 1px solid #e8edf4; background: #ffffff; transition: background 0.15s; }
+.data-table tbody tr:last-child { border-bottom: none; }
+.data-table tbody tr:hover { background: #f6faff; }
+.data-table td { padding: 12px 12px; vertical-align: top; line-height: 1.5; }
+.data-table td:first-child { text-align: center; vertical-align: middle; }
+.data-table .title-cell { font-weight: 600; color: #0b2a4a; }
+.data-table .source-cell { font-size: 11px; color: #6a7f8e; }
+.data-table .insight-cell { background: #f8fbfe; border-left: 1px solid #e8edf4; font-size: 12px; color: #1f3a4a; }
+.data-table .risk-tag { display: inline-block; padding: 2px 12px; border-radius: 30px; font-size: 11px; font-weight: 600; }
+.data-table .risk-tag.high { background: #C00000; color: #fff; }
+.data-table .risk-tag.medium { background: #f39c12; color: #fff; }
+.data-table .risk-tag.low { background: #27ae60; color: #fff; }
+.footer { margin-top: 32px; padding-top: 18px; border-top: 2px solid #e6edf5; font-size: 12px; color: #6f7e8a; text-align: center; }
+.footer a { color: #2E75B6; text-decoration: none; }
+@media (max-width: 720px) {
+    .container { padding: 16px; }
+    .header { margin: -16px -16px 16px -16px; padding: 20px 16px; }
+    .header h1 { font-size: 20px; }
+    .data-table th, .data-table td { padding: 8px 6px; font-size: 11px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+    <h1>📡 每日公安AI情报简报 · 第44期</h1>
+    <div class="subtitle">南威软件 · 公安AI竞品情报监测系统</div>
+    <div class="meta">
+        <span>📅 监测周期：2026年6月16日—6月17日</span>
+        <span>⏱ 生成时间：2026年6月17日</span>
+        <span>🔢 情报总数：7条</span>
+        <span>📋 期次：第44期</span>
+    </div>
+</div>
+
+<div class="overview-bar">
+    📊 本期共监测到 <strong>7</strong> 条新增情报，其中
+    <span class="risk-badge high">高风险 1</span>
+    <span class="risk-badge medium">中风险 5</span>
+    <span class="risk-badge low">低风险 1</span>
+    <br><span style="font-size:12px;color:#6a7f8e;">✅ 已对比第41-43期（6月11日-16日）报告及7日内历史内容，本次均为新增情报。</span>
+</div>
+
+<div class="section-title">■ 政策与热点</div>
+<table class="data-table">
+<thead><tr>
+<th>风险等级</th><th>核心标题</th><th>关键内容摘要</th><th>来源</th><th>对南威的启示</th>
+</tr></thead>
+<tbody>
+<tr style="background:#FFE0E0">
+    <td style="text-align:center;"><span class="risk-tag 高">高</span></td>
+    <td class="title-cell">抖音2026"反诈万里行"在京启动，AI风控Agent体系升级</td>
+    <td>6月16日抖音联合中央网信办、工信部、北京市公安局启动反诈万里行。升级长辈模式新增反诈预警，依托AI大模型+Agent风控体系识别阻断诈骗，2026年已助12万余用户规避风险。</td>
+    <td class="source-cell">环球网/新浪财经 2026-06-16</td>
+    <td class="insight-cell">公安反诈与互联网平台深度联动成趋势，AI Agent在反诈实战中价值凸显，南威可关注反诈智能体产品在警务侧的适配机会。</td>
+</tr>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">柳州公安以AI赋能智慧警务建设新进展</td>
+    <td>柳州市公安局贯彻落实公安部"人工智能+"政策，构建"专业+机制+大数据"新型警务运行模式，智慧警务平台建设取得突破性进展。</td>
+    <td class="source-cell">百家号 2026-06-15</td>
+    <td class="insight-cell">地市级公安AI建设需求持续释放，南威可借鉴柳州模式加速推广情指行一体化平台在区县级市场的落地。</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="section-title">■ 技术前沿</div>
+<table class="data-table">
+<thead><tr>
+<th>风险等级</th><th>核心标题</th><th>关键内容摘要</th><th>来源</th><th>对南威的启示</th>
+</tr></thead>
+<tbody>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">科大讯飞发布星火多模态大模型X2-VL（全国产算力）</td>
+    <td>6月11日科大讯飞发布星火多模态大模型X2-VL，唯一基于全国产算力训练的主流大模型。高考数学148分、多模态准确率95%，已落地75所学校1200台AI黑板、司法系统效率提升30%-60%。</td>
+    <td class="source-cell">百家号/IT之家 2026-06-13</td>
+    <td class="insight-cell">科大讯飞全国产算力大模型+垂直场景（教育/司法）落地能力突出，南威需关注其向公安场景迁移的策略节奏。</td>
+</tr>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">海康威视推出"观澜编码"应对硬盘涨价</td>
+    <td>海康利用观澜大模型精准提取对象，对感兴趣区域和背景采用不同量化策略，结合H.26X纹理编码技术，大幅降低存储需求，应对全球硬盘涨价潮。</td>
+    <td class="source-cell">新浪财经 2026-06-16</td>
+    <td class="insight-cell">海康将大模型能力下沉至编码层，降低用户存储TCO，南威需关注视频存储方案中的AI差异化能力构建。</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="section-title">■ 竞品动态</div>
+<table class="data-table">
+<thead><tr>
+<th>风险等级</th><th>核心标题</th><th>关键内容摘要</th><th>来源</th><th>对南威的启示</th>
+</tr></thead>
+<tbody>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">海康威视举办投资者交流活动，详解AI大模型布局</td>
+    <td>近三月获20篇券商研报，管理层详解AI大模型轻量化蒸馏、边缘端部署、"榕树模式"经营、费用管控三大策略。欧洲周界相机误报率降至1/10；毫米波安检门获民航A3认证。</td>
+    <td class="source-cell">同花顺iNews 2026-06-16</td>
+    <td class="insight-cell">海康大模型轻量化+边缘部署战略清晰，南威需在算力有限的公安基层场景中强化自身AI方案的性价比优势。</td>
+</tr>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">科大讯飞AI眼镜6月15日开启预售，打通语音与视觉交互</td>
+    <td>产品定价4299元，40g轻量化，支持122种语言翻译、GlassClaw AI助理完成多模态记录与会议纪要，从语音入口向视野交互技术跃迁。</td>
+    <td class="source-cell">腾讯新闻 2026-06-15</td>
+    <td class="insight-cell">讯飞AI眼镜可穿戴+多模态能力或延伸至警务场景（移动巡查/前线指挥），南威需关注智能穿戴与警务业务的融合趋势。</td>
+</tr>
+<tr style="background:#E2EFDA">
+    <td style="text-align:center;"><span class="risk-tag 低">低</span></td>
+    <td class="title-cell">商汤科技林达华@AIGC2026：AI正式迈入智能体（Agent）时代</td>
+    <td>商汤首席科学家林达华在AIGC2026峰会上提出，行业竞争已从大模型参数比拼转向多模态融合、端到端落地、物理空间认知的深层较量。</td>
+    <td class="source-cell">智源社区 2026-06-11</td>
+    <td class="insight-cell">Agent时代开启，商汤在多模态+物理空间认知的前瞻布局值得关注，南威需思考AI Agent在警务情报分析中的差异化应用。</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="footer">
+    本报告由南威软件自动化生成 | 数据来源：全网公开信息 | 生成时间：2026年6月17日<br>
+    <a href="https://frankadimitriadis-boop.github.io/daily-GA-test-/20260617_Public_Security_AI_Intelligence_Briefing.html">📎 GitHub Pages 在线浏览</a>
+</div>
+</div>
+</body>
+</html>
