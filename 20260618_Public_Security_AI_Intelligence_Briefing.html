@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日公安AI情报简报 | 第45期</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif;
+    background: #f0f4f8;
+    color: #1a2a3a;
+    line-height: 1.6;
+    padding: 20px;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0,20,40,0.08);
+    padding: 32px 36px;
+}
+.header {
+    background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 100%);
+    margin: -32px -36px 24px -36px;
+    padding: 30px 36px;
+    border-radius: 16px 16px 0 0;
+    color: #ffffff;
+}
+.header h1 { font-size: 26px; font-weight: 700; letter-spacing: 1px; margin-bottom: 4px; }
+.header .subtitle { font-size: 13px; opacity: 0.85; margin-bottom: 10px; }
+.header .meta { display: flex; flex-wrap: wrap; gap: 18px; font-size: 13px; opacity: 0.75; }
+.overview-bar {
+    background: #eef3f9; border-left: 5px solid #1F4E79;
+    padding: 14px 18px; border-radius: 10px; margin-bottom: 28px; font-size: 15px; font-weight: 500;
+}
+.risk-badge { display: inline-block; padding: 3px 14px; border-radius: 30px; font-size: 12px; font-weight: 600; letter-spacing: 0.3px; }
+.risk-badge.high { background: #C00000; color: #ffffff; }
+.risk-badge.medium { background: #f39c12; color: #ffffff; }
+.risk-badge.low { background: #27ae60; color: #ffffff; }
+.section-title {
+    font-size: 20px; font-weight: 700; color: #1F4E79;
+    margin: 30px 0 12px 0; padding-bottom: 6px;
+    border-bottom: 2px solid #dce6ef;
+}
+.data-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 24px;
+    font-size: 13px; border-radius: 12px; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,20,40,0.04);
+}
+.data-table thead { background: #1F4E79; color: #ffffff; }
+.data-table th { padding: 10px 12px; text-align: left; font-weight: 600; font-size: 12px; letter-spacing: 0.5px; white-space: nowrap; }
+.data-table th:nth-child(1) { width: 68px; }
+.data-table th:nth-child(2) { width: 22%; }
+.data-table th:nth-child(3) { width: 28%; }
+.data-table th:nth-child(4) { width: 14%; }
+.data-table th:nth-child(5) { width: 28%; }
+.data-table tbody tr { border-bottom: 1px solid #e8edf4; background: #ffffff; transition: background 0.15s; }
+.data-table tbody tr:last-child { border-bottom: none; }
+.data-table tbody tr:hover { background: #f6faff; }
+.data-table td { padding: 12px 12px; vertical-align: top; line-height: 1.5; }
+.data-table td:first-child { text-align: center; vertical-align: middle; }
+.data-table .title-cell { font-weight: 600; color: #0b2a4a; }
+.data-table .source-cell { font-size: 11px; color: #6a7f8e; }
+.data-table .insight-cell { background: #f8fbfe; border-left: 1px solid #e8edf4; font-size: 12px; color: #1f3a4a; }
+.data-table .risk-tag { display: inline-block; padding: 2px 12px; border-radius: 30px; font-size: 11px; font-weight: 600; }
+.data-table .risk-tag.high { background: #C00000; color: #fff; }
+.data-table .risk-tag.medium { background: #f39c12; color: #fff; }
+.data-table .risk-tag.low { background: #27ae60; color: #fff; }
+.footer { margin-top: 32px; padding-top: 18px; border-top: 2px solid #e6edf5; font-size: 12px; color: #6f7e8a; text-align: center; }
+.footer a { color: #2E75B6; text-decoration: none; }
+@media (max-width: 720px) {
+    .container { padding: 16px; }
+    .header { margin: -16px -16px 16px -16px; padding: 20px 16px; }
+    .header h1 { font-size: 20px; }
+    .data-table th, .data-table td { padding: 8px 6px; font-size: 11px; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+<div class="header">
+    <h1>📡 每日公安AI情报简报 · 第45期</h1>
+    <div class="subtitle">南威软件 · 公安AI竞品情报监测系统</div>
+    <div class="meta">
+        <span>📅 监测周期：2026年6月17日—6月18日</span>
+        <span>⏱ 生成时间：2026年6月18日</span>
+        <span>🔢 情报总数：9条</span>
+        <span>📋 期次：第45期</span>
+    </div>
+</div>
+
+<div class="overview-bar">
+    📊 本期共监测到 <strong>9</strong> 条新增情报，其中
+    <span class="risk-badge high">高风险 2</span>
+    <span class="risk-badge medium">中风险 5</span>
+    <span class="risk-badge low">低风险 2</span>
+    <br><span style="font-size:12px;color:#6a7f8e;">✅ 已对比第41-44期（6月11日-17日）报告及7日内历史内容，本次均为新增情报。</span>
+</div>
+
+<div class="section-title">■ 政策与热点</div>
+<table class="data-table">
+<thead><tr>
+<th>风险等级</th><th>核心标题</th><th>关键内容摘要</th><th>来源</th><th>对南威的启示</th>
+</tr></thead>
+<tbody>
+<tr style="background:#FFE0E0">
+    <td style="text-align:center;"><span class="risk-tag 高">高</span></td>
+    <td class="title-cell">南威软件6月17日跌2.91%，Q1营收同比减少31.49%</td>
+    <td>6月17日南威软件收盘跌2.91%，成交额2.17亿元。2026年Q1营收1.17亿元同比-31.49%，归母净利润-4981.60万元同比-43.60%。</td>
+    <td class="source-cell">新浪财经 2026-06-17</td>
+    <td class="insight-cell">南威自身业绩承压，营收持续下滑。在G端市场面临海康、大华、科大讯飞等多方挤压，需加速AI战略转型与项目落地转化。</td>
+</tr>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">ISC.AI 2026确认6月24日开幕，聚焦Agent安全范式</td>
+    <td>第十四届互联网安全大会(ISC.AI 2026)定于6月24日北京国家会议中心举办，主题聚焦安全对抗从"人对人"向"AI对AI"范式变革。</td>
+    <td class="source-cell">ISC官网/360 2026-06-17</td>
+    <td class="insight-cell">AI安全成行业新焦点，360将展示漏洞挖掘智能体、渗透测试智能体等实践。南威需关注Agent安全能力建设，防范警务AI安全风险。</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="section-title">■ 技术前沿</div>
+<table class="data-table">
+<thead><tr>
+<th>风险等级</th><th>核心标题</th><th>关键内容摘要</th><th>来源</th><th>对南威的启示</th>
+</tr></thead>
+<tbody>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">大华股份获并行任务资源分配控制方法发明专利</td>
+    <td>大华股份6月16日获授权发明专利"并行任务的资源分配控制方法"，通过监控资源使用情况动态调整候选任务数量，提升多任务并行处理效率。</td>
+    <td class="source-cell">天眼查/证券之星 2026-06-16</td>
+    <td class="insight-cell">该专利可提升视频分析等并行任务的资源利用效率，大华在AI边缘计算场景的底层技术能力持续增强。</td>
+</tr>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">大华股份申请语义感知模型压缩专利</td>
+    <td>大华股份6月16日公布"基于语义感知的模型压缩方法及视觉识别方法"专利，针对深度学习模型进行语义感知压缩，提升视觉识别效率。</td>
+    <td class="source-cell">国家知识产权局 2026-06-16</td>
+    <td class="insight-cell">模型轻量化是边缘智能核心能力，大华在端侧AI部署的技术储备不断加深，南威需加快自研模型压缩与边缘部署能力建设。</td>
+</tr>
+<tr style="background:#E2EFDA">
+    <td style="text-align:center;"><span class="risk-tag 低">低</span></td>
+    <td class="title-cell">DeepSeek V4.1灰度测试，代码能力大幅提升</td>
+    <td>6月15日消息DeepSeek V4.1已启动灰度测试，知识水平升级至2026年1月，代码能力大幅提升，定位"商业化就绪的多模态Agent基座模型"。</td>
+    <td class="source-cell">Linux.do社区/CSDN 2026-06-15</td>
+    <td class="insight-cell">DeepSeek V4.1加速多模态+Agent商业落地，国产大模型竞争白热化。南威警务大模型选型可关注DeepSeek的MCP原生支持能力。</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="section-title">■ 竞品动态</div>
+<table class="data-table">
+<thead><tr>
+<th>风险等级</th><th>核心标题</th><th>关键内容摘要</th><th>来源</th><th>对南威的启示</th>
+</tr></thead>
+<tbody>
+<tr style="background:#FFE0E0">
+    <td style="text-align:center;"><span class="risk-tag 高">高</span></td>
+    <td class="title-cell">智谱中标深智城集团9390万元国产大模型项目</td>
+    <td>6月16日智谱中标深圳智慧城市集团"基于国产大模型的全球科创分析服务项目"，金额9390万元，涵盖全球科创要素感知引擎、知识图谱情报中台等。</td>
+    <td class="source-cell">知乎/中关村智慧城市联盟 2026-06-17</td>
+    <td class="insight-cell">智谱在政企大模型市场强势回归，9390万大单标志国产大模型在智慧城市核心场景的规模化渗透加速。南威需关注智谱向公安场景延伸的风险。</td>
+</tr>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">科大讯飞+中科大获存储系统配置发明专利</td>
+    <td>科大讯飞与中国科学技术大学联合获"存储系统及存储集群的配置方法"专利授权，涉及分类存储、配额管理技术，授权日期6月16日。</td>
+    <td class="source-cell">国家知识产权局 2026-06-17</td>
+    <td class="insight-cell">讯飞持续加注算力基础设施专利布局，存储配置管理是AI智算底座关键环节。南威智慧警务云平台建设中可借鉴其存储分层管理思路。</td>
+</tr>
+<tr style="background:#FFF2CC">
+    <td style="text-align:center;"><span class="risk-tag 中">中</span></td>
+    <td class="title-cell">大华股份6月16日主力资金净流入逾3200万，股价涨1.8%</td>
+    <td>6月16日大华股份报收16.41元(+1.8%)，主力资金净流入3233.1万元，换手率1.78%，成交额6.91亿元，资金面呈现积极信号。</td>
+    <td class="source-cell">MSN财经/证券之星 2026-06-16</td>
+    <td class="insight-cell">大华获主力资金净买入，市场对其AI+安防战略持乐观态度。南威需关注资本市场的行业估值逻辑变化。</td>
+</tr>
+<tr style="background:#E2EFDA">
+    <td style="text-align:center;"><span class="risk-tag 低">低</span></td>
+    <td class="title-cell">大华股份申请吸波线缆及目标检测专利</td>
+    <td>大华股份6月16日公布"吸波线缆"(抗扰降辐射)和"目标检测方法"(多层特征图检测小目标)两项新专利，覆盖硬件与算法双领域。</td>
+    <td class="source-cell">国家知识产权局/百家号 2026-06-17</td>
+    <td class="insight-cell">大华在硬件(线缆/补光)和算法(小目标检测/模型压缩)双线布局持续发力，南威需关注其"软硬一体"解决方案的竞争力提升。</td>
+</tr>
+
+</tbody>
+</table>
+
+<div class="footer">
+    本报告由南威软件自动化生成 | 数据来源：全网公开信息 | 生成时间：2026年6月18日<br>
+    <a href="https://frankadimitriadis-boop.github.io/daily-GA-test-/20260618_Public_Security_AI_Intelligence_Briefing.html">📎 GitHub Pages 在线浏览</a>
+</div>
+</div>
+</body>
+</html>
