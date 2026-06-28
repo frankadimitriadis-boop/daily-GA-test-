@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>【第50期】每日公安AI情报简报 | 2026年6月28日</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Microsoft YaHei', 'PingFang SC', Arial, sans-serif;
+            background: #f0f4f8;
+            color: #333;
+            padding: 30px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            padding: 40px 50px;
+        }
+        .header {
+            text-align: center;
+            padding: 30px 0 20px;
+            background: linear-gradient(135deg, #1F4E79 0%, #2E75B6 100%);
+            border-radius: 10px;
+            margin: -40px -50px 30px;
+            padding: 40px 50px;
+            color: #fff;
+        }
+        .header h1 {
+            font-size: 28px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            margin-bottom: 8px;
+        }
+        .header .subtitle {
+            font-size: 14px;
+            opacity: 0.85;
+        }
+        .stats-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            background: #f8fafd;
+            border: 1px solid #e8edf3;
+            border-radius: 8px;
+            padding: 15px 20px;
+            margin: 20px 0 30px;
+            flex-wrap: wrap;
+        }
+        .stats-bar .stat-label {
+            font-size: 15px;
+            font-weight: 600;
+            color: #1F4E79;
+        }
+        .stats-bar .stat-item {
+            font-size: 14px;
+            font-weight: 600;
+            padding: 4px 12px;
+            border-radius: 12px;
+        }
+        .stats-bar .stat-item.high { color: #C00000; background: #FFE0E0; }
+        .stats-bar .stat-item.medium { color: #9C6500; background: #FFF2CC; }
+        .stats-bar .stat-item.low { color: #375623; background: #E2EFDA; }
+        
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #1F4E79;
+            border-left: 5px solid #1F4E79;
+            padding-left: 15px;
+            margin: 30px 0 15px;
+        }
+        .section-desc {
+            font-size: 13px;
+            color: #888;
+            margin: -10px 0 15px 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 25px;
+            font-size: 13px;
+        }
+        th {
+            background: #1F4E79;
+            color: #fff;
+            padding: 10px 8px;
+            text-align: center;
+            font-weight: 600;
+            border: 1px solid #1F4E79;
+            white-space: nowrap;
+        }
+        td {
+            padding: 9px 8px;
+            border: 1px solid #CCCCCC;
+            vertical-align: top;
+            line-height: 1.5;
+        }
+        tr:hover {
+            background: #f8fafd;
+        }
+        .risk-tag {
+            display: inline-block;
+            padding: 2px 10px;
+            border-radius: 10px;
+            font-weight: 700;
+            font-size: 13px;
+            text-align: center;
+            min-width: 32px;
+        }
+        .risk-tag.high { color: #C00000; background: #FFE0E0; }
+        .risk-tag.medium { color: #9C6500; background: #FFF2CC; }
+        .risk-tag.low { color: #375623; background: #E2EFDA; }
+        
+        .cell-highlight { background: #FFF8E1; }
+        
+        .footer {
+            text-align: center;
+            padding: 20px 0 5px;
+            font-size: 12px;
+            color: #aaa;
+            border-top: 1px solid #eee;
+            margin-top: 20px;
+        }
+        .dedup-note {
+            background: #f5f7fa;
+            border-left: 3px solid #2E75B6;
+            padding: 10px 15px;
+            margin: 15px 0;
+            font-size: 12px;
+            color: #666;
+            border-radius: 0 6px 6px 0;
+        }
+        .dedup-note strong { color: #1F4E79; }
+        
+        @media (max-width: 768px) {
+            .container { padding: 15px; }
+            .header { margin: -15px -15px 20px; padding: 25px 15px; }
+            .header h1 { font-size: 20px; }
+            table { font-size: 11px; }
+            th, td { padding: 6px 4px; }
+            .stats-bar { gap: 8px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 头部 -->
+        <div class="header">
+            <h1>【第50期】每日公安AI情报简报</h1>
+            <div class="subtitle">监测周期：2026年6月26日 — 6月28日 | 生成时间：2026年6月28日</div>
+        </div>
+        
+        <!-- 统计条 -->
+        <div class="stats-bar">
+            <span class="stat-label">📊 本期共监测到 16 条新增情报</span>
+            <span class="stat-item high">高风险 5 条</span>
+            <span class="stat-item medium">中风险 7 条</span>
+            <span class="stat-item low">低风险 4 条</span>
+        </div>
+
+        <!-- ===== 一、政策与热点 ===== -->
+        <div class="section-title">一、政策与热点</div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:5%">风险</th>
+                    <th style="width:18%">核心标题</th>
+                    <th style="width:30%">关键内容摘要</th>
+                    <th style="width:17%">来源/链接</th>
+                    <th style="width:30%">对南威的启示</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag high">高</span></td>
+                    <td><strong>公安部/人民日报：深入推进"全民反诈在行动"集中宣传月</strong></td>
+                    <td>电诈案件连续8个月同比下降；累计核查涉诈高风险电话卡近2亿张、拦截诈骗电话短信64.8亿次；12381预警短信17.26亿条</td>
+                    <td>公安部官网/mps.gov.cn<br>2026-06-26</td>
+                    <td>反诈AI技术防线需求持续扩大，南威可在反诈预警、涉诈App分析等AI场景寻求切入机会</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag medium">中</span></td>
+                    <td><strong>2026北京国际低空经济与无人机系统产业展举行</strong></td>
+                    <td>6月26-28日在北京首钢会展中心举办，同期举办低空经济与无人机高质量发展论坛，聚焦无人机安防应用</td>
+                    <td>UAS EXPO CHINA<br>2026-06-26</td>
+                    <td>低空经济+安防融合新赛道，无人机管控与AI识别成为公安新需求，南威可关注相关算法合作机会</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag low">低</span></td>
+                    <td><strong>南京市公安局举办警营开放活动</strong></td>
+                    <td>6月27-28日南京交管局车管所举办警营开放日，展示警用AI装备及智慧交通成果</td>
+                    <td>南京市公安局/腾讯新闻<br>2026-06-27</td>
+                    <td>各地警营开放活动反映AI装备展示交流需求，南威可借此类活动推广智慧警务产品</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ===== 二、技术前沿 ===== -->
+        <div class="section-title">二、技术前沿</div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:5%">风险</th>
+                    <th style="width:18%">核心标题</th>
+                    <th style="width:30%">关键内容摘要</th>
+                    <th style="width:17%">来源/链接</th>
+                    <th style="width:30%">对南威的启示</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag medium">中</span></td>
+                    <td><strong>科大讯飞发布招采AI智能体平台2.0</strong></td>
+                    <td>自组织自进化智能体协作框架+Harness可信执行引擎，已落地200+智能体，交付速度提升300%；联合华为推出基于昇腾算力的智能招采一体机</td>
+                    <td>科大讯飞/新京报<br>2026-06-25/26</td>
+                    <td>讯飞AI智能体向企业招采场景渗透，表明其AI能力从G端向B端全面扩张，南威需关注AI Agent在政务场景的竞争态势</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag low">低</span></td>
+                    <td><strong>海康威视获两项发明专利授权</strong></td>
+                    <td>6月26日获"光电器件及其制备方法"及"多维度关联多媒体数据安全性度量方法"两项专利授权，涉及硬件底层与数据安全</td>
+                    <td>国家知识产权局/百家号<br>2026-06-27</td>
+                    <td>海康持续在硬件底层及数据安全领域布局专利，需关注其技术壁垒的持续加厚</td>
+                </tr>
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag low">低</span></td>
+                    <td><strong>大华股份获工程构建方法专利</strong></td>
+                    <td>6月26日获"多产物的工程构建方法、工程构建系统和计算机设备"专利，提升工程构建效率</td>
+                    <td>国家知识产权局/百家号<br>2026-06-27</td>
+                    <td>大华在工程构建领域的技术积累，反映其对项目交付效率的重视</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- ===== 三、竞品动态 ===== -->
+        <div class="section-title">三、竞品动态</div>
+        <table>
+            <thead>
+                <tr>
+                    <th style="width:5%">风险</th>
+                    <th style="width:18%">核心标题</th>
+                    <th style="width:30%">关键内容摘要</th>
+                    <th style="width:17%">来源/链接</th>
+                    <th style="width:30%">对南威的启示</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- 南威软件 - 利好 -->
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag medium">中</span></td>
+                    <td><strong>南威软件万福信息中标华能吉林AI项目</strong></td>
+                    <td>万福信息中标华能吉林分公司AI视觉安全分析项目，聚焦储能电站AI视觉识别+数据一张图+电池仓监控三大模块，覆盖9类风险识别</td>
+                    <td>南威软件官微/新浪财经<br>2026-06-25</td>
+                    <td>✅ 南威AI视觉在能源行业实现突破，验证AIoT技术向电力场景的拓展能力</td>
+                </tr>
+                <!-- 南威软件 - 利空 -->
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag high">高</span></td>
+                    <td><strong>南威软件本周暴跌13.44%，实控人拟减持3%</strong></td>
+                    <td>6月26日收盘7.92元（较上周9.15元跌13.44%），盘中最低7.89元创近一年新低，总市值45.96亿；实控人吴志雄拟7月15日起减持不超3%</td>
+                    <td>东方财富/同花顺<br>2026-06-28</td>
+                    <td>⚠️ 股价连续暴跌+实控人减持利空叠加，短期承压，需关注后续经营基本面变化</td>
+                </tr>
+                <!-- 科大讯飞 -->
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag high">高</span></td>
+                    <td><strong>科大讯飞6月26日暴跌6.14%，股价创60日新低</strong></td>
+                    <td>6月26日收盘39.12元跌6.14%，成交额25.14亿元，股价创60日新低；总市值950.74亿元；近3日主力净流出6.54亿</td>
+                    <td>新浪财经/证券之星<br>2026-06-26</td>
+                    <td>讯飞股价持续承压，但AI业务仍在加速推进（招采平台2.0、政法展），注意其市场压力下的竞争策略变化</td>
+                </tr>
+                <!-- 海康威视 -->
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag medium">中</span></td>
+                    <td><strong>海康威视6月26日跌3.25%，存储业务预期增长</strong></td>
+                    <td>6月26日收盘33.32元跌3.25%，市值3053.74亿；公司回应存储业务受益行业高景气度，预计今年增长，营收占比2.57%（约23.80亿）</td>
+                    <td>新浪财经<br>2026-06-26</td>
+                    <td>海康整体承压但存储业务高景气，需关注其存储+安防融合方案对公安视频大数据存储市场的渗透</td>
+                </tr>
+                <!-- 大华股份 -->
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag high">高</span></td>
+                    <td><strong>大华股份6月26日跌4.14%，欧洲展发布新能源AI方案</strong></td>
+                    <td>6月26日收盘15.98元跌4.14%，市值522.43亿；同日大华技术在欧洲国际太阳能展发布"新能源领域可见AI"方案，展示五大核心场景</td>
+                    <td>新浪财经/证券之星<br>2026-06-26</td>
+                    <td>大华新能源AI出海布局加速，AIoT覆盖发电到用电全流程，关注其国际化+行业AI双轮驱动战略</td>
+                </tr>
+                <!-- 智谱AI -->
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag high">高</span></td>
+                    <td><strong>智谱AI港股6月26日暴跌超15%，跌破2000港元</strong></td>
+                    <td>6月26日智谱股价跌破2000港元，跌超15%；此前6月12-22日累计上涨127%创2980港元历史新高后大幅回调</td>
+                    <td>每日经济新闻/上证报<br>2026-06-26</td>
+                    <td>大模型概念股波动剧烈，需关注AI赛道估值回调对行业整体情绪的影响</td>
+                </tr>
+                <!-- 电科数字 -->
+                <tr>
+                    <td style="text-align:center"><span class="risk-tag medium">中</span></td>
+                    <td><strong>电科数字6月26日跌5.03%，除权除息日创60日新低</strong></td>
+                    <td>6月26日为除权除息日（10转2股派1.60元），收盘14.55元跌5.03%，盘中创60日新低，主力净流出2376万</td>
+                    <td>证券之星<br>2026-06-26</td>
+                    <td>电科数字持续承压，此前因虚假宣传被罚，叠加业绩下滑，短期难有反转</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- 排重说明 -->
+        <div class="dedup-note">
+            <strong>📌 排重说明：</strong>本期情报对比第41-49期（6月11日-26日）已报道内容，已排重公安部"十五五"规划、山东AI换脸案、ISC.AI 2026开幕、政法装备展开幕、链博会、商汤Token增长7倍、商汤老板龙虾预售等情报。新增内容聚焦6月26-28日最新动态。
+        </div>
+
+        <!-- 底部 -->
+        <div class="footer">
+            —— 本报告由AI情报监测系统自动生成，仅供内部参考 ——<br>
+            © 2026 南威软件 · 公安AI竞品分析日报
+        </div>
+    </div>
+</body>
+</html>
